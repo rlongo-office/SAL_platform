@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:t="http://feed.elasticstats.com/schema/football/teams-v7.0.xsd"
+           targetNamespace="http://feed.elasticstats.com/schema/football/teams-v7.0.xsd"
+           elementFormDefault="qualified">
+
+  <xs:include schemaLocation="common-v7.0.xsd" />
+
+  <xs:complexType name="leagueType">
+    <xs:sequence>
+      <xs:element name="teams" type="t:teamsType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attributeGroup ref="t:baseOrganizationAttributes"/>
+  </xs:complexType>
+
+  <xs:element name="league" type="t:leagueType"/>
+
+  <xs:complexType name="teamsType">
+    <xs:sequence>
+      <xs:element name="team" type="t:teamType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

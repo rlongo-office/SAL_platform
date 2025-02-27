@@ -1,0 +1,4930 @@
+[
+    {
+        "description": "(3:33) (Shotgun) 28-T.Badie right guard to TB 46 for 7 yards (52-K.Britt).",
+        "rush": {
+            "team": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "rushingPlayer": {
+                "id": 39221,
+                "firstName": "Tyler",
+                "lastName": "Badie",
+                "position": "RB",
+                "jerseyNumber": 28
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 47,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 30254,
+                "firstName": "K.J.",
+                "lastName": "Britt",
+                "position": "LB",
+                "jerseyNumber": 52
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 71,
+                    "abbreviation": "TB"
+                },
+                "yardLine": 46,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 7,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 687,
+            "teamInPossession": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 47
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 39221,
+                        "firstName": "Tyler",
+                        "lastName": "Badie",
+                        "position": "RB",
+                        "jerseyNumber": 28
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 30254,
+                        "firstName": "K.J.",
+                        "lastName": "Britt",
+                        "position": "LB",
+                        "jerseyNumber": 52
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(11:51) (Shotgun) 18-C.Keenum pass short left to 22O-C.Akers pushed ob at HOU 36 for 6 yards (6D-T.Tomlinson).",
+        "pass": {
+            "team": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "passingPlayer": {
+                "id": 8464,
+                "firstName": "Case",
+                "lastName": "Keenum",
+                "position": "QB",
+                "jerseyNumber": 18
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 18640,
+                "firstName": "Cam",
+                "lastName": "Akers",
+                "position": "RB",
+                "jerseyNumber": 22
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 108868,
+                "firstName": "Tre'Vius",
+                "lastName": "Tomlinson",
+                "position": "CB",
+                "jerseyNumber": 6
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": null,
+                "yardLine": 36,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": true,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 6,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 189,
+            "teamInPossession": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 64,
+                    "abbreviation": "HOU"
+                },
+                "yardLine": 30
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 108868,
+                        "firstName": "Tre'Vius",
+                        "lastName": "Tomlinson",
+                        "position": "CB",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 8464,
+                        "firstName": "Case",
+                        "lastName": "Keenum",
+                        "position": "QB",
+                        "jerseyNumber": 18
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 18640,
+                        "firstName": "Cam",
+                        "lastName": "Akers",
+                        "position": "RB",
+                        "jerseyNumber": 22
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(6:17) (Shotgun) 23-K.Williams left end to LA 30 for no gain (17-N.Dean).",
+        "rush": {
+            "team": {
+                "id": 77,
+                "abbreviation": "LA"
+            },
+            "rushingPlayer": {
+                "id": 39751,
+                "firstName": "Kyren",
+                "lastName": "Williams",
+                "position": "RB",
+                "jerseyNumber": 23
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 77,
+                    "abbreviation": "LA"
+                },
+                "yardLine": 30,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 47380,
+                "firstName": "Nakobe",
+                "lastName": "Dean",
+                "position": "LB",
+                "jerseyNumber": 17
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 77,
+                    "abbreviation": "LA"
+                },
+                "yardLine": 30,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 523,
+            "teamInPossession": {
+                "id": 77,
+                "abbreviation": "LA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 77,
+                    "abbreviation": "LA"
+                },
+                "yardLine": 30
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 47380,
+                        "firstName": "Nakobe",
+                        "lastName": "Dean",
+                        "position": "LB",
+                        "jerseyNumber": 17
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 39751,
+                        "firstName": "Kyren",
+                        "lastName": "Williams",
+                        "position": "RB",
+                        "jerseyNumber": 23
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(13:52) (Shotgun) 15-P.Mahomes pass short left to 8-D.Hopkins to KC 46 for 13 yards (39-N.Hobbs).",
+        "pass": {
+            "team": {
+                "id": 73,
+                "abbreviation": "KC"
+            },
+            "passingPlayer": {
+                "id": 13349,
+                "firstName": "Patrick",
+                "lastName": "Mahomes",
+                "position": "QB",
+                "jerseyNumber": 15
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 7013,
+                "firstName": "DeAndre",
+                "lastName": "Hopkins",
+                "position": "WR",
+                "jerseyNumber": 8
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 31913,
+                "firstName": "Nate",
+                "lastName": "Hobbs",
+                "position": "CB",
+                "jerseyNumber": 39
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 46,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 13,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 68,
+            "teamInPossession": {
+                "id": 73,
+                "abbreviation": "KC"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 7,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 33
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 13349,
+                        "firstName": "Patrick",
+                        "lastName": "Mahomes",
+                        "position": "QB",
+                        "jerseyNumber": 15
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7013,
+                        "firstName": "DeAndre",
+                        "lastName": "Hopkins",
+                        "position": "WR",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 31913,
+                        "firstName": "Nate",
+                        "lastName": "Hobbs",
+                        "position": "CB",
+                        "jerseyNumber": 39
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:25) (Shotgun) 17-D.Thompson-Robinson pass short middle to 11-J.Proche to GB 14 for 17 yards (48-B.Sapp; 40-A.Davis).",
+        "pass": {
+            "team": {
+                "id": 58,
+                "abbreviation": "CLE"
+            },
+            "passingPlayer": {
+                "id": 108826,
+                "firstName": "Dorian",
+                "lastName": "Thompson-Robinson",
+                "position": "QB",
+                "jerseyNumber": 17
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 18727,
+                "firstName": "James",
+                "lastName": "Proche",
+                "position": "WR",
+                "jerseyNumber": 11
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 25863,
+                "firstName": "Benny",
+                "lastName": "Sapp",
+                "position": "CB",
+                "jerseyNumber": 48
+            },
+            "assistedTacklingPlayer2": {
+                "id": 112060,
+                "firstName": "Alonzo",
+                "lastName": "Davis",
+                "position": "CB",
+                "jerseyNumber": 38
+            },
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 14,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 17,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 455,
+            "teamInPossession": {
+                "id": 58,
+                "abbreviation": "CLE"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 31
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 25863,
+                        "firstName": "Benny",
+                        "lastName": "Sapp",
+                        "position": "CB",
+                        "jerseyNumber": 48
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 112060,
+                        "firstName": "Alonzo",
+                        "lastName": "Davis",
+                        "position": "CB",
+                        "jerseyNumber": 38
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 108826,
+                        "firstName": "Dorian",
+                        "lastName": "Thompson-Robinson",
+                        "position": "QB",
+                        "jerseyNumber": 17
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 18727,
+                        "firstName": "James",
+                        "lastName": "Proche",
+                        "position": "WR",
+                        "jerseyNumber": 11
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "2-T.Bass extra point is GOOD, Center-69-R.Ferguson, Holder-8-S.Martin.",
+        "extraPointAttempt": {
+            "team": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "kickingPlayer": {
+                "id": 18732,
+                "firstName": "Tyler",
+                "lastName": "Bass",
+                "position": "K",
+                "jerseyNumber": 2
+            },
+            "centerPlayer": {
+                "id": 12767,
+                "firstName": "Reid",
+                "lastName": "Ferguson",
+                "position": "LS",
+                "jerseyNumber": 69
+            },
+            "holdingPlayer": {
+                "id": 6909,
+                "firstName": "Sam",
+                "lastName": "Martin",
+                "position": "P",
+                "jerseyNumber": 8
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 15,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "blockedAtPosition": null,
+            "isBlocked": false,
+            "isGood": true,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 25,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 244,
+            "teamInPossession": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": null,
+            "yardsRemaining": null,
+            "lineOfScrimmage": null,
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 18732,
+                        "firstName": "Tyler",
+                        "lastName": "Bass",
+                        "position": "K",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 6909,
+                        "firstName": "Sam",
+                        "lastName": "Martin",
+                        "position": "P",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 12767,
+                        "firstName": "Reid",
+                        "lastName": "Ferguson",
+                        "position": "LS",
+                        "jerseyNumber": 69
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(14:20) 1-K.Murray pass short left to 6-J.Conner pushed ob at SF 15 for 15 yards (27-J.Brown).",
+        "pass": {
+            "team": {
+                "id": 76,
+                "abbreviation": "ARI"
+            },
+            "passingPlayer": {
+                "id": 16226,
+                "firstName": "Kyler",
+                "lastName": "Murray",
+                "position": "QB",
+                "jerseyNumber": 1
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 13188,
+                "firstName": "James",
+                "lastName": "Conner",
+                "position": "RB",
+                "jerseyNumber": 6
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 79825,
+                "firstName": "Ji'Ayir",
+                "lastName": "Brown",
+                "position": "FS",
+                "jerseyNumber": 27
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": null,
+                "yardLine": 15,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": true,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 15,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 40,
+            "teamInPossession": {
+                "id": 76,
+                "abbreviation": "ARI"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 78,
+                    "abbreviation": "SF"
+                },
+                "yardLine": 30
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 16226,
+                        "firstName": "Kyler",
+                        "lastName": "Murray",
+                        "position": "QB",
+                        "jerseyNumber": 1
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 13188,
+                        "firstName": "James",
+                        "lastName": "Conner",
+                        "position": "RB",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79825,
+                        "firstName": "Ji'Ayir",
+                        "lastName": "Brown",
+                        "position": "FS",
+                        "jerseyNumber": 27
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(:54) 4-R.Stonehouse punts 50 yards to MIN 11, Center-46-M.Cox, fair catch by 4-B.Powell.",
+        "punt": {
+            "kickingTeam": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "kickingPlayer": {
+                "id": 45707,
+                "firstName": "Ryan",
+                "lastName": "Stonehouse",
+                "position": "P",
+                "jerseyNumber": 4
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 67,
+                    "abbreviation": "TEN"
+                },
+                "yardLine": 39,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "retrievingTeam": {
+                "id": 63,
+                "abbreviation": "MIN"
+            },
+            "retrievingPlayer": {
+                "id": 14927,
+                "firstName": "Brandon",
+                "lastName": "Powell",
+                "position": "WR",
+                "jerseyNumber": 4
+            },
+            "retrievedAtPosition": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 11,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 11,
+                "point": null
+            },
+            "isBlocked": false,
+            "isTouchback": false,
+            "isSafety": false,
+            "isOutOfBounds": false,
+            "isTouchdown": false,
+            "isFairCatch": true,
+            "isLanded": false,
+            "isOnside": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 50,
+            "yardsReturned": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 846,
+            "teamInPossession": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 4,
+            "yardsRemaining": 12,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 67,
+                    "abbreviation": "TEN"
+                },
+                "yardLine": 39
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 14927,
+                        "firstName": "Brandon",
+                        "lastName": "Powell",
+                        "position": "WR",
+                        "jerseyNumber": 4
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 45707,
+                        "firstName": "Ryan",
+                        "lastName": "Stonehouse",
+                        "position": "P",
+                        "jerseyNumber": 4
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(14:55) 2-J.Fields pass incomplete short left to 22-N.Harris. PIT-2-J.Fields was injured during the play.  PENALTY on DAL-91-T.Wheat, Roughing the Passer, 15 yards, enforced at PIT 28 - No Play.",
+        "pass": {
+            "team": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "passingPlayer": {
+                "id": 30439,
+                "firstName": "Justin",
+                "lastName": "Fields",
+                "position": "QB",
+                "jerseyNumber": 2
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 13433,
+                "firstName": "Najee",
+                "lastName": "Harris",
+                "position": "RB",
+                "jerseyNumber": 22
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": true,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": [
+                {
+                    "penalty": {
+                        "team": {
+                            "id": 52,
+                            "abbreviation": "DAL"
+                        },
+                        "penalizedPlayer": {
+                            "id": 112484,
+                            "firstName": "Tyrus",
+                            "lastName": "Wheat",
+                            "position": "DE",
+                            "jerseyNumber": 91
+                        },
+                        "enforcedAtPosition": {
+                            "team": {
+                                "id": 59,
+                                "abbreviation": "PIT"
+                            },
+                            "yardLine": 28,
+                            "point": null
+                        },
+                        "description": "Roughing the Passer",
+                        "isCancelsPlay": true,
+                        "yardsPenalized": 15
+                    }
+                }
+            ]
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 5,
+            "teamInPossession": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 28
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 30439,
+                        "firstName": "Justin",
+                        "lastName": "Fields",
+                        "position": "QB",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 13433,
+                        "firstName": "Najee",
+                        "lastName": "Harris",
+                        "position": "RB",
+                        "jerseyNumber": 22
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(6:04) 37-A.Estime left end to GB 21 for 2 yards (54-K.Welch).",
+        "rush": {
+            "team": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "rushingPlayer": {
+                "id": 133983,
+                "firstName": "Audric",
+                "lastName": "Estime",
+                "position": "RB",
+                "jerseyNumber": 37
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 23,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 24076,
+                "firstName": "Kristian",
+                "lastName": "Welch",
+                "position": "LB",
+                "jerseyNumber": 54
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 21,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 2,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 536,
+            "teamInPossession": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 23
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 24076,
+                        "firstName": "Kristian",
+                        "lastName": "Welch",
+                        "position": "LB",
+                        "jerseyNumber": 54
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 133983,
+                        "firstName": "Audric",
+                        "lastName": "Estime",
+                        "position": "RB",
+                        "jerseyNumber": 37
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(8:11) 2-T.Bass 27 yard field goal is GOOD, Center-69-R.Ferguson, Holder-8-S.Martin.",
+        "fieldGoalAttempt": {
+            "team": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "kickingPlayer": {
+                "id": 18732,
+                "firstName": "Tyler",
+                "lastName": "Bass",
+                "position": "K",
+                "jerseyNumber": 2
+            },
+            "centerPlayer": {
+                "id": 12767,
+                "firstName": "Reid",
+                "lastName": "Ferguson",
+                "position": "LS",
+                "jerseyNumber": 69
+            },
+            "holdingPlayer": {
+                "id": 6909,
+                "firstName": "Sam",
+                "lastName": "Martin",
+                "position": "P",
+                "jerseyNumber": 8
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 17,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "blockedAtPosition": null,
+            "isBlocked": false,
+            "isGood": true,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 27,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 409,
+            "teamInPossession": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": null,
+            "yardsRemaining": null,
+            "lineOfScrimmage": null,
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 18732,
+                        "firstName": "Tyler",
+                        "lastName": "Bass",
+                        "position": "K",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 6909,
+                        "firstName": "Sam",
+                        "lastName": "Martin",
+                        "position": "P",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 12767,
+                        "firstName": "Reid",
+                        "lastName": "Ferguson",
+                        "position": "LS",
+                        "jerseyNumber": 69
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(12:10) 34O-M.Boone left tackle to CAR 23 for no gain (95-D.Ekuale; 93-O.Ximines).",
+        "rush": {
+            "team": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "rushingPlayer": {
+                "id": 14802,
+                "firstName": "Mike",
+                "lastName": "Boone",
+                "position": "RB",
+                "jerseyNumber": 34
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 69,
+                    "abbreviation": "CAR"
+                },
+                "yardLine": 23,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 16923,
+                "firstName": "Daniel",
+                "lastName": "Ekuale",
+                "position": "DT",
+                "jerseyNumber": 95
+            },
+            "assistedTacklingPlayer2": {
+                "id": 16527,
+                "firstName": "Oshane",
+                "lastName": "Ximines",
+                "position": "LB",
+                "jerseyNumber": 93
+            },
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 69,
+                    "abbreviation": "CAR"
+                },
+                "yardLine": 23,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 170,
+            "teamInPossession": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 69,
+                    "abbreviation": "CAR"
+                },
+                "yardLine": 23
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 14802,
+                        "firstName": "Mike",
+                        "lastName": "Boone",
+                        "position": "RB",
+                        "jerseyNumber": 34
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 16923,
+                        "firstName": "Daniel",
+                        "lastName": "Ekuale",
+                        "position": "DT",
+                        "jerseyNumber": 95
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 16527,
+                        "firstName": "Oshane",
+                        "lastName": "Ximines",
+                        "position": "LB",
+                        "jerseyNumber": 93
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(12:21) 38-J.McLaughlin left end to DEN 17 for 8 yards (27-C.Conner).",
+        "rush": {
+            "team": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "rushingPlayer": {
+                "id": 112076,
+                "firstName": "Jaleel",
+                "lastName": "McLaughlin",
+                "position": "RB",
+                "jerseyNumber": 38
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 9,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 79857,
+                "firstName": "Chamarri",
+                "lastName": "Conner",
+                "position": "DB",
+                "jerseyNumber": 27
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 17,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 8,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 159,
+            "teamInPossession": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 9
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 112076,
+                        "firstName": "Jaleel",
+                        "lastName": "McLaughlin",
+                        "position": "RB",
+                        "jerseyNumber": 38
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79857,
+                        "firstName": "Chamarri",
+                        "lastName": "Conner",
+                        "position": "DB",
+                        "jerseyNumber": 27
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(2:16) 22-D.Henry right end to BAL 42 for 1 yard (98-T.Wharton).",
+        "rush": {
+            "team": {
+                "id": 56,
+                "abbreviation": "BAL"
+            },
+            "rushingPlayer": {
+                "id": 10043,
+                "firstName": "Derrick",
+                "lastName": "Henry",
+                "position": "RB",
+                "jerseyNumber": 22
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "yardLine": 41,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 22481,
+                "firstName": "Tershawn",
+                "lastName": "Wharton",
+                "position": "DT",
+                "jerseyNumber": 98
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "yardLine": 42,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 1,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 764,
+            "teamInPossession": {
+                "id": 56,
+                "abbreviation": "BAL"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 4,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "yardLine": 41
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 10043,
+                        "firstName": "Derrick",
+                        "lastName": "Henry",
+                        "position": "RB",
+                        "jerseyNumber": 22
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 22481,
+                        "firstName": "Tershawn",
+                        "lastName": "Wharton",
+                        "position": "DT",
+                        "jerseyNumber": 98
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(1:04) (Shotgun) 6-B.Mayfield pass incomplete deep left.",
+        "pass": {
+            "team": {
+                "id": 71,
+                "abbreviation": "TB"
+            },
+            "passingPlayer": {
+                "id": 14492,
+                "firstName": "Baker",
+                "lastName": "Mayfield",
+                "position": "QB",
+                "jerseyNumber": 6
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": null,
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 836,
+            "teamInPossession": {
+                "id": 71,
+                "abbreviation": "TB"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 71,
+                    "abbreviation": "TB"
+                },
+                "yardLine": 20
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 14492,
+                        "firstName": "Baker",
+                        "lastName": "Mayfield",
+                        "position": "QB",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(12:22) (Shotgun) 4-D.Watson pass incomplete short left to 2-A.Cooper.",
+        "pass": {
+            "team": {
+                "id": 58,
+                "abbreviation": "CLE"
+            },
+            "passingPlayer": {
+                "id": 13027,
+                "firstName": "Deshaun",
+                "lastName": "Watson",
+                "position": "QB",
+                "jerseyNumber": 4
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 7929,
+                "firstName": "Amari",
+                "lastName": "Cooper",
+                "position": "WR",
+                "jerseyNumber": 2
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 158,
+            "teamInPossession": {
+                "id": 58,
+                "abbreviation": "CLE"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 9,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 58,
+                    "abbreviation": "CLE"
+                },
+                "yardLine": 31
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 13027,
+                        "firstName": "Deshaun",
+                        "lastName": "Watson",
+                        "position": "QB",
+                        "jerseyNumber": 4
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7929,
+                        "firstName": "Amari",
+                        "lastName": "Cooper",
+                        "position": "WR",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(13:43) (Shotgun) 10-D.Ridder sacked at LV 30 for -4 yards (51-D.Malone).",
+        "sack": {
+            "team": {
+                "id": 74,
+                "abbreviation": "LV"
+            },
+            "passingPlayer": {
+                "id": 43384,
+                "firstName": "Desmond",
+                "lastName": "Ridder",
+                "position": "QB",
+                "jerseyNumber": 10
+            },
+            "soloTacklingPlayer": {
+                "id": 39286,
+                "firstName": "DeAngelo",
+                "lastName": "Malone",
+                "position": "OLB",
+                "jerseyNumber": 51
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "sackedAtPosition": {
+                "team": {
+                    "id": 74,
+                    "abbreviation": "LV"
+                },
+                "yardLine": 30,
+                "point": null
+            },
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsLost": 4,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 77,
+            "teamInPossession": {
+                "id": 74,
+                "abbreviation": "LV"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 22,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 74,
+                    "abbreviation": "LV"
+                },
+                "yardLine": 34
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 39286,
+                        "firstName": "DeAngelo",
+                        "lastName": "Malone",
+                        "position": "OLB",
+                        "jerseyNumber": 51
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 43384,
+                        "firstName": "Desmond",
+                        "lastName": "Ridder",
+                        "position": "QB",
+                        "jerseyNumber": 10
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(6:10) (Shotgun) 15-G.Minshew sacked at LV 45 for -12 yards (sack split by 56-M.Fox and 52-K.Mack).",
+        "sack": {
+            "team": {
+                "id": 74,
+                "abbreviation": "LV"
+            },
+            "passingPlayer": {
+                "id": 16736,
+                "firstName": "Gardner",
+                "lastName": "Minshew II",
+                "position": "QB",
+                "jerseyNumber": 15
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 11574,
+                "firstName": "Morgan",
+                "lastName": "Fox",
+                "position": "DE",
+                "jerseyNumber": 56
+            },
+            "assistedTacklingPlayer2": {
+                "id": 7981,
+                "firstName": "Khalil",
+                "lastName": "Mack",
+                "position": "OLB",
+                "jerseyNumber": 52
+            },
+            "sackedAtPosition": {
+                "team": {
+                    "id": 74,
+                    "abbreviation": "LV"
+                },
+                "yardLine": 45,
+                "point": null
+            },
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsLost": 12,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 530,
+            "teamInPossession": {
+                "id": 74,
+                "abbreviation": "LV"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 75,
+                    "abbreviation": "LAC"
+                },
+                "yardLine": 43
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 16736,
+                        "firstName": "Gardner",
+                        "lastName": "Minshew II",
+                        "position": "QB",
+                        "jerseyNumber": 15
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 11574,
+                        "firstName": "Morgan",
+                        "lastName": "Fox",
+                        "position": "DE",
+                        "jerseyNumber": 56
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7981,
+                        "firstName": "Khalil",
+                        "lastName": "Mack",
+                        "position": "OLB",
+                        "jerseyNumber": 52
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(8:21) (Shotgun) 8-W.Levis pass incomplete short middle to 83-T.Boyd.",
+        "pass": {
+            "team": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "passingPlayer": {
+                "id": 79771,
+                "firstName": "Will",
+                "lastName": "Levis",
+                "position": "QB",
+                "jerseyNumber": 8
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 9797,
+                "firstName": "Tyler",
+                "lastName": "Boyd",
+                "position": "WR",
+                "jerseyNumber": 83
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 399,
+            "teamInPossession": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 8,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 13
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79771,
+                        "firstName": "Will",
+                        "lastName": "Levis",
+                        "position": "QB",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 9797,
+                        "firstName": "Tyler",
+                        "lastName": "Boyd",
+                        "position": "WR",
+                        "jerseyNumber": 83
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:07) (Shotgun) 7-C.Stroud pass incomplete deep left to 1-S.Diggs.",
+        "pass": {
+            "team": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "passingPlayer": {
+                "id": 79740,
+                "firstName": "C.J.",
+                "lastName": "Stroud",
+                "position": "QB",
+                "jerseyNumber": 7
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 7471,
+                "firstName": "Stefon",
+                "lastName": "Diggs",
+                "position": "WR",
+                "jerseyNumber": 1
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 473,
+            "teamInPossession": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 5,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 64,
+                    "abbreviation": "HOU"
+                },
+                "yardLine": 35
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 79740,
+                        "firstName": "C.J.",
+                        "lastName": "Stroud",
+                        "position": "QB",
+                        "jerseyNumber": 7
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7471,
+                        "firstName": "Stefon",
+                        "lastName": "Diggs",
+                        "position": "WR",
+                        "jerseyNumber": 1
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "96-J.Romo kicks 65 yards from MIN 35 to end zone, Touchback to the JAX 30.",
+        "kick": {
+            "kickingTeam": {
+                "id": 63,
+                "abbreviation": "MIN"
+            },
+            "kickingPlayer": {
+                "id": 47904,
+                "firstName": "John Parker",
+                "lastName": "Romo",
+                "position": "K",
+                "jerseyNumber": 96
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 35,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "retrievingTeam": {
+                "id": 66,
+                "abbreviation": "JAX"
+            },
+            "retrievingPlayer": null,
+            "retrievedAtPosition": {
+                "team": {
+                    "id": 66,
+                    "abbreviation": "JAX"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 66,
+                    "abbreviation": "JAX"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "isBlocked": false,
+            "isTouchback": true,
+            "isSafety": false,
+            "isOutOfBounds": false,
+            "isTouchdown": false,
+            "isFairCatch": false,
+            "isLanded": false,
+            "isOnside": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 65,
+            "yardsReturned": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 466,
+            "teamInPossession": {
+                "id": 63,
+                "abbreviation": "MIN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 0,
+            "yardsRemaining": 0,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 35
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 47904,
+                        "firstName": "John Parker",
+                        "lastName": "Romo",
+                        "position": "K",
+                        "jerseyNumber": 96
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(14:21) 3-R.Wilson pass incomplete short right to 80-D.Washington (50-A.Isaac). BAL-0-R.Smith was injured during the play.",
+        "pass": {
+            "team": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "passingPlayer": {
+                "id": 8283,
+                "firstName": "Russell",
+                "lastName": "Wilson",
+                "position": "QB",
+                "jerseyNumber": 3
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 79831,
+                "firstName": "Darnell",
+                "lastName": "Washington",
+                "position": "TE",
+                "jerseyNumber": 80
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 133928,
+                "firstName": "Adisa",
+                "lastName": "Isaac",
+                "position": "LB",
+                "jerseyNumber": 50
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 39,
+            "teamInPossession": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 32
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 133928,
+                        "firstName": "Adisa",
+                        "lastName": "Isaac",
+                        "position": "LB",
+                        "jerseyNumber": 50
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 8283,
+                        "firstName": "Russell",
+                        "lastName": "Wilson",
+                        "position": "QB",
+                        "jerseyNumber": 3
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 79831,
+                        "firstName": "Darnell",
+                        "lastName": "Washington",
+                        "position": "TE",
+                        "jerseyNumber": 80
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(2:45) (Shotgun) 17-J.Allen pass incomplete short left to 13-M.Hollins.",
+        "pass": {
+            "team": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "passingPlayer": {
+                "id": 14498,
+                "firstName": "Josh",
+                "lastName": "Allen",
+                "position": "QB",
+                "jerseyNumber": 17
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 13280,
+                "firstName": "Mack",
+                "lastName": "Hollins",
+                "position": "WR",
+                "jerseyNumber": 13
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 735,
+            "teamInPossession": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 30
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 14498,
+                        "firstName": "Josh",
+                        "lastName": "Allen",
+                        "position": "QB",
+                        "jerseyNumber": 17
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 13280,
+                        "firstName": "Mack",
+                        "lastName": "Hollins",
+                        "position": "WR",
+                        "jerseyNumber": 13
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(6:28) (Shotgun) 10-I.Pacheco right guard to KC 21 for 10 yards (33-L.Ryan; 27-J.Brown).",
+        "rush": {
+            "team": {
+                "id": 73,
+                "abbreviation": "KC"
+            },
+            "rushingPlayer": {
+                "id": 43343,
+                "firstName": "Isiah",
+                "lastName": "Pacheco",
+                "position": "RB",
+                "jerseyNumber": 10
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 11,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 7628,
+                "firstName": "Logan",
+                "lastName": "Ryan",
+                "position": "SS",
+                "jerseyNumber": 33
+            },
+            "assistedTacklingPlayer2": {
+                "id": 79825,
+                "firstName": "Ji'Ayir",
+                "lastName": "Brown",
+                "position": "FS",
+                "jerseyNumber": 27
+            },
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 21,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 10,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 512,
+            "teamInPossession": {
+                "id": 73,
+                "abbreviation": "KC"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "yardLine": 11
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 7628,
+                        "firstName": "Logan",
+                        "lastName": "Ryan",
+                        "position": "SS",
+                        "jerseyNumber": 33
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 79825,
+                        "firstName": "Ji'Ayir",
+                        "lastName": "Brown",
+                        "position": "FS",
+                        "jerseyNumber": 27
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 43343,
+                        "firstName": "Isiah",
+                        "lastName": "Pacheco",
+                        "position": "RB",
+                        "jerseyNumber": 10
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:02) 22-N.Harris up the middle to PIT 28 for 3 yards (42-D.Williams; 93-L.Joseph).",
+        "rush": {
+            "team": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "rushingPlayer": {
+                "id": 13433,
+                "firstName": "Najee",
+                "lastName": "Harris",
+                "position": "RB",
+                "jerseyNumber": 22
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 25,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 79829,
+                "firstName": "Dorian",
+                "lastName": "Williams",
+                "position": "LB",
+                "jerseyNumber": 42
+            },
+            "assistedTacklingPlayer2": {
+                "id": 7515,
+                "firstName": "Linval",
+                "lastName": "Joseph",
+                "position": "DT",
+                "jerseyNumber": 93
+            },
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 28,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 3,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 478,
+            "teamInPossession": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 25
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 13433,
+                        "firstName": "Najee",
+                        "lastName": "Harris",
+                        "position": "RB",
+                        "jerseyNumber": 22
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79829,
+                        "firstName": "Dorian",
+                        "lastName": "Williams",
+                        "position": "LB",
+                        "jerseyNumber": 42
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7515,
+                        "firstName": "Linval",
+                        "lastName": "Joseph",
+                        "position": "DT",
+                        "jerseyNumber": 93
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(8:34) (No Huddle, Shotgun) 2-J.Fields pass incomplete short right to 11-V.Jefferson.",
+        "pass": {
+            "team": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "passingPlayer": {
+                "id": 30439,
+                "firstName": "Justin",
+                "lastName": "Fields",
+                "position": "QB",
+                "jerseyNumber": 2
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 18635,
+                "firstName": "Van",
+                "lastName": "Jefferson",
+                "position": "WR",
+                "jerseyNumber": 11
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 386,
+            "teamInPossession": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 7,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 33
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 30439,
+                        "firstName": "Justin",
+                        "lastName": "Fields",
+                        "position": "QB",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 18635,
+                        "firstName": "Van",
+                        "lastName": "Jefferson",
+                        "position": "WR",
+                        "jerseyNumber": 11
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(:26) (No Huddle, Shotgun) 19-S.Thompson pass incomplete short right to 83-M.Washington (33-A.Hamilton). ATL-48-B.Trice was injured during the play.",
+        "pass": {
+            "team": {
+                "id": 49,
+                "abbreviation": "MIA"
+            },
+            "passingPlayer": {
+                "id": 44961,
+                "firstName": "Skylar",
+                "lastName": "Thompson",
+                "position": "QB",
+                "jerseyNumber": 19
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 134020,
+                "firstName": "Malik",
+                "lastName": "Washington",
+                "position": "WR",
+                "jerseyNumber": 83
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 9974,
+                "firstName": "Antonio",
+                "lastName": "Hamilton",
+                "position": "CB",
+                "jerseyNumber": 33
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 874,
+            "teamInPossession": {
+                "id": 49,
+                "abbreviation": "MIA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 6,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 68,
+                    "abbreviation": "ATL"
+                },
+                "yardLine": 43
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 9974,
+                        "firstName": "Antonio",
+                        "lastName": "Hamilton",
+                        "position": "CB",
+                        "jerseyNumber": 33
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 44961,
+                        "firstName": "Skylar",
+                        "lastName": "Thompson",
+                        "position": "QB",
+                        "jerseyNumber": 19
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 134020,
+                        "firstName": "Malik",
+                        "lastName": "Washington",
+                        "position": "WR",
+                        "jerseyNumber": 83
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(8:07) 6-J.Gillan punts 34 yards to NO 8, Center-59-C.Kreiter, out of bounds.",
+        "punt": {
+            "kickingTeam": {
+                "id": 53,
+                "abbreviation": "NYG"
+            },
+            "kickingPlayer": {
+                "id": 16846,
+                "firstName": "Jamie",
+                "lastName": "Gillan",
+                "position": "P",
+                "jerseyNumber": 6
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 42,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "retrievingTeam": null,
+            "retrievingPlayer": null,
+            "retrievedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 8,
+                "point": null
+            },
+            "isBlocked": false,
+            "isTouchback": false,
+            "isSafety": false,
+            "isOutOfBounds": true,
+            "isTouchdown": false,
+            "isFairCatch": false,
+            "isLanded": false,
+            "isOnside": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 34,
+            "yardsReturned": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 413,
+            "teamInPossession": {
+                "id": 53,
+                "abbreviation": "NYG"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 4,
+            "yardsRemaining": 4,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 42
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 16846,
+                        "firstName": "Jamie",
+                        "lastName": "Gillan",
+                        "position": "P",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(10:00) 28-J.Mixon up the middle to HOU 47 for 4 yards (97-B.Urban).",
+        "rush": {
+            "team": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "rushingPlayer": {
+                "id": 12843,
+                "firstName": "Joe",
+                "lastName": "Mixon",
+                "position": "RB",
+                "jerseyNumber": 28
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 64,
+                    "abbreviation": "HOU"
+                },
+                "yardLine": 43,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 6163,
+                "firstName": "Brent",
+                "lastName": "Urban",
+                "position": "DT",
+                "jerseyNumber": 97
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 64,
+                    "abbreviation": "HOU"
+                },
+                "yardLine": 47,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 4,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 300,
+            "teamInPossession": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 64,
+                    "abbreviation": "HOU"
+                },
+                "yardLine": 43
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 6163,
+                        "firstName": "Brent",
+                        "lastName": "Urban",
+                        "position": "DT",
+                        "jerseyNumber": 97
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 12843,
+                        "firstName": "Joe",
+                        "lastName": "Mixon",
+                        "position": "RB",
+                        "jerseyNumber": 28
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(1:13) 2-M.Willis scrambles right end to JAX 38 for 20 yards (6-D.Savage).",
+        "rush": {
+            "team": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "rushingPlayer": {
+                "id": 44956,
+                "firstName": "Malik",
+                "lastName": "Willis",
+                "position": "QB",
+                "jerseyNumber": 2
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 42,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 16370,
+                "firstName": "Darnell",
+                "lastName": "Savage",
+                "position": "FS",
+                "jerseyNumber": 6
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 66,
+                    "abbreviation": "JAX"
+                },
+                "yardLine": 38,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 20,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 827,
+            "teamInPossession": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 42
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 44956,
+                        "firstName": "Malik",
+                        "lastName": "Willis",
+                        "position": "QB",
+                        "jerseyNumber": 2
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 16370,
+                        "firstName": "Darnell",
+                        "lastName": "Savage",
+                        "position": "FS",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(9:46) (Shotgun) 9-B.Young pass short right to 18-J.Coker to TB 17 for 15 yards (3-J.Whitehead) [21-M.Edwards].",
+        "pass": {
+            "team": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "passingPlayer": {
+                "id": 79739,
+                "firstName": "Bryce",
+                "lastName": "Young",
+                "position": "QB",
+                "jerseyNumber": 9
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 134524,
+                "firstName": "Jalen",
+                "lastName": "Coker",
+                "position": "WR",
+                "jerseyNumber": 18
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 16235,
+                "firstName": "Mike",
+                "lastName": "Edwards",
+                "position": "SS",
+                "jerseyNumber": 21
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 71,
+                    "abbreviation": "TB"
+                },
+                "yardLine": 17,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 15,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 314,
+            "teamInPossession": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 8,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 71,
+                    "abbreviation": "TB"
+                },
+                "yardLine": 32
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 79739,
+                        "firstName": "Bryce",
+                        "lastName": "Young",
+                        "position": "QB",
+                        "jerseyNumber": 9
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 134524,
+                        "firstName": "Jalen",
+                        "lastName": "Coker",
+                        "position": "WR",
+                        "jerseyNumber": 18
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 16235,
+                        "firstName": "Mike",
+                        "lastName": "Edwards",
+                        "position": "SS",
+                        "jerseyNumber": 21
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(6:57) (Shotgun) 8-W.Levis sacked at TEN 23 for -4 yards (90-L.Van Ness).",
+        "sack": {
+            "team": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "passingPlayer": {
+                "id": 79771,
+                "firstName": "Will",
+                "lastName": "Levis",
+                "position": "QB",
+                "jerseyNumber": 8
+            },
+            "soloTacklingPlayer": {
+                "id": 79751,
+                "firstName": "Lukas",
+                "lastName": "Van Ness",
+                "position": "OLB",
+                "jerseyNumber": 90
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "sackedAtPosition": {
+                "team": {
+                    "id": 67,
+                    "abbreviation": "TEN"
+                },
+                "yardLine": 23,
+                "point": null
+            },
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsLost": 4,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 483,
+            "teamInPossession": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 3,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 67,
+                    "abbreviation": "TEN"
+                },
+                "yardLine": 27
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 79751,
+                        "firstName": "Lukas",
+                        "lastName": "Van Ness",
+                        "position": "OLB",
+                        "jerseyNumber": 90
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79771,
+                        "firstName": "Will",
+                        "lastName": "Levis",
+                        "position": "QB",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(5:05) (Shotgun) 9-M.Stafford pass short middle to 10-C.Kupp to DET 34 for 6 yards (97-A.Hutchinson).",
+        "pass": {
+            "team": {
+                "id": 77,
+                "abbreviation": "LA"
+            },
+            "passingPlayer": {
+                "id": 6825,
+                "firstName": "Matthew",
+                "lastName": "Stafford",
+                "position": "QB",
+                "jerseyNumber": 9
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 13412,
+                "firstName": "Cooper",
+                "lastName": "Kupp",
+                "position": "WR",
+                "jerseyNumber": 10
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 39076,
+                "firstName": "Aidan",
+                "lastName": "Hutchinson",
+                "position": "DE",
+                "jerseyNumber": 97
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 34,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 6,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 595,
+            "teamInPossession": {
+                "id": 77,
+                "abbreviation": "LA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 40
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 6825,
+                        "firstName": "Matthew",
+                        "lastName": "Stafford",
+                        "position": "QB",
+                        "jerseyNumber": 9
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 13412,
+                        "firstName": "Cooper",
+                        "lastName": "Kupp",
+                        "position": "WR",
+                        "jerseyNumber": 10
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 39076,
+                        "firstName": "Aidan",
+                        "lastName": "Hutchinson",
+                        "position": "DE",
+                        "jerseyNumber": 97
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:51) (Shotgun) 11-M.Trubisky pass short left to 22-R.Davis to BUF 43 for -1 yards (28-A.Austin).",
+        "pass": {
+            "team": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "passingPlayer": {
+                "id": 12831,
+                "firstName": "Mitchell",
+                "lastName": "Trubisky",
+                "position": "QB",
+                "jerseyNumber": 11
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 133963,
+                "firstName": "Ray",
+                "lastName": "Davis",
+                "position": "RB",
+                "jerseyNumber": 22
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 111933,
+                "firstName": "Alex",
+                "lastName": "Austin",
+                "position": "CB",
+                "jerseyNumber": 28
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 43,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": -1,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 429,
+            "teamInPossession": {
+                "id": 48,
+                "abbreviation": "BUF"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 44
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 12831,
+                        "firstName": "Mitchell",
+                        "lastName": "Trubisky",
+                        "position": "QB",
+                        "jerseyNumber": 11
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 133963,
+                        "firstName": "Ray",
+                        "lastName": "Davis",
+                        "position": "RB",
+                        "jerseyNumber": 22
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 111933,
+                        "firstName": "Alex",
+                        "lastName": "Austin",
+                        "position": "CB",
+                        "jerseyNumber": 28
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:06) (Shotgun) 23-R.Dowdle left guard for 2 yards, TOUCHDOWN.",
+        "rush": {
+            "team": {
+                "id": 52,
+                "abbreviation": "DAL"
+            },
+            "rushingPlayer": {
+                "id": 24114,
+                "firstName": "Rico",
+                "lastName": "Dowdle",
+                "position": "RB",
+                "jerseyNumber": 23
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 55,
+                    "abbreviation": "WAS"
+                },
+                "yardLine": 2,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 55,
+                    "abbreviation": "WAS"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": true,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 2,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 474,
+            "teamInPossession": {
+                "id": 52,
+                "abbreviation": "DAL"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 2,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 55,
+                    "abbreviation": "WAS"
+                },
+                "yardLine": 2
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 24114,
+                        "firstName": "Rico",
+                        "lastName": "Dowdle",
+                        "position": "RB",
+                        "jerseyNumber": 23
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(2:07) PENALTY on SF-82-E.Saubert, False Start, 5 yards, enforced at SF 13 - No Play.",
+        "penalty": {
+            "penalty": {
+                "team": {
+                    "id": 78,
+                    "abbreviation": "SF"
+                },
+                "penalizedPlayer": {
+                    "id": 12738,
+                    "firstName": "Eric",
+                    "lastName": "Saubert",
+                    "position": "TE",
+                    "jerseyNumber": 82
+                },
+                "enforcedAtPosition": {
+                    "team": {
+                        "id": 78,
+                        "abbreviation": "SF"
+                    },
+                    "yardLine": 13,
+                    "point": null
+                },
+                "description": "False Start",
+                "isCancelsPlay": true,
+                "yardsPenalized": 5
+            },
+            "isFirstDownPenalty": false,
+            "isNoPlay": true
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 773,
+            "teamInPossession": {
+                "id": 78,
+                "abbreviation": "SF"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 78,
+                    "abbreviation": "SF"
+                },
+                "yardLine": 13
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 12738,
+                        "firstName": "Eric",
+                        "lastName": "Saubert",
+                        "position": "TE",
+                        "jerseyNumber": 82
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "TWO-POINT CONVERSION ATTEMPT. 8-J.Jacobs rushes left guard. ATTEMPT FAILS.",
+        "rush": {
+            "team": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "rushingPlayer": {
+                "id": 16034,
+                "firstName": "Josh",
+                "lastName": "Jacobs",
+                "position": "RB",
+                "jerseyNumber": 8
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 60,
+                    "abbreviation": "CHI"
+                },
+                "yardLine": 2,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": null,
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": true,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 721,
+            "teamInPossession": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 0,
+            "yardsRemaining": 0,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 60,
+                    "abbreviation": "CHI"
+                },
+                "yardLine": 2
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 16034,
+                        "firstName": "Josh",
+                        "lastName": "Jacobs",
+                        "position": "RB",
+                        "jerseyNumber": 8
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(10:15) (Shotgun) 10-B.Nix pass short left to 38-J.McLaughlin pushed ob at DEN 19 for 6 yards (99-O.Oweh).",
+        "pass": {
+            "team": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "passingPlayer": {
+                "id": 133846,
+                "firstName": "Bo",
+                "lastName": "Nix",
+                "position": "QB",
+                "jerseyNumber": 10
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 112076,
+                "firstName": "Jaleel",
+                "lastName": "McLaughlin",
+                "position": "RB",
+                "jerseyNumber": 38
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 30455,
+                "firstName": "Odafe",
+                "lastName": "Oweh",
+                "position": "LB",
+                "jerseyNumber": 99
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": null,
+                "yardLine": 19,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": true,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 6,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 285,
+            "teamInPossession": {
+                "id": 72,
+                "abbreviation": "DEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 13
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 133846,
+                        "firstName": "Bo",
+                        "lastName": "Nix",
+                        "position": "QB",
+                        "jerseyNumber": 10
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 112076,
+                        "firstName": "Jaleel",
+                        "lastName": "McLaughlin",
+                        "position": "RB",
+                        "jerseyNumber": 38
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 30455,
+                        "firstName": "Odafe",
+                        "lastName": "Oweh",
+                        "position": "LB",
+                        "jerseyNumber": 99
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(4:18) (Shotgun) 7-G.Smith pass incomplete short right to 86-P.Brown (15-J.Phillips).",
+        "pass": {
+            "team": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "passingPlayer": {
+                "id": 19276,
+                "firstName": "Geno",
+                "lastName": "Smith",
+                "position": "QB",
+                "jerseyNumber": 7
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 13430,
+                "firstName": "Pharaoh",
+                "lastName": "Brown",
+                "position": "TE",
+                "jerseyNumber": 86
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 30446,
+                "firstName": "Jaelan",
+                "lastName": "Phillips",
+                "position": "OLB",
+                "jerseyNumber": 15
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 642,
+            "teamInPossession": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 16,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 79,
+                    "abbreviation": "SEA"
+                },
+                "yardLine": 31
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 30446,
+                        "firstName": "Jaelan",
+                        "lastName": "Phillips",
+                        "position": "OLB",
+                        "jerseyNumber": 15
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 19276,
+                        "firstName": "Geno",
+                        "lastName": "Smith",
+                        "position": "QB",
+                        "jerseyNumber": 7
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 13430,
+                        "firstName": "Pharaoh",
+                        "lastName": "Brown",
+                        "position": "TE",
+                        "jerseyNumber": 86
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "44-B.Narveson kicks 65 yards from GB 35 to end zone, Touchback to the MIN 30.",
+        "kick": {
+            "kickingTeam": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "kickingPlayer": {
+                "id": 134352,
+                "firstName": "Brayden",
+                "lastName": "Narveson",
+                "position": "K",
+                "jerseyNumber": 44
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 35,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "retrievingTeam": {
+                "id": 63,
+                "abbreviation": "MIN"
+            },
+            "retrievingPlayer": null,
+            "retrievedAtPosition": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 63,
+                    "abbreviation": "MIN"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "isBlocked": false,
+            "isTouchback": true,
+            "isSafety": false,
+            "isOutOfBounds": false,
+            "isTouchdown": false,
+            "isFairCatch": false,
+            "isLanded": false,
+            "isOnside": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 65,
+            "yardsReturned": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 202,
+            "teamInPossession": {
+                "id": 62,
+                "abbreviation": "GB"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 0,
+            "yardsRemaining": 0,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 62,
+                    "abbreviation": "GB"
+                },
+                "yardLine": 35
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 134352,
+                        "firstName": "Brayden",
+                        "lastName": "Narveson",
+                        "position": "K",
+                        "jerseyNumber": 44
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(4:40) (Shotgun) 11-M.Rudolph pass short right intended for 15-N.Westbrook-Ikhine INTERCEPTED by 3-D.Hamlin (47-C.Benford) at BUF 16. 3-D.Hamlin to BUF 16 for no gain (15-N.Westbrook-Ikhine).",
+        "pass": {
+            "team": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "passingPlayer": {
+                "id": 14743,
+                "firstName": "Mason",
+                "lastName": "Rudolph",
+                "position": "QB",
+                "jerseyNumber": 11
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 23257,
+                "firstName": "Nick",
+                "lastName": "Westbrook-Ikhine",
+                "position": "WR",
+                "jerseyNumber": 15
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": {
+                "id": 30697,
+                "firstName": "Damar",
+                "lastName": "Hamlin",
+                "position": "DB",
+                "jerseyNumber": 3
+            },
+            "interceptedAtPosition": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 16,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 23257,
+                "firstName": "Nick",
+                "lastName": "Westbrook-Ikhine",
+                "position": "WR",
+                "jerseyNumber": 15
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 16,
+                "point": null
+            },
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 4,
+            "secondsElapsed": 620,
+            "teamInPossession": {
+                "id": 67,
+                "abbreviation": "TEN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 4,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 48,
+                    "abbreviation": "BUF"
+                },
+                "yardLine": 20
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 14743,
+                        "firstName": "Mason",
+                        "lastName": "Rudolph",
+                        "position": "QB",
+                        "jerseyNumber": 11
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 23257,
+                        "firstName": "Nick",
+                        "lastName": "Westbrook-Ikhine",
+                        "position": "WR",
+                        "jerseyNumber": 15
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 23257,
+                        "firstName": "Nick",
+                        "lastName": "Westbrook-Ikhine",
+                        "position": "WR",
+                        "jerseyNumber": 15
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 30697,
+                        "firstName": "Damar",
+                        "lastName": "Hamlin",
+                        "position": "DB",
+                        "jerseyNumber": 3
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(5:33) 5-J.Myers 36 yard field goal is GOOD, Center-41-C.Stoll, Holder-4-M.Dickson.",
+        "fieldGoalAttempt": {
+            "team": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "kickingPlayer": {
+                "id": 7266,
+                "firstName": "Jason",
+                "lastName": "Myers",
+                "position": "K",
+                "jerseyNumber": 5
+            },
+            "centerPlayer": {
+                "id": 112349,
+                "firstName": "Chris",
+                "lastName": "Stoll",
+                "position": "LS",
+                "jerseyNumber": 41
+            },
+            "holdingPlayer": {
+                "id": 14732,
+                "firstName": "Michael",
+                "lastName": "Dickson",
+                "position": "P",
+                "jerseyNumber": 4
+            },
+            "kickedFromPosition": {
+                "team": {
+                    "id": 76,
+                    "abbreviation": "ARI"
+                },
+                "yardLine": 26,
+                "point": null
+            },
+            "blockingPlayer": null,
+            "blockedAtPosition": null,
+            "isBlocked": false,
+            "isGood": true,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsKicked": 36,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 567,
+            "teamInPossession": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": null,
+            "yardsRemaining": null,
+            "lineOfScrimmage": null,
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 7266,
+                        "firstName": "Jason",
+                        "lastName": "Myers",
+                        "position": "K",
+                        "jerseyNumber": 5
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 14732,
+                        "firstName": "Michael",
+                        "lastName": "Dickson",
+                        "position": "P",
+                        "jerseyNumber": 4
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 112349,
+                        "firstName": "Chris",
+                        "lastName": "Stoll",
+                        "position": "LS",
+                        "jerseyNumber": 41
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(3:02) (Shotgun) 18-K.Cousins pass incomplete short right to 5-D.London.",
+        "pass": {
+            "team": {
+                "id": 68,
+                "abbreviation": "ATL"
+            },
+            "passingPlayer": {
+                "id": 8731,
+                "firstName": "Kirk",
+                "lastName": "Cousins",
+                "position": "QB",
+                "jerseyNumber": 18
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 39082,
+                "firstName": "Drake",
+                "lastName": "London",
+                "position": "WR",
+                "jerseyNumber": 5
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 718,
+            "teamInPossession": {
+                "id": 68,
+                "abbreviation": "ATL"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 7,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 72,
+                    "abbreviation": "DEN"
+                },
+                "yardLine": 32
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 8731,
+                        "firstName": "Kirk",
+                        "lastName": "Cousins",
+                        "position": "QB",
+                        "jerseyNumber": 18
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 39082,
+                        "firstName": "Drake",
+                        "lastName": "London",
+                        "position": "WR",
+                        "jerseyNumber": 5
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": []
+        }
+    },
+    {
+        "description": "(9:01) (Shotgun) 31-D.Pierce right guard to NYG 6 for 1 yard (5D-K.Thibodeaux).",
+        "rush": {
+            "team": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "rushingPlayer": {
+                "id": 43341,
+                "firstName": "Dameon",
+                "lastName": "Pierce",
+                "position": "RB",
+                "jerseyNumber": 31
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 53,
+                    "abbreviation": "NYG"
+                },
+                "yardLine": 7,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 39079,
+                "firstName": "Kayvon",
+                "lastName": "Thibodeaux",
+                "position": "OLB",
+                "jerseyNumber": 5
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 53,
+                    "abbreviation": "NYG"
+                },
+                "yardLine": 6,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 1,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 359,
+            "teamInPossession": {
+                "id": 64,
+                "abbreviation": "HOU"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 7,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 53,
+                    "abbreviation": "NYG"
+                },
+                "yardLine": 7
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 39079,
+                        "firstName": "Kayvon",
+                        "lastName": "Thibodeaux",
+                        "position": "OLB",
+                        "jerseyNumber": 5
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 43341,
+                        "firstName": "Dameon",
+                        "lastName": "Pierce",
+                        "position": "RB",
+                        "jerseyNumber": 31
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(2:43) (Shotgun) 27-J.Dobbins left end ran ob at NO 20 for 9 yards (23-M.Lattimore).",
+        "rush": {
+            "team": {
+                "id": 75,
+                "abbreviation": "LAC"
+            },
+            "rushingPlayer": {
+                "id": 18561,
+                "firstName": "J.K.",
+                "lastName": "Dobbins",
+                "position": "RB",
+                "jerseyNumber": 27
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 29,
+                "point": null
+            },
+            "soloTacklingPlayer": {
+                "id": 13256,
+                "firstName": "Marshon",
+                "lastName": "Lattimore",
+                "position": "CB",
+                "jerseyNumber": 23
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 20,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": true,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 9,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 737,
+            "teamInPossession": {
+                "id": 75,
+                "abbreviation": "LAC"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 7,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 70,
+                    "abbreviation": "NO"
+                },
+                "yardLine": 29
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 13256,
+                        "firstName": "Marshon",
+                        "lastName": "Lattimore",
+                        "position": "CB",
+                        "jerseyNumber": 23
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 18561,
+                        "firstName": "J.K.",
+                        "lastName": "Dobbins",
+                        "position": "RB",
+                        "jerseyNumber": 27
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(:52) (Shotgun) 9-J.Burrow pass incomplete deep left.",
+        "pass": {
+            "team": {
+                "id": 57,
+                "abbreviation": "CIN"
+            },
+            "passingPlayer": {
+                "id": 18577,
+                "firstName": "Joe",
+                "lastName": "Burrow",
+                "position": "QB",
+                "jerseyNumber": 9
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": null,
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": null,
+            "isCompleted": false,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 0,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 2,
+            "secondsElapsed": 848,
+            "teamInPossession": {
+                "id": 57,
+                "abbreviation": "CIN"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 18,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 58,
+                    "abbreviation": "CLE"
+                },
+                "yardLine": 45
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 18577,
+                        "firstName": "Joe",
+                        "lastName": "Burrow",
+                        "position": "QB",
+                        "jerseyNumber": 9
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(6:48) (No Huddle, Shotgun) 26-Z.Charbonnet left guard for 4 yards, TOUCHDOWN.",
+        "rush": {
+            "team": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "rushingPlayer": {
+                "id": 79790,
+                "firstName": "Zach",
+                "lastName": "Charbonnet",
+                "position": "RB",
+                "jerseyNumber": 26
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 49,
+                    "abbreviation": "MIA"
+                },
+                "yardLine": 4,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 49,
+                    "abbreviation": "MIA"
+                },
+                "yardLine": 0,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": false,
+            "isEndedWithTouchdown": true,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsRushed": 4,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 492,
+            "teamInPossession": {
+                "id": 79,
+                "abbreviation": "SEA"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 4,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 49,
+                    "abbreviation": "MIA"
+                },
+                "yardLine": 4
+            },
+            "awayPlayersOnField": [],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 79790,
+                        "firstName": "Zach",
+                        "lastName": "Charbonnet",
+                        "position": "RB",
+                        "jerseyNumber": 26
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(7:14) 6-J.Conner up the middle to DET 22 for 6 yards (46-J.Campbell; 92-M.Davenport). PENALTY on ARI-76-W.Hernandez, Offensive Holding, 10 yards, enforced at DET 28 - No Play.",
+        "rush": {
+            "team": {
+                "id": 76,
+                "abbreviation": "ARI"
+            },
+            "rushingPlayer": {
+                "id": 13188,
+                "firstName": "James",
+                "lastName": "Conner",
+                "position": "RB",
+                "jerseyNumber": 6
+            },
+            "rushedFromPosition": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 28,
+                "point": null
+            },
+            "soloTacklingPlayer": null,
+            "assistedTacklingPlayer1": {
+                "id": 79756,
+                "firstName": "Jack",
+                "lastName": "Campbell",
+                "position": "LB",
+                "jerseyNumber": 46
+            },
+            "assistedTacklingPlayer2": {
+                "id": 14505,
+                "firstName": "Marcus",
+                "lastName": "Davenport",
+                "position": "DE",
+                "jerseyNumber": 92
+            },
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 22,
+                "point": null
+            },
+            "rushType": null,
+            "rushDirection": null,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": true,
+            "yardsRushed": 6,
+            "subPlays": [],
+            "penalties": [
+                {
+                    "penalty": {
+                        "team": {
+                            "id": 76,
+                            "abbreviation": "ARI"
+                        },
+                        "penalizedPlayer": {
+                            "id": 15393,
+                            "firstName": "Will",
+                            "lastName": "Hernandez",
+                            "position": "G",
+                            "jerseyNumber": 76
+                        },
+                        "enforcedAtPosition": {
+                            "team": {
+                                "id": 61,
+                                "abbreviation": "DET"
+                            },
+                            "yardLine": 28,
+                            "point": null
+                        },
+                        "description": "Offensive Holding",
+                        "isCancelsPlay": true,
+                        "yardsPenalized": 10
+                    }
+                }
+            ]
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 466,
+            "teamInPossession": {
+                "id": 76,
+                "abbreviation": "ARI"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 1,
+            "yardsRemaining": 10,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 61,
+                    "abbreviation": "DET"
+                },
+                "yardLine": 28
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 79756,
+                        "firstName": "Jack",
+                        "lastName": "Campbell",
+                        "position": "LB",
+                        "jerseyNumber": 46
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 14505,
+                        "firstName": "Marcus",
+                        "lastName": "Davenport",
+                        "position": "DE",
+                        "jerseyNumber": 92
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 13188,
+                        "firstName": "James",
+                        "lastName": "Conner",
+                        "position": "RB",
+                        "jerseyNumber": 6
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(14:34) (No Huddle) 3-R.Wilson pass short right to 81-M.Pruitt to PIT 37 for -1 yards (30-D.Bush).",
+        "pass": {
+            "team": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "passingPlayer": {
+                "id": 8283,
+                "firstName": "Russell",
+                "lastName": "Wilson",
+                "position": "QB",
+                "jerseyNumber": 3
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 7484,
+                "firstName": "MyCole",
+                "lastName": "Pruitt",
+                "position": "TE",
+                "jerseyNumber": 81
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 16824,
+                "firstName": "Devin",
+                "lastName": "Bush",
+                "position": "ILB",
+                "jerseyNumber": 30
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 37,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": -1,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 1,
+            "secondsElapsed": 26,
+            "teamInPossession": {
+                "id": 59,
+                "abbreviation": "PIT"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 2,
+            "yardsRemaining": 2,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 59,
+                    "abbreviation": "PIT"
+                },
+                "yardLine": 38
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 16824,
+                        "firstName": "Devin",
+                        "lastName": "Bush",
+                        "position": "ILB",
+                        "jerseyNumber": 30
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 8283,
+                        "firstName": "Russell",
+                        "lastName": "Wilson",
+                        "position": "QB",
+                        "jerseyNumber": 3
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 7484,
+                        "firstName": "MyCole",
+                        "lastName": "Pruitt",
+                        "position": "TE",
+                        "jerseyNumber": 81
+                    },
+                    "position": null
+                }
+            ]
+        }
+    },
+    {
+        "description": "(5:58) (Shotgun) 16-J.Plummer pass short left to 49-F.Franks to NYJ 18 for 1 yard (53-Z.Barnes).",
+        "pass": {
+            "team": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "passingPlayer": {
+                "id": 134614,
+                "firstName": "Jack",
+                "lastName": "Plummer",
+                "position": "QB",
+                "jerseyNumber": 16
+            },
+            "passedFromPosition": null,
+            "receivingPlayer": {
+                "id": 30263,
+                "firstName": "Feleipe",
+                "lastName": "Franks",
+                "position": "QB",
+                "jerseyNumber": 49
+            },
+            "receivedAtPosition": null,
+            "interceptingPlayer": null,
+            "interceptedAtPosition": null,
+            "soloTacklingPlayer": {
+                "id": 108870,
+                "firstName": "Zaire",
+                "lastName": "Barnes",
+                "position": "LB",
+                "jerseyNumber": 53
+            },
+            "assistedTacklingPlayer1": null,
+            "assistedTacklingPlayer2": null,
+            "passType": null,
+            "passDirection": null,
+            "passDistance": null,
+            "stoppedAtPosition": {
+                "team": {
+                    "id": 51,
+                    "abbreviation": "NYJ"
+                },
+                "yardLine": 18,
+                "point": null
+            },
+            "isCompleted": true,
+            "isOutOfBounds": false,
+            "isTackled": true,
+            "isEndedWithTouchdown": false,
+            "isTwoPointConversion": false,
+            "isFirstDownPenalty": false,
+            "isNoPlay": false,
+            "yardsPassed": 0,
+            "yardsRushed": 0,
+            "yardsIntercepted": 0,
+            "totalYardsGained": 1,
+            "subPlays": [],
+            "penalties": []
+        },
+        "playStatus": {
+            "quarter": 3,
+            "secondsElapsed": 542,
+            "teamInPossession": {
+                "id": 69,
+                "abbreviation": "CAR"
+            },
+            "overallDriveNum": null,
+            "teamDriveNum": null,
+            "currentDown": 3,
+            "yardsRemaining": 1,
+            "lineOfScrimmage": {
+                "team": {
+                    "id": 51,
+                    "abbreviation": "NYJ"
+                },
+                "yardLine": 19
+            },
+            "awayPlayersOnField": [
+                {
+                    "player": {
+                        "id": 108870,
+                        "firstName": "Zaire",
+                        "lastName": "Barnes",
+                        "position": "LB",
+                        "jerseyNumber": 53
+                    },
+                    "position": null
+                }
+            ],
+            "homePlayersOnField": [
+                {
+                    "player": {
+                        "id": 134614,
+                        "firstName": "Jack",
+                        "lastName": "Plummer",
+                        "position": "QB",
+                        "jerseyNumber": 16
+                    },
+                    "position": null
+                },
+                {
+                    "player": {
+                        "id": 30263,
+                        "firstName": "Feleipe",
+                        "lastName": "Franks",
+                        "position": "QB",
+                        "jerseyNumber": 49
+                    },
+                    "position": null
+                }
+            ]
+        }
+    }
+]

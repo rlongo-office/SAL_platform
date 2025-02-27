@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:s="http://feed.elasticstats.com/schema/football/tournaments-v7.0.xsd"
+           targetNamespace="http://feed.elasticstats.com/schema/football/tournaments-v7.0.xsd"
+           elementFormDefault="qualified">
+
+  <xs:include schemaLocation="common-v7.0.xsd"/>
+  <xs:include schemaLocation="common-game-v7.0.xsd"/>
+
+  <xs:complexType name="leagueType">
+    <xs:choice>
+      <xs:element name="season-schedule" maxOccurs="1">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="s:scheduleType">
+              <xs:attribute name="id" use="required" type="xs:string"/>
+              <xs:attribute name="type" use="required" type="xs:string"/>
+              <xs:attribute name="year" use="required" type="xs:integer"/>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="tournament-schedule" maxOccurs="1">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="s:tournament-scheduleType"/>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+
+    </xs:choice>
+    <xs:attributeGroup ref="s:baseOrganizationAttributes" />
+  </xs:complexType>
+
+  <xs:element name="league" type="s:leagueType" />
+
+  <xs:complexType name="scheduleType">
+    <xs:choice>
+      <xs:element name="tournament" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="id" use="required" type="xs:string" />
+          <xs:attribute name="name" use="optional" type="xs:string" />
+          <xs:attribute name="location" use="optional" type="xs:string" />
+          <xs:attributeGroup ref="s:eventStatusAttributes" />
+          <xs:attribute name="start_date" use="optional" type="xs:date" />
+          <xs:attribute name="end_date" use="optional" type="xs:date" />
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="locationType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="lat" use="optional"/>
+        <xs:attribute type="xs:string" name="lng" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="periodType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="period_type" use="optional"/>
+        <xs:attribute type="xs:string" name="id" use="optional"/>
+        <xs:attribute type="xs:string" name="number" use="optional"/>
+        <xs:attribute type="xs:string" name="sequence" use="optional"/>
+        <xs:attribute type="xs:string" name="home_points" use="optional"/>
+        <xs:attribute type="xs:string" name="away_points" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="scoringType">
+    <xs:sequence>
+      <xs:element type="s:periodType" name="period" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="home_points"/>
+    <xs:attribute type="xs:string" name="away_points"/>
+  </xs:complexType>
+  <xs:complexType name="gameType">
+    <xs:sequence>
+      <xs:element type="s:timezonesType" name="time_zones"/>
+      <xs:element type="s:venueType" name="venue" minOccurs="0"/>
+      <xs:element type="s:gameTeamType" name="home"/>
+      <xs:element type="s:gameTeamType" name="away"/>
+      <xs:element type="s:scoringType" name="scoring" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="title" use="optional"/>
+    <xs:attribute type="xs:string" name="parent_id" use="optional"/>
+    <xs:attribute type="xs:string" name="status" use="optional"/>
+    <xs:attribute type="xs:string" name="coverage" use="optional"/>
+    <xs:attribute type="xs:string" name="game_type" use="optional"/>
+    <xs:attribute type="xs:string" name="local_game_date" use="optional"/>
+    <xs:attribute type="xs:string" name="scheduled" use="optional"/>
+    <xs:attribute type="xs:string" name="entry_mode" use="optional"/>
+    <xs:attribute type="xs:string" name="weather" use="optional"/>
+    <xs:attribute type="xs:string" name="conference_game" use="optional"/>
+    <xs:attribute type="xs:string" name="home_team" use="optional"/>
+    <xs:attribute type="xs:string" name="away_team" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="bracketType">
+    <xs:sequence>
+      <xs:element type="s:gameType" name="game"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+    <xs:attribute type="xs:string" name="location" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="roundType">
+    <xs:sequence>
+      <xs:element type="s:bracketType" name="bracket" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="s:gameType" name="game" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="sequence" use="optional"/>
+    <xs:attribute type="xs:string" name="name" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="tournament-scheduleType">
+    <xs:sequence>
+      <xs:element type="s:roundType" name="round" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+    <xs:attribute type="xs:string" name="name"/>
+    <xs:attribute type="xs:string" name="location"/>
+    <xs:attribute type="xs:string" name="status"/>
+  </xs:complexType>
+</xs:schema>

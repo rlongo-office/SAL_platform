@@ -1,0 +1,49 @@
+# Ignore virtual environments
+venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Log files
+*.log
+logs/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python egg and package distribution files
+*.egg-info/
+dist/
+build/
+
+# Ignore temporary files
+*.swp
+*.swo
+*.bak
+
+# Ignore editor/IDE configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore test coverage reports
+.coverage
+htmlcov/
+.cache/
+
+# Ignore pip environment files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore poetry virtual environments
+.poetry/
+
+# Ignore Pyenv and other virtual environments
+.pyenv/
