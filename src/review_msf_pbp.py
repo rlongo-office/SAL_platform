@@ -37,15 +37,14 @@ LEXICON = {
     "blocking": ["pocket collapses", "pancake block", "offensive line", "pulling guard", "chip block"]
 }
 
-# Function to analyze play descriptions
+# Function to analyze play descriptions and log word frequency counts
 def analyze_pbp_descriptions():
     word_counts = defaultdict(int)  # Store word occurrence counts
-    play_matches = defaultdict(list)  # Store play descriptions that match words
+    total_plays = 0
 
     # Retrieve all pbp documents
     cursor = pbp_collection.find({})
-    total_plays = 0
-
+    
     for doc in cursor:
         plays = doc.get("response", {}).get("plays", [])
         
@@ -58,17 +57,12 @@ def analyze_pbp_descriptions():
                 for word in words:
                     if re.search(rf"\b{word}\b", description):  # Match whole words
                         word_counts[word] += 1
-                        play_matches[word].append(description)
 
-    # Log results
+    # Log total word counts
     logging.info(f"✅ Total Plays Processed: {total_plays}")
-    logging.info(f"✅ Word Occurrences: {dict(word_counts)}")
-
-    # Print some examples of matches for each category
-    for word, matches in play_matches.items():
-        logging.info(f"📌 Examples for '{word}':")
-        for example in matches[:3]:  # Log only first 3 examples for each word
-            logging.info(f"   - {example}")
+    logging.info(f"✅ Word Frequency Counts:")
+    for word, count in sorted(word_counts.items(), key=lambda x: x[1], reverse=True):
+        logging.info(f"   {word}: {count} occurrences")
 
 # Run the analysis
 analyze_pbp_descriptions()

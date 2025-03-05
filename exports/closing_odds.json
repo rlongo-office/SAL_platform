@@ -1,0 +1,767 @@
+[
+    {
+        "close_time": "2024-09-08T20:01:10",
+        "close_outcome": "home",
+        "close_odds": -549
+    },
+    {
+        "close_time": "2024-09-08T22:36:27",
+        "close_outcome": "home",
+        "close_odds": -300
+    },
+    {
+        "close_time": "2024-09-08T22:36:27",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2024-09-09T03:36:42",
+        "close_outcome": "home",
+        "close_odds": -2500
+    },
+    {
+        "close_time": "2024-09-15T19:47:43",
+        "close_outcome": "home",
+        "close_odds": -3333
+    },
+    {
+        "close_time": "2024-09-15T19:53:00",
+        "close_outcome": "home",
+        "close_odds": 1000
+    },
+    {
+        "close_time": "2024-09-16T03:40:26",
+        "close_outcome": "home",
+        "close_odds": -3333
+    },
+    {
+        "close_time": "2024-09-22T19:59:41",
+        "close_outcome": "home",
+        "close_odds": 310
+    },
+    {
+        "close_time": "2024-09-24T00:35:44",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2024-09-27T03:12:48",
+        "close_outcome": "home",
+        "close_odds": 475
+    },
+    {
+        "close_time": "2024-09-29T23:10:35",
+        "close_outcome": "home",
+        "close_odds": 1200
+    },
+    {
+        "close_time": "2024-10-01T02:55:42",
+        "close_outcome": "home",
+        "close_odds": -1600
+    },
+    {
+        "close_time": "2024-10-06T16:46:11",
+        "close_outcome": "home",
+        "close_odds": -250
+    },
+    {
+        "close_time": "2024-10-06T18:22:02",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2024-10-11T00:24:53",
+        "close_outcome": "home",
+        "close_odds": -190
+    },
+    {
+        "close_time": "2024-11-10T20:49:25",
+        "close_outcome": "home",
+        "close_odds": 1700
+    },
+    {
+        "close_time": "2024-11-10T20:54:26",
+        "close_outcome": "home",
+        "close_odds": 375
+    },
+    {
+        "close_time": "2024-11-11T04:34:39",
+        "close_outcome": "home",
+        "close_odds": 550
+    },
+    {
+        "close_time": "2024-11-21T22:41:26",
+        "close_outcome": "home",
+        "close_odds": 165
+    },
+    {
+        "close_time": "2024-11-22T04:16:40",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2024-12-08T21:19:59",
+        "close_outcome": "home",
+        "close_odds": 115
+    },
+    {
+        "close_time": "2024-12-09T00:15:05",
+        "close_outcome": "home",
+        "close_odds": -350
+    },
+    {
+        "close_time": "2024-12-09T04:06:58",
+        "close_outcome": "home",
+        "close_odds": -185
+    },
+    {
+        "close_time": "2024-01-21T23:01:04",
+        "close_outcome": "home",
+        "close_odds": -25000
+    },
+    {
+        "close_time": "2024-08-09T01:56:28",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2024-08-10T22:32:58",
+        "close_outcome": "home",
+        "close_odds": 2000
+    },
+    {
+        "close_time": "2024-08-18T01:38:28",
+        "close_outcome": "home",
+        "close_odds": 1200
+    },
+    {
+        "close_time": "2024-08-19T02:24:11",
+        "close_outcome": "home",
+        "close_odds": -25000
+    },
+    {
+        "close_time": "2024-08-24T23:15:01",
+        "close_outcome": "home",
+        "close_odds": 1400
+    },
+    {
+        "close_time": "2024-08-25T22:56:42",
+        "close_outcome": "home",
+        "close_odds": -12500
+    },
+    {
+        "close_time": "2024-10-27T12:57:53",
+        "close_outcome": "home",
+        "close_odds": 165
+    },
+    {
+        "close_time": "2024-10-27T13:11:15",
+        "close_outcome": "home",
+        "close_odds": -145
+    },
+    {
+        "close_time": "2024-10-29T03:07:15",
+        "close_outcome": "home",
+        "close_odds": -800
+    },
+    {
+        "close_time": "2024-11-15T03:49:53",
+        "close_outcome": "home",
+        "close_odds": -5000
+    },
+    {
+        "close_time": "2024-11-17T21:19:27",
+        "close_outcome": "home",
+        "close_odds": -1613
+    },
+    {
+        "close_time": "2024-11-17T20:54:30",
+        "close_outcome": "home",
+        "close_odds": 180
+    },
+    {
+        "close_time": "2024-11-29T03:57:42",
+        "close_outcome": "home",
+        "close_odds": -5000
+    },
+    {
+        "close_time": "2024-12-01T20:59:56",
+        "close_outcome": "home",
+        "close_odds": -2000
+    },
+    {
+        "close_time": "2024-12-15T21:12:55",
+        "close_outcome": "home",
+        "close_odds": 800
+    },
+    {
+        "close_time": "2024-12-15T20:12:54",
+        "close_outcome": "home",
+        "close_odds": 1400
+    },
+    {
+        "close_time": "2024-12-16T00:03:01",
+        "close_outcome": "home",
+        "close_odds": -3333
+    },
+    {
+        "close_time": "2024-12-23T04:34:15",
+        "close_outcome": "home",
+        "close_odds": -250
+    },
+    {
+        "close_time": "2024-12-30T04:36:06",
+        "close_outcome": "home",
+        "close_odds": -1613
+    },
+    {
+        "close_time": "2025-01-05T22:26:32",
+        "close_outcome": "home",
+        "close_odds": 140
+    },
+    {
+        "close_time": "2025-01-05T22:26:32",
+        "close_outcome": "home",
+        "close_odds": -130
+    },
+    {
+        "close_time": "2025-01-05T22:26:32",
+        "close_outcome": "home",
+        "close_odds": -105
+    },
+    {
+        "close_time": "2023-08-28T03:03:07",
+        "close_outcome": "home",
+        "close_odds": 675
+    },
+    {
+        "close_time": "2023-09-10T23:13:48",
+        "close_outcome": "home",
+        "close_odds": 350
+    },
+    {
+        "close_time": "2023-09-24T19:43:08",
+        "close_outcome": "home",
+        "close_odds": -7500
+    },
+    {
+        "close_time": "2023-09-24T19:13:06",
+        "close_outcome": "home",
+        "close_odds": 2000
+    },
+    {
+        "close_time": "2023-09-24T23:13:34",
+        "close_outcome": "home",
+        "close_odds": -5000
+    },
+    {
+        "close_time": "2023-10-01T19:38:24",
+        "close_outcome": "home",
+        "close_odds": -450
+    },
+    {
+        "close_time": "2023-10-01T19:39:28",
+        "close_outcome": "home",
+        "close_odds": 550
+    },
+    {
+        "close_time": "2023-10-15T23:21:53",
+        "close_outcome": "home",
+        "close_odds": -1600
+    },
+    {
+        "close_time": "2023-10-15T23:31:52",
+        "close_outcome": "home",
+        "close_odds": -300
+    },
+    {
+        "close_time": "2023-11-05T21:15:54",
+        "close_outcome": "home",
+        "close_odds": 750
+    },
+    {
+        "close_time": "2023-11-17T04:01:48",
+        "close_outcome": "home",
+        "close_odds": -220
+    },
+    {
+        "close_time": "2023-11-24T03:58:42",
+        "close_outcome": "home",
+        "close_odds": 1200
+    },
+    {
+        "close_time": "2023-11-26T21:03:28",
+        "close_outcome": "home",
+        "close_odds": -5000
+    },
+    {
+        "close_time": "2023-11-27T01:02:04",
+        "close_outcome": "home",
+        "close_odds": -118
+    },
+    {
+        "close_time": "2023-11-28T04:02:15",
+        "close_outcome": "home",
+        "close_odds": 150
+    },
+    {
+        "close_time": "2023-12-03T20:50:28",
+        "close_outcome": "home",
+        "close_odds": 1600
+    },
+    {
+        "close_time": "2023-12-16T21:18:36",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2023-12-17T03:23:01",
+        "close_outcome": "home",
+        "close_odds": -3300
+    },
+    {
+        "close_time": "2023-12-19T04:15:01",
+        "close_outcome": "home",
+        "close_odds": -1613
+    },
+    {
+        "close_time": "2023-12-22T03:16:09",
+        "close_outcome": "home",
+        "close_odds": -7500
+    },
+    {
+        "close_time": "2023-12-22T03:06:25",
+        "close_outcome": "home",
+        "close_odds": -1613
+    },
+    {
+        "close_time": "2023-12-26T04:02:48",
+        "close_outcome": "home",
+        "close_odds": 1900
+    },
+    {
+        "close_time": "2023-12-31T21:03:19",
+        "close_outcome": "home",
+        "close_odds": 550
+    },
+    {
+        "close_time": "2023-12-31T20:18:18",
+        "close_outcome": "home",
+        "close_odds": 1700
+    },
+    {
+        "close_time": "2024-01-07T20:50:37",
+        "close_outcome": "home",
+        "close_odds": -1205
+    },
+    {
+        "close_time": "2020-09-21T00:22:21",
+        "close_outcome": "home",
+        "close_odds": -190
+    },
+    {
+        "close_time": "2020-09-27T20:10:49",
+        "close_outcome": "home",
+        "close_odds": -170
+    },
+    {
+        "close_time": "2020-10-04T19:23:23",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2020-10-18T16:57:16",
+        "close_outcome": "home",
+        "close_odds": -135
+    },
+    {
+        "close_time": "2020-10-18T20:03:15",
+        "close_outcome": "home",
+        "close_odds": -143
+    },
+    {
+        "close_time": "2020-10-19T23:36:12",
+        "close_outcome": "home",
+        "close_odds": 380
+    },
+    {
+        "close_time": "2020-11-01T20:55:54",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2020-11-09T02:21:13",
+        "close_outcome": "home",
+        "close_odds": 950
+    },
+    {
+        "close_time": "2020-11-15T20:58:10",
+        "close_outcome": "home",
+        "close_odds": -150
+    },
+    {
+        "close_time": "2020-11-22T17:55:13",
+        "close_outcome": "home",
+        "close_odds": -160
+    },
+    {
+        "close_time": "2020-11-24T04:16:04",
+        "close_outcome": "home",
+        "close_odds": 102
+    },
+    {
+        "close_time": "2020-11-29T17:48:20",
+        "close_outcome": "home",
+        "close_odds": 155
+    },
+    {
+        "close_time": "2020-12-01T00:40:44",
+        "close_outcome": "home",
+        "close_odds": 145
+    },
+    {
+        "close_time": "2020-12-06T21:10:12",
+        "close_outcome": "home",
+        "close_odds": 1150
+    },
+    {
+        "close_time": "2020-12-21T01:13:05",
+        "close_outcome": "home",
+        "close_odds": 145
+    },
+    {
+        "close_time": "2020-12-21T03:20:15",
+        "close_outcome": "home",
+        "close_odds": 1200
+    },
+    {
+        "close_time": "2020-12-28T02:53:32",
+        "close_outcome": "home",
+        "close_odds": -590
+    },
+    {
+        "close_time": "2020-12-29T00:54:01",
+        "close_outcome": "home",
+        "close_odds": 135
+    },
+    {
+        "close_time": "2021-01-03T21:19:14",
+        "close_outcome": "home",
+        "close_odds": 115
+    },
+    {
+        "close_time": "2021-01-03T19:54:17",
+        "close_outcome": "home",
+        "close_odds": 130
+    },
+    {
+        "close_time": "2021-08-24T03:08:21",
+        "close_outcome": "home",
+        "close_odds": -1600
+    },
+    {
+        "close_time": "2021-08-28T03:05:34",
+        "close_outcome": "home",
+        "close_odds": -6600
+    },
+    {
+        "close_time": "2021-09-12T20:14:10",
+        "close_outcome": "home",
+        "close_odds": -530
+    },
+    {
+        "close_time": "2021-09-12T19:32:21",
+        "close_outcome": "home",
+        "close_odds": 1600
+    },
+    {
+        "close_time": "2021-09-19T19:53:18",
+        "close_outcome": "home",
+        "close_odds": 355
+    },
+    {
+        "close_time": "2021-09-19T23:51:39",
+        "close_outcome": "home",
+        "close_odds": 1050
+    },
+    {
+        "close_time": "2021-09-26T19:43:06",
+        "close_outcome": "home",
+        "close_odds": -1400
+    },
+    {
+        "close_time": "2021-09-26T23:43:04",
+        "close_outcome": "home",
+        "close_odds": -195
+    },
+    {
+        "close_time": "2021-09-27T03:28:23",
+        "close_outcome": "home",
+        "close_odds": -240
+    },
+    {
+        "close_time": "2021-10-03T19:27:49",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2021-10-10T20:07:45",
+        "close_outcome": "home",
+        "close_odds": 650
+    },
+    {
+        "close_time": "2021-10-18T03:59:52",
+        "close_outcome": "home",
+        "close_odds": 161
+    },
+    {
+        "close_time": "2021-10-18T03:59:33",
+        "close_outcome": "home",
+        "close_odds": 125
+    },
+    {
+        "close_time": "2021-10-19T03:20:37",
+        "close_outcome": "home",
+        "close_odds": 138
+    },
+    {
+        "close_time": "2021-10-24T19:37:38",
+        "close_outcome": "home",
+        "close_odds": 140
+    },
+    {
+        "close_time": "2021-10-24T18:42:49",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2021-10-24T22:57:45",
+        "close_outcome": "home",
+        "close_odds": -2500
+    },
+    {
+        "close_time": "2021-10-29T03:28:42",
+        "close_outcome": "home",
+        "close_odds": -125
+    },
+    {
+        "close_time": "2021-10-31T23:17:49",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2021-11-15T00:09:13",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2021-11-28T19:20:00",
+        "close_outcome": "home",
+        "close_odds": -8000
+    },
+    {
+        "close_time": "2021-11-28T19:05:08",
+        "close_outcome": "home",
+        "close_odds": -10000
+    },
+    {
+        "close_time": "2021-12-05T20:16:48",
+        "close_outcome": "home",
+        "close_odds": 2000
+    },
+    {
+        "close_time": "2021-12-12T21:20:00",
+        "close_outcome": "home",
+        "close_odds": 600
+    },
+    {
+        "close_time": "2021-12-19T21:11:07",
+        "close_outcome": "home",
+        "close_odds": -6600
+    },
+    {
+        "close_time": "2022-01-02T13:30:11",
+        "close_outcome": "home",
+        "close_odds": 155
+    },
+    {
+        "close_time": "2022-01-09T17:28:19",
+        "close_outcome": "home",
+        "close_odds": 200
+    },
+    {
+        "close_time": "2022-01-10T00:27:54",
+        "close_outcome": "home",
+        "close_odds": 900
+    },
+    {
+        "close_time": "2021-01-10T17:57:50",
+        "close_outcome": "home",
+        "close_odds": 160
+    },
+    {
+        "close_time": "2022-08-28T23:06:55",
+        "close_outcome": "home",
+        "close_odds": -20000
+    },
+    {
+        "close_time": "2022-09-11T20:18:00",
+        "close_outcome": "home",
+        "close_odds": 700
+    },
+    {
+        "close_time": "2022-09-11T14:42:51",
+        "close_outcome": "home",
+        "close_odds": 200
+    },
+    {
+        "close_time": "2022-09-11T22:08:04",
+        "close_outcome": "home",
+        "close_odds": 1000
+    },
+    {
+        "close_time": "2022-09-10T18:37:23",
+        "close_outcome": "home",
+        "close_odds": 220
+    },
+    {
+        "close_time": "2022-09-18T16:23:34",
+        "close_outcome": "home",
+        "close_odds": -175
+    },
+    {
+        "close_time": "2022-09-18T19:18:06",
+        "close_outcome": "home",
+        "close_odds": -25000
+    },
+    {
+        "close_time": "2022-09-25T17:16:25",
+        "close_outcome": "home",
+        "close_odds": 180
+    },
+    {
+        "close_time": "2022-09-25T15:06:51",
+        "close_outcome": "home",
+        "close_odds": 163
+    },
+    {
+        "close_time": "2022-09-25T16:32:22",
+        "close_outcome": "home",
+        "close_odds": 145
+    },
+    {
+        "close_time": "2022-09-25T04:41:43",
+        "close_outcome": "home",
+        "close_odds": -118
+    },
+    {
+        "close_time": "2022-10-09T23:10:59",
+        "close_outcome": "home",
+        "close_odds": 240
+    },
+    {
+        "close_time": "2022-10-09T20:21:16",
+        "close_outcome": "home",
+        "close_odds": 185
+    },
+    {
+        "close_time": "2022-10-18T03:35:28",
+        "close_outcome": "home",
+        "close_odds": 200
+    },
+    {
+        "close_time": "2022-10-17T22:35:35",
+        "close_outcome": "home",
+        "close_odds": -200
+    },
+    {
+        "close_time": "2022-10-23T16:44:40",
+        "close_outcome": "home",
+        "close_odds": 110
+    },
+    {
+        "close_time": "2022-11-04T20:22:46",
+        "close_outcome": "home",
+        "close_odds": -133
+    },
+    {
+        "close_time": "2022-11-13T22:00:53",
+        "close_outcome": "home",
+        "close_odds": -350
+    },
+    {
+        "close_time": "2022-11-27T17:26:15",
+        "close_outcome": "home",
+        "close_odds": -350
+    },
+    {
+        "close_time": "2022-12-11T17:57:30",
+        "close_outcome": "home",
+        "close_odds": -222
+    },
+    {
+        "close_time": "2022-12-11T21:11:06",
+        "close_outcome": "home",
+        "close_odds": 1700
+    },
+    {
+        "close_time": "2022-12-18T17:35:39",
+        "close_outcome": "home",
+        "close_odds": -225
+    },
+    {
+        "close_time": "2022-12-23T14:43:09",
+        "close_outcome": "home",
+        "close_odds": -188
+    },
+    {
+        "close_time": "2023-01-09T00:33:32",
+        "close_outcome": "home",
+        "close_odds": -250
+    },
+    {
+        "close_time": "2022-01-16T00:49:52",
+        "close_outcome": "home",
+        "close_odds": -370
+    },
+    {
+        "close_time": "2022-01-16T03:20:01",
+        "close_outcome": "home",
+        "close_odds": -176
+    },
+    {
+        "close_time": "2022-01-15T20:31:21",
+        "close_outcome": "home",
+        "close_odds": -222
+    },
+    {
+        "close_time": "2022-01-17T20:08:58",
+        "close_outcome": "home",
+        "close_odds": -175
+    },
+    {
+        "close_time": "2022-02-13T22:17:35",
+        "close_outcome": "home",
+        "close_odds": 180
+    },
+    {
+        "close_time": "2023-01-22T22:46:10",
+        "close_outcome": "home",
+        "close_odds": 1600
+    },
+    {
+        "close_time": "2023-01-19T13:22:23",
+        "close_outcome": "home",
+        "close_odds": -250
+    },
+    {
+        "close_time": "2023-01-23T02:32:05",
+        "close_outcome": "home",
+        "close_odds": -3300
+    },
+    {
+        "close_time": "2023-01-22T23:18:25",
+        "close_outcome": "home",
+        "close_odds": -188
+    }
+]
