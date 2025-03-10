@@ -1,0 +1,2896 @@
+{
+    "lastUpdatedOn": "2025-01-09T15:48:34.385Z",
+    "game": {
+        "id": 134312,
+        "week": 1,
+        "startTime": "2024-09-06T00:20:00.000Z",
+        "endedTime": "2024-09-06T02:54:00.000Z",
+        "awayTeam": {
+            "id": 56,
+            "abbreviation": "BAL"
+        },
+        "homeTeam": {
+            "id": 73,
+            "abbreviation": "KC"
+        },
+        "venue": {
+            "id": 58,
+            "name": "GEHA Field at Arrowhead Stadium"
+        },
+        "venueAllegiance": "HOME",
+        "scheduleStatus": "NORMAL",
+        "originalStartTime": null,
+        "delayedOrPostponedReason": null,
+        "playedStatus": "COMPLETED",
+        "attendance": 73611,
+        "officials": [
+            {
+                "id": 21851,
+                "title": "Head Linesman",
+                "firstName": "Patrick",
+                "lastName": "Holt"
+            },
+            {
+                "id": 19324,
+                "title": "Line Judge",
+                "firstName": "Tim",
+                "lastName": "Podraza"
+            },
+            {
+                "id": 514369,
+                "title": "Umpire",
+                "firstName": "Terry",
+                "lastName": "Killens"
+            },
+            {
+                "id": 21939,
+                "title": "Back Judge",
+                "firstName": "Jimmy",
+                "lastName": "Russell"
+            },
+            {
+                "id": 20373,
+                "title": "Side Judge",
+                "firstName": "Jim",
+                "lastName": "Quirk"
+            },
+            {
+                "id": 20269,
+                "title": "Referee",
+                "firstName": "Shawn",
+                "lastName": "Hochuli"
+            },
+            {
+                "id": 477360,
+                "title": "Field Judge",
+                "firstName": "Jason",
+                "lastName": "Ledet"
+            },
+            {
+                "id": 477360,
+                "title": "Field Judge",
+                "firstName": "Jason",
+                "lastName": "Ledet"
+            },
+            {
+                "id": 20373,
+                "title": "Side Judge",
+                "firstName": "Jim",
+                "lastName": "Quirk"
+            },
+            {
+                "id": 21939,
+                "title": "Back Judge",
+                "firstName": "Jimmy",
+                "lastName": "Russell"
+            },
+            {
+                "id": 20269,
+                "title": "Referee",
+                "firstName": "Shawn",
+                "lastName": "Hochuli"
+            },
+            {
+                "id": 21851,
+                "title": "Down Judge",
+                "firstName": "Patrick",
+                "lastName": "Holt"
+            },
+            {
+                "id": 37323,
+                "title": "Replay Official",
+                "firstName": "James",
+                "lastName": "Nicholson"
+            },
+            {
+                "id": 19324,
+                "title": "Line Judge",
+                "firstName": "Tim",
+                "lastName": "Podraza"
+            },
+            {
+                "id": 21423,
+                "title": "Umpire",
+                "firstName": "Terry",
+                "lastName": "Killens"
+            }
+        ],
+        "broadcasters": [
+            "NBC",
+            "TELEMUNDO",
+            "UNIVERSO",
+            "CTV",
+            "RDS",
+            "TSN",
+            "DAZN Canada",
+            "Sky Sports",
+            "Game Pass via DAZN",
+            "ESPN2",
+            "NFL Game Pass on DAZN",
+            "DAZN Germany (OTT)",
+            "ESPN",
+            "beIN 1",
+            "ESPN 2",
+            "Disney+",
+            "Peacock"
+        ],
+        "weather": {
+            "type": "LIGHT_RAIN",
+            "description": "light rain",
+            "wind": {
+                "speed": {
+                    "milesPerHour": 9,
+                    "kilometersPerHour": 14
+                },
+                "direction": {
+                    "degrees": 11,
+                    "label": "NNE"
+                }
+            },
+            "temperature": {
+                "fahrenheit": 86,
+                "celsius": 30
+            },
+            "precipitation": {
+                "type": "RAIN",
+                "percent": null,
+                "amount": {
+                    "millimeters": 1,
+                    "centimeters": null,
+                    "inches": null,
+                    "feet": null
+                }
+            },
+            "humidityPercent": 31
+        }
+    },
+    "teamLineups": [
+        {
+            "team": {
+                "id": 56,
+                "abbreviation": "BAL"
+            },
+            "expected": {
+                "lineupPositions": [
+                    {
+                        "position": "Offense-RB-1",
+                        "player": {
+                            "id": 10043,
+                            "firstName": "Derrick",
+                            "lastName": "Henry",
+                            "position": "RB",
+                            "jerseyNumber": 22
+                        }
+                    },
+                    {
+                        "position": "Offense-C",
+                        "player": {
+                            "id": 134064,
+                            "firstName": "Nick",
+                            "lastName": "Samac",
+                            "position": "C",
+                            "jerseyNumber": 61
+                        }
+                    },
+                    {
+                        "position": "Offense-RB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-RB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-1",
+                        "player": {
+                            "id": 14486,
+                            "firstName": "Mark",
+                            "lastName": "Andrews",
+                            "position": "TE",
+                            "jerseyNumber": 89
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DE-1",
+                        "player": {
+                            "id": 18564,
+                            "firstName": "Nnamdi",
+                            "lastName": "Madubuike",
+                            "position": "DE",
+                            "jerseyNumber": 92
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-1",
+                        "player": {
+                            "id": 133896,
+                            "firstName": "Roger",
+                            "lastName": "Rosengarten",
+                            "position": "OT",
+                            "jerseyNumber": 70
+                        }
+                    },
+                    {
+                        "position": "Defense-DT-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-1",
+                        "player": {
+                            "id": 39279,
+                            "firstName": "Travis",
+                            "lastName": "Jones",
+                            "position": "DT",
+                            "jerseyNumber": 98
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-1",
+                        "player": {
+                            "id": 14523,
+                            "firstName": "Lamar",
+                            "lastName": "Jackson",
+                            "position": "QB",
+                            "jerseyNumber": 8
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-1",
+                        "player": {
+                            "id": 134294,
+                            "firstName": "Deion",
+                            "lastName": "Jennings",
+                            "position": "ILB",
+                            "jerseyNumber": 56
+                        }
+                    },
+                    {
+                        "position": "SpecialTeams-K-2",
+                        "player": null
+                    },
+                    {
+                        "position": "SpecialTeams-K-1",
+                        "player": {
+                            "id": 6198,
+                            "firstName": "Justin",
+                            "lastName": "Tucker",
+                            "position": "K",
+                            "jerseyNumber": 9
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-3",
+                        "player": {
+                            "id": 8019,
+                            "firstName": "Nelson",
+                            "lastName": "Agholor",
+                            "position": "WR",
+                            "jerseyNumber": 15
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-2",
+                        "player": {
+                            "id": 79824,
+                            "firstName": "Trenton",
+                            "lastName": "Simpson",
+                            "position": "LB",
+                            "jerseyNumber": 23
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-2",
+                        "player": {
+                            "id": 30221,
+                            "firstName": "Rashod",
+                            "lastName": "Bateman",
+                            "position": "WR",
+                            "jerseyNumber": 7
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-NT",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-1",
+                        "player": {
+                            "id": 79760,
+                            "firstName": "Zay",
+                            "lastName": "Flowers",
+                            "position": "WR",
+                            "jerseyNumber": 4
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-2",
+                        "player": {
+                            "id": 16584,
+                            "firstName": "Trayvon",
+                            "lastName": "Mullen",
+                            "position": "CB",
+                            "jerseyNumber": 30
+                        }
+                    },
+                    {
+                        "position": "Offense-G-1",
+                        "player": {
+                            "id": 111969,
+                            "firstName": "Andrew",
+                            "lastName": "Vorhees",
+                            "position": "G",
+                            "jerseyNumber": 72
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-1",
+                        "player": {
+                            "id": 134295,
+                            "firstName": "Bump",
+                            "lastName": "Cooper Jr.",
+                            "position": "CB",
+                            "jerseyNumber": 31
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-S-1",
+                        "player": {
+                            "id": 30819,
+                            "firstName": "Brandon",
+                            "lastName": "Stephens",
+                            "position": "FS",
+                            "jerseyNumber": 21
+                        }
+                    },
+                    {
+                        "position": "Defense-S-2",
+                        "player": null
+                    }
+                ]
+            },
+            "actual": {
+                "lineupPositions": [
+                    {
+                        "position": "Offense-RB-1",
+                        "player": {
+                            "id": 10043,
+                            "firstName": "Derrick",
+                            "lastName": "Henry",
+                            "position": "RB",
+                            "jerseyNumber": 22
+                        }
+                    },
+                    {
+                        "position": "Offense-C",
+                        "player": {
+                            "id": 39099,
+                            "firstName": "Tyler",
+                            "lastName": "Linderbaum",
+                            "position": "C",
+                            "jerseyNumber": 64
+                        }
+                    },
+                    {
+                        "position": "Offense-RB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-RB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-1",
+                        "player": {
+                            "id": 14486,
+                            "firstName": "Mark",
+                            "lastName": "Andrews",
+                            "position": "TE",
+                            "jerseyNumber": 89
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DE-1",
+                        "player": {
+                            "id": 18564,
+                            "firstName": "Nnamdi",
+                            "lastName": "Madubuike",
+                            "position": "DE",
+                            "jerseyNumber": 92
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-2",
+                        "player": {
+                            "id": 39279,
+                            "firstName": "Travis",
+                            "lastName": "Jones",
+                            "position": "DT",
+                            "jerseyNumber": 98
+                        }
+                    },
+                    {
+                        "position": "Offense-T-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-2",
+                        "player": {
+                            "id": 16906,
+                            "firstName": "Patrick",
+                            "lastName": "Mekari",
+                            "position": "G",
+                            "jerseyNumber": 65
+                        }
+                    },
+                    {
+                        "position": "Offense-T-1",
+                        "player": {
+                            "id": 9761,
+                            "firstName": "Ronnie",
+                            "lastName": "Stanley",
+                            "position": "T",
+                            "jerseyNumber": 79
+                        }
+                    },
+                    {
+                        "position": "Defense-DT-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-1",
+                        "player": {
+                            "id": 43382,
+                            "firstName": "Jalyn",
+                            "lastName": "Armour-Davis",
+                            "position": "CB",
+                            "jerseyNumber": 5
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-1",
+                        "player": {
+                            "id": 14523,
+                            "firstName": "Lamar",
+                            "lastName": "Jackson",
+                            "position": "QB",
+                            "jerseyNumber": 8
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-1",
+                        "player": {
+                            "id": 30455,
+                            "firstName": "Odafe",
+                            "lastName": "Oweh",
+                            "position": "LB",
+                            "jerseyNumber": 99
+                        }
+                    },
+                    {
+                        "position": "SpecialTeams-K-2",
+                        "player": null
+                    },
+                    {
+                        "position": "SpecialTeams-K-1",
+                        "player": {
+                            "id": 6198,
+                            "firstName": "Justin",
+                            "lastName": "Tucker",
+                            "position": "K",
+                            "jerseyNumber": 9
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-3",
+                        "player": {
+                            "id": 39757,
+                            "firstName": "Isaiah",
+                            "lastName": "Likely",
+                            "position": "TE",
+                            "jerseyNumber": 80
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-2",
+                        "player": {
+                            "id": 79824,
+                            "firstName": "Trenton",
+                            "lastName": "Simpson",
+                            "position": "LB",
+                            "jerseyNumber": 23
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-3",
+                        "player": {
+                            "id": 6887,
+                            "firstName": "Kyle",
+                            "lastName": "Van Noy",
+                            "position": "MLB",
+                            "jerseyNumber": 53
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-2",
+                        "player": {
+                            "id": 79760,
+                            "firstName": "Zay",
+                            "lastName": "Flowers",
+                            "position": "WR",
+                            "jerseyNumber": 4
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-NT",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-1",
+                        "player": {
+                            "id": 30221,
+                            "firstName": "Rashod",
+                            "lastName": "Bateman",
+                            "position": "WR",
+                            "jerseyNumber": 7
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-2",
+                        "player": {
+                            "id": 43381,
+                            "firstName": "Daniel",
+                            "lastName": "Faalele",
+                            "position": "T",
+                            "jerseyNumber": 77
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-2",
+                        "player": {
+                            "id": 12751,
+                            "firstName": "Marlon",
+                            "lastName": "Humphrey",
+                            "position": "CB",
+                            "jerseyNumber": 44
+                        }
+                    },
+                    {
+                        "position": "Offense-G-1",
+                        "player": {
+                            "id": 111969,
+                            "firstName": "Andrew",
+                            "lastName": "Vorhees",
+                            "position": "G",
+                            "jerseyNumber": 72
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-1",
+                        "player": {
+                            "id": 30819,
+                            "firstName": "Brandon",
+                            "lastName": "Stephens",
+                            "position": "CB",
+                            "jerseyNumber": 21
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-S-1",
+                        "player": {
+                            "id": 13267,
+                            "firstName": "Marcus",
+                            "lastName": "Williams",
+                            "position": "FS",
+                            "jerseyNumber": 32
+                        }
+                    },
+                    {
+                        "position": "Defense-S-2",
+                        "player": {
+                            "id": 39088,
+                            "firstName": "Kyle",
+                            "lastName": "Hamilton",
+                            "position": "FS",
+                            "jerseyNumber": 14
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "team": {
+                "id": 73,
+                "abbreviation": "KC"
+            },
+            "expected": {
+                "lineupPositions": [
+                    {
+                        "position": "Offense-RB-1",
+                        "player": {
+                            "id": 43343,
+                            "firstName": "Isiah",
+                            "lastName": "Pacheco",
+                            "position": "RB",
+                            "jerseyNumber": 10
+                        }
+                    },
+                    {
+                        "position": "Offense-C",
+                        "player": {
+                            "id": 32350,
+                            "firstName": "Creed",
+                            "lastName": "Humphrey",
+                            "position": "C",
+                            "jerseyNumber": 52
+                        }
+                    },
+                    {
+                        "position": "Offense-RB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-RB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-1",
+                        "player": {
+                            "id": 7299,
+                            "firstName": "Travis",
+                            "lastName": "Kelce",
+                            "position": "TE",
+                            "jerseyNumber": 87
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DE-1",
+                        "player": {
+                            "id": 22481,
+                            "firstName": "Tershawn",
+                            "lastName": "Wharton",
+                            "position": "DE",
+                            "jerseyNumber": 98
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-1",
+                        "player": {
+                            "id": 133897,
+                            "firstName": "Kingsley",
+                            "lastName": "Suamataia",
+                            "position": "OT",
+                            "jerseyNumber": 76
+                        }
+                    },
+                    {
+                        "position": "Defense-DT-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-1",
+                        "player": {
+                            "id": 134376,
+                            "firstName": "Fabien",
+                            "lastName": "Lovett Sr.",
+                            "position": "DT",
+                            "jerseyNumber": 99
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-1",
+                        "player": {
+                            "id": 13349,
+                            "firstName": "Patrick",
+                            "lastName": "Mahomes",
+                            "position": "QB",
+                            "jerseyNumber": 15
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-1",
+                        "player": {
+                            "id": 39244,
+                            "firstName": "Jack",
+                            "lastName": "Cochrane",
+                            "position": "LB",
+                            "jerseyNumber": 43
+                        }
+                    },
+                    {
+                        "position": "SpecialTeams-K-2",
+                        "player": null
+                    },
+                    {
+                        "position": "SpecialTeams-K-1",
+                        "player": {
+                            "id": 12796,
+                            "firstName": "Harrison",
+                            "lastName": "Butker",
+                            "position": "K",
+                            "jerseyNumber": 7
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-3",
+                        "player": {
+                            "id": 14734,
+                            "firstName": "Justin",
+                            "lastName": "Watson",
+                            "position": "WR",
+                            "jerseyNumber": 84
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-2",
+                        "player": {
+                            "id": 108852,
+                            "firstName": "B.J.",
+                            "lastName": "Thompson",
+                            "position": "LB",
+                            "jerseyNumber": 53
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-2",
+                        "player": {
+                            "id": 133862,
+                            "firstName": "Xavier",
+                            "lastName": "Worthy",
+                            "position": "WR",
+                            "jerseyNumber": 1
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-NT",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-1",
+                        "player": {
+                            "id": 79793,
+                            "firstName": "Rashee",
+                            "lastName": "Rice",
+                            "position": "WR",
+                            "jerseyNumber": 4
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-2",
+                        "player": {
+                            "id": 108864,
+                            "firstName": "Eric",
+                            "lastName": "Scott Jr.",
+                            "position": "CB",
+                            "jerseyNumber": 37
+                        }
+                    },
+                    {
+                        "position": "Offense-G-1",
+                        "player": {
+                            "id": 134084,
+                            "firstName": "C.J.",
+                            "lastName": "Hanson",
+                            "position": "G",
+                            "jerseyNumber": 61
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-1",
+                        "player": {
+                            "id": 39766,
+                            "firstName": "Joshua",
+                            "lastName": "Williams",
+                            "position": "CB",
+                            "jerseyNumber": 2
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-S-1",
+                        "player": {
+                            "id": 79857,
+                            "firstName": "Chamarri",
+                            "lastName": "Conner",
+                            "position": "FS",
+                            "jerseyNumber": 27
+                        }
+                    },
+                    {
+                        "position": "Defense-S-2",
+                        "player": null
+                    }
+                ]
+            },
+            "actual": {
+                "lineupPositions": [
+                    {
+                        "position": "Offense-RB-1",
+                        "player": {
+                            "id": 43343,
+                            "firstName": "Isiah",
+                            "lastName": "Pacheco",
+                            "position": "RB",
+                            "jerseyNumber": 10
+                        }
+                    },
+                    {
+                        "position": "Offense-C",
+                        "player": {
+                            "id": 32350,
+                            "firstName": "Creed",
+                            "lastName": "Humphrey",
+                            "position": "C",
+                            "jerseyNumber": 52
+                        }
+                    },
+                    {
+                        "position": "Offense-RB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-RB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-TE-1",
+                        "player": {
+                            "id": 7299,
+                            "firstName": "Travis",
+                            "lastName": "Kelce",
+                            "position": "TE",
+                            "jerseyNumber": 87
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-3",
+                        "player": {
+                            "id": 39104,
+                            "firstName": "George",
+                            "lastName": "Karlaftis",
+                            "position": "DE",
+                            "jerseyNumber": 56
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-1",
+                        "player": {
+                            "id": 112094,
+                            "firstName": "Cam",
+                            "lastName": "Jones",
+                            "position": "LB",
+                            "jerseyNumber": 95
+                        }
+                    },
+                    {
+                        "position": "Defense-DE-2",
+                        "player": {
+                            "id": 6963,
+                            "firstName": "Mike",
+                            "lastName": "Pennel",
+                            "position": "DT",
+                            "jerseyNumber": 69
+                        }
+                    },
+                    {
+                        "position": "Offense-T-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-T-2",
+                        "player": {
+                            "id": 16720,
+                            "firstName": "Jawaan",
+                            "lastName": "Taylor",
+                            "position": "T",
+                            "jerseyNumber": 74
+                        }
+                    },
+                    {
+                        "position": "Offense-T-1",
+                        "player": {
+                            "id": 133897,
+                            "firstName": "Kingsley",
+                            "lastName": "Suamataia",
+                            "position": "T",
+                            "jerseyNumber": 76
+                        }
+                    },
+                    {
+                        "position": "Defense-DT-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-DT-1",
+                        "player": {
+                            "id": 18856,
+                            "firstName": "Michael",
+                            "lastName": "Danna",
+                            "position": "DE",
+                            "jerseyNumber": 51
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-1",
+                        "player": {
+                            "id": 13349,
+                            "firstName": "Patrick",
+                            "lastName": "Mahomes",
+                            "position": "QB",
+                            "jerseyNumber": 15
+                        }
+                    },
+                    {
+                        "position": "Offense-QB-2",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-1",
+                        "player": {
+                            "id": 31891,
+                            "firstName": "Nick",
+                            "lastName": "Bolton",
+                            "position": "LB",
+                            "jerseyNumber": 32
+                        }
+                    },
+                    {
+                        "position": "SpecialTeams-K-2",
+                        "player": null
+                    },
+                    {
+                        "position": "SpecialTeams-K-1",
+                        "player": {
+                            "id": 6198,
+                            "firstName": "Justin",
+                            "lastName": "Tucker",
+                            "position": "K",
+                            "jerseyNumber": 9
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-3",
+                        "player": {
+                            "id": 13203,
+                            "firstName": "JuJu",
+                            "lastName": "Smith-Schuster",
+                            "position": "WR",
+                            "jerseyNumber": 9
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-LB-2",
+                        "player": {
+                            "id": 16546,
+                            "firstName": "Drue",
+                            "lastName": "Tranquill",
+                            "position": "LB",
+                            "jerseyNumber": 23
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-3",
+                        "player": {
+                            "id": 39299,
+                            "firstName": "Leo",
+                            "lastName": "Chenal",
+                            "position": "LB",
+                            "jerseyNumber": 54
+                        }
+                    },
+                    {
+                        "position": "Offense-WR-2",
+                        "player": {
+                            "id": 133862,
+                            "firstName": "Xavier",
+                            "lastName": "Worthy",
+                            "position": "WR",
+                            "jerseyNumber": 1
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-NT",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-WR-1",
+                        "player": {
+                            "id": 79793,
+                            "firstName": "Rashee",
+                            "lastName": "Rice",
+                            "position": "WR",
+                            "jerseyNumber": 4
+                        }
+                    },
+                    {
+                        "position": "Defense-LB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-5",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-2",
+                        "player": {
+                            "id": 33840,
+                            "firstName": "Trey",
+                            "lastName": "Smith",
+                            "position": "G",
+                            "jerseyNumber": 65
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-2",
+                        "player": {
+                            "id": 39233,
+                            "firstName": "Jaylen",
+                            "lastName": "Watson",
+                            "position": "CB",
+                            "jerseyNumber": 35
+                        }
+                    },
+                    {
+                        "position": "Offense-G-1",
+                        "player": {
+                            "id": 9943,
+                            "firstName": "Joe",
+                            "lastName": "Thuney",
+                            "position": "G",
+                            "jerseyNumber": 62
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-1",
+                        "player": {
+                            "id": 39095,
+                            "firstName": "Trent",
+                            "lastName": "McDuffie",
+                            "position": "CB",
+                            "jerseyNumber": 22
+                        }
+                    },
+                    {
+                        "position": "Defense-CB-4",
+                        "player": null
+                    },
+                    {
+                        "position": "Offense-G-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-CB-3",
+                        "player": null
+                    },
+                    {
+                        "position": "Defense-S-1",
+                        "player": {
+                            "id": 14999,
+                            "firstName": "Justin",
+                            "lastName": "Reid",
+                            "position": "SS",
+                            "jerseyNumber": 20
+                        }
+                    },
+                    {
+                        "position": "Defense-S-2",
+                        "player": {
+                            "id": 39136,
+                            "firstName": "Bryan",
+                            "lastName": "Cook",
+                            "position": "FS",
+                            "jerseyNumber": 6
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "references": {
+        "teamReferences": [
+            {
+                "id": 56,
+                "city": "Baltimore",
+                "name": "Ravens",
+                "abbreviation": "BAL",
+                "homeVenue": {
+                    "id": 45,
+                    "name": "M&T Bank Stadium"
+                },
+                "teamColoursHex": [
+                    "#241773",
+                    "#000000",
+                    "#9e7c0c",
+                    "#c60c30"
+                ],
+                "socialMediaAccounts": [
+                    {
+                        "mediaType": "TWITTER",
+                        "value": "Ravens"
+                    }
+                ],
+                "officialLogoImageSrc": "https://static.www.nfl.com/t_q-best/league/api/clubs/logos/BAL.svg"
+            },
+            {
+                "id": 73,
+                "city": "Kansas City",
+                "name": "Chiefs",
+                "abbreviation": "KC",
+                "homeVenue": {
+                    "id": 58,
+                    "name": "GEHA Field at Arrowhead Stadium"
+                },
+                "teamColoursHex": [
+                    "#e31837",
+                    "#ffb81c"
+                ],
+                "socialMediaAccounts": [
+                    {
+                        "mediaType": "TWITTER",
+                        "value": "Chiefs"
+                    }
+                ],
+                "officialLogoImageSrc": "https://static.www.nfl.com/league/api/clubs/logos/KC.svg"
+            }
+        ],
+        "venueReferences": [
+            {
+                "id": 58,
+                "name": "GEHA Field at Arrowhead Stadium",
+                "city": "Kansas City, MO",
+                "country": "USA",
+                "geoCoordinates": {
+                    "latitude": 39.048889,
+                    "longitude": -94.483889
+                },
+                "capacitiesByEventType": [
+                    {
+                        "eventType": "FOOTBALL",
+                        "capacity": 76416
+                    }
+                ],
+                "playingSurface": "Latitude 36 Bermuda Grass",
+                "baseballDimensions": [],
+                "hasRoof": false,
+                "hasRetractableRoof": false
+            }
+        ],
+        "playerReferences": [
+            {
+                "id": 6198,
+                "firstName": "Justin",
+                "lastName": "Tucker",
+                "primaryPosition": "K",
+                "jerseyNumber": 9,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 191,
+                "birthDate": "1989-11-21",
+                "age": 35,
+                "birthCity": "Houston, TX",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Westlake",
+                "college": "Texas",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/rneculgpkzldvo5fxqke",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 6887,
+                "firstName": "Kyle",
+                "lastName": "Van Noy",
+                "primaryPosition": "MLB",
+                "jerseyNumber": 53,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 255,
+                "birthDate": "1990-06-19",
+                "age": 34,
+                "birthCity": "Reno, NV",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "BYU",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 6963,
+                "firstName": "Mike",
+                "lastName": "Pennel",
+                "primaryPosition": "DT",
+                "jerseyNumber": 69,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 330,
+                "birthDate": "1991-05-09",
+                "age": 33,
+                "birthCity": "Topeka, KS",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "Colorado State-Pueblo",
+                "handedness": null,
+                "officialImageSrc": "http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/PEN320554.png",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 7299,
+                "firstName": "Travis",
+                "lastName": "Kelce",
+                "primaryPosition": "TE",
+                "jerseyNumber": 87,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 250,
+                "birthDate": "1989-10-05",
+                "age": 35,
+                "birthCity": "Westlake, OH",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Cleveland Heights",
+                "college": "Cincinnati",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/ryzr3vbragwe50vtj9af",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 8019,
+                "firstName": "Nelson",
+                "lastName": "Agholor",
+                "primaryPosition": "WR",
+                "jerseyNumber": 15,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 200,
+                "birthDate": "1993-05-24",
+                "age": 31,
+                "birthCity": "Lagos",
+                "birthCountry": "Nigeria",
+                "rookie": false,
+                "highSchool": null,
+                "college": "USC",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/lfc8g0z3wmxowwggvzqh",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 9761,
+                "firstName": "Ronnie",
+                "lastName": "Stanley",
+                "primaryPosition": "T",
+                "jerseyNumber": 79,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'6\"",
+                "weight": 310,
+                "birthDate": "1994-03-18",
+                "age": 30,
+                "birthCity": "Los Angeles, CA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Bishop Gorman",
+                "college": "Notre Dame",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/efyw2l7h1lznyflbg14q",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 9943,
+                "firstName": "Joe",
+                "lastName": "Thuney",
+                "primaryPosition": "G",
+                "jerseyNumber": 62,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 304,
+                "birthDate": "1992-11-19",
+                "age": 32,
+                "birthCity": "Spring Valley, OH",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Archbishop Alter",
+                "college": "North Carolina State",
+                "handedness": null,
+                "officialImageSrc": "http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/THU198074.png",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 10043,
+                "firstName": "Derrick",
+                "lastName": "Henry",
+                "primaryPosition": "RB",
+                "jerseyNumber": 22,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 247,
+                "birthDate": "1994-07-17",
+                "age": 30,
+                "birthCity": "Yulee, FL",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "Alabama",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/xpewyoieoj7zeub4fvff",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 12751,
+                "firstName": "Marlon",
+                "lastName": "Humphrey",
+                "primaryPosition": "CB",
+                "jerseyNumber": 44,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 203,
+                "birthDate": "1996-07-08",
+                "age": 28,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Alabama",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/vr7fex4zr6fptqjib8ai",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 12796,
+                "firstName": "Harrison",
+                "lastName": "Butker",
+                "primaryPosition": "K",
+                "jerseyNumber": 7,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 205,
+                "birthDate": "1995-07-14",
+                "age": 29,
+                "birthCity": "Decatur, GA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Westminster",
+                "college": "Georgia Tech",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/aad5b2uzuah6vfd4vxll",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 13203,
+                "firstName": "JuJu",
+                "lastName": "Smith-Schuster",
+                "primaryPosition": "WR",
+                "jerseyNumber": 9,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 215,
+                "birthDate": "1996-11-22",
+                "age": 28,
+                "birthCity": "Long Beach, CA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Long Beach Polytechnic",
+                "college": "USC",
+                "handedness": null,
+                "officialImageSrc": "http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/SMI829709.png",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 13267,
+                "firstName": "Marcus",
+                "lastName": "Williams",
+                "primaryPosition": "FS",
+                "jerseyNumber": 32,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 204,
+                "birthDate": "1996-09-08",
+                "age": 28,
+                "birthCity": "Corona, CA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Eleanor Roosevelt",
+                "college": "Utah",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/gsktrqhsjnxuopomtzvr",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 13349,
+                "firstName": "Patrick",
+                "lastName": "Mahomes",
+                "primaryPosition": "QB",
+                "jerseyNumber": 15,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 225,
+                "birthDate": "1995-09-17",
+                "age": 29,
+                "birthCity": "Tyler, TX",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "Texas Tech",
+                "handedness": {
+                    "throws": null
+                },
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/oagzjdsdoezmp6frggrn",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 14486,
+                "firstName": "Mark",
+                "lastName": "Andrews",
+                "primaryPosition": "TE",
+                "jerseyNumber": 89,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 250,
+                "birthDate": "1995-09-06",
+                "age": 29,
+                "birthCity": null,
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "Oklahoma",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/cv7h66mkpoalli9wfdqp",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 14523,
+                "firstName": "Lamar",
+                "lastName": "Jackson",
+                "primaryPosition": "QB",
+                "jerseyNumber": 8,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 205,
+                "birthDate": "1997-01-07",
+                "age": 28,
+                "birthCity": "Pompano Beach, FL",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Boynton Beach Community",
+                "college": "Louisville",
+                "handedness": {
+                    "throws": null
+                },
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/wj1fwvvkjaqztm56ybzu",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 14734,
+                "firstName": "Justin",
+                "lastName": "Watson",
+                "primaryPosition": "WR",
+                "jerseyNumber": 84,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 215,
+                "birthDate": "1995-04-04",
+                "age": 29,
+                "birthCity": "South Park, PA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "South Fayette",
+                "college": "Pennsylvania",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/vr9tayyujt23takv3hv3",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 14999,
+                "firstName": "Justin",
+                "lastName": "Reid",
+                "primaryPosition": "SS",
+                "jerseyNumber": 20,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 207,
+                "birthDate": "1997-02-15",
+                "age": 28,
+                "birthCity": "Prairieville, LA",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "Dutchtown",
+                "college": "Stanford",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/hcj2bp24j6zxngejcosp",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 16546,
+                "firstName": "Drue",
+                "lastName": "Tranquill",
+                "primaryPosition": "LB",
+                "jerseyNumber": 23,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 234,
+                "birthDate": "1995-08-15",
+                "age": 29,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Notre Dame",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/kag56opaxhhajhfqt3nk",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 16584,
+                "firstName": "Trayvon",
+                "lastName": "Mullen",
+                "primaryPosition": "CB",
+                "jerseyNumber": 30,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": {
+                    "description": "shoulder",
+                    "playingProbability": "QUESTIONABLE"
+                },
+                "height": "6'1\"",
+                "weight": 194,
+                "birthDate": "1997-09-20",
+                "age": 27,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": true,
+                "highSchool": null,
+                "college": "Clemson",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/pz4urpkczjgrqpgtysaw",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 16720,
+                "firstName": "Jawaan",
+                "lastName": "Taylor",
+                "primaryPosition": "T",
+                "jerseyNumber": 74,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 330,
+                "birthDate": "1997-11-25",
+                "age": 27,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Florida",
+                "handedness": null,
+                "officialImageSrc": "http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/TAY349425.png",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 16906,
+                "firstName": "Patrick",
+                "lastName": "Mekari",
+                "primaryPosition": "G",
+                "jerseyNumber": 65,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 305,
+                "birthDate": "1997-08-13",
+                "age": 27,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "California",
+                "handedness": null,
+                "officialImageSrc": "http://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/MEK415291.png",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 18564,
+                "firstName": "Nnamdi",
+                "lastName": "Madubuike",
+                "primaryPosition": "DE",
+                "jerseyNumber": 92,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 305,
+                "birthDate": "1997-11-17",
+                "age": 27,
+                "birthCity": null,
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": "McKinney North",
+                "college": "Texas A&M",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/tvitcjl2ahtfjqogd2rx",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 18856,
+                "firstName": "Michael",
+                "lastName": "Danna",
+                "primaryPosition": "DE",
+                "jerseyNumber": 51,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 257,
+                "birthDate": "1997-12-01",
+                "age": 27,
+                "birthCity": "Detroit, MI",
+                "birthCountry": "USA",
+                "rookie": false,
+                "highSchool": null,
+                "college": "Michigan",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/oiywq8es1rm2rjnpbouw",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 22481,
+                "firstName": "Tershawn",
+                "lastName": "Wharton",
+                "primaryPosition": "DE",
+                "jerseyNumber": 98,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 280,
+                "birthDate": "1998-06-25",
+                "age": 26,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": true,
+                "highSchool": null,
+                "college": "Missouri S&T",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/pbuynfvzq7bojcivxbba",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 30221,
+                "firstName": "Rashod",
+                "lastName": "Bateman",
+                "primaryPosition": "WR",
+                "jerseyNumber": 7,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 195,
+                "birthDate": "1999-11-29",
+                "age": 25,
+                "birthCity": "Tifton, GA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Minnesota",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/rxkbjfe1pdmlvp1vd6i5",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 30455,
+                "firstName": "Odafe",
+                "lastName": "Oweh",
+                "primaryPosition": "LB",
+                "jerseyNumber": 99,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 255,
+                "birthDate": "1998-12-15",
+                "age": 26,
+                "birthCity": "Hackensack, NJ",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Penn State",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/zlf34rejm1bnlc07izfd",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 30819,
+                "firstName": "Brandon",
+                "lastName": "Stephens",
+                "primaryPosition": "CB",
+                "jerseyNumber": 21,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 215,
+                "birthDate": "1997-12-29",
+                "age": 27,
+                "birthCity": "Plano, TX",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "SMU",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 31891,
+                "firstName": "Nick",
+                "lastName": "Bolton",
+                "primaryPosition": "LB",
+                "jerseyNumber": 32,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 237,
+                "birthDate": "2000-03-10",
+                "age": 25,
+                "birthCity": "Frisco, TX",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Missouri",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 32350,
+                "firstName": "Creed",
+                "lastName": "Humphrey",
+                "primaryPosition": "C",
+                "jerseyNumber": 52,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 302,
+                "birthDate": "1999-06-28",
+                "age": 25,
+                "birthCity": "Shawnee, OK",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Oklahoma",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/w2wfrapnpjft8d4lumft",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 33840,
+                "firstName": "Trey",
+                "lastName": "Smith",
+                "primaryPosition": "G",
+                "jerseyNumber": 65,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 321,
+                "birthDate": "1999-06-16",
+                "age": 25,
+                "birthCity": "Humboldt, TN",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Tennessee",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/laaiknnjzgu88jrsula3",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39088,
+                "firstName": "Kyle",
+                "lastName": "Hamilton",
+                "primaryPosition": "FS",
+                "jerseyNumber": 14,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 224,
+                "birthDate": "2001-03-16",
+                "age": 23,
+                "birthCity": "Heraklion, Crete",
+                "birthCountry": "Greece",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Notre Dame",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/hmqb0ft9rfcqlqqiuwnn",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39095,
+                "firstName": "Trent",
+                "lastName": "McDuffie",
+                "primaryPosition": "CB",
+                "jerseyNumber": 22,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "5'10\"",
+                "weight": 193,
+                "birthDate": "2000-09-13",
+                "age": 24,
+                "birthCity": "Westminster, CA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Washington",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/nz9l17s8ka8er38x8gzo",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39099,
+                "firstName": "Tyler",
+                "lastName": "Linderbaum",
+                "primaryPosition": "C",
+                "jerseyNumber": 64,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 314,
+                "birthDate": "2000-04-07",
+                "age": 24,
+                "birthCity": "Solon, IA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Iowa",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/vfwjvx8noxeuugdzjqd2",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39104,
+                "firstName": "George",
+                "lastName": "Karlaftis",
+                "primaryPosition": "DE",
+                "jerseyNumber": 56,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 263,
+                "birthDate": "2001-04-03",
+                "age": 23,
+                "birthCity": "Athens",
+                "birthCountry": "Greece",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Purdue",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39136,
+                "firstName": "Bryan",
+                "lastName": "Cook",
+                "primaryPosition": "FS",
+                "jerseyNumber": 6,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 206,
+                "birthDate": "1999-09-07",
+                "age": 25,
+                "birthCity": "Cincinnati, OH",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Cincinnati",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/ov7gtwc6boflbj4kqewc",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39233,
+                "firstName": "Jaylen",
+                "lastName": "Watson",
+                "primaryPosition": "CB",
+                "jerseyNumber": 35,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 197,
+                "birthDate": "1998-09-17",
+                "age": 26,
+                "birthCity": "Augusta, GA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Washington State",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/abj96tqo9vzowgkdeagc",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39244,
+                "firstName": "Jack",
+                "lastName": "Cochrane",
+                "primaryPosition": "LB",
+                "jerseyNumber": 43,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 236,
+                "birthDate": "1999-02-09",
+                "age": 26,
+                "birthCity": "Mount Vernon, IA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "South Dakota",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/cqc7skjc03izy06saopx",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39279,
+                "firstName": "Travis",
+                "lastName": "Jones",
+                "primaryPosition": "DT",
+                "jerseyNumber": 98,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 338,
+                "birthDate": "1999-10-15",
+                "age": 25,
+                "birthCity": "New Haven, CT",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Connecticut",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/a2phaj6ysjsplrh7h8lf",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39299,
+                "firstName": "Leo",
+                "lastName": "Chenal",
+                "primaryPosition": "LB",
+                "jerseyNumber": 54,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 250,
+                "birthDate": "2000-10-26",
+                "age": 24,
+                "birthCity": "Grantsburg, WI",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Wisconsin",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/zxeak7ou6tcqj8wqe1y2",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39757,
+                "firstName": "Isaiah",
+                "lastName": "Likely",
+                "primaryPosition": "TE",
+                "jerseyNumber": 80,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 247,
+                "birthDate": "2000-04-18",
+                "age": 24,
+                "birthCity": "Cambridge, MA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Coastal Carolina",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/z8xwspdtqixrzxxjbapx",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 39766,
+                "firstName": "Joshua",
+                "lastName": "Williams",
+                "primaryPosition": "CB",
+                "jerseyNumber": 2,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'3\"",
+                "weight": 193,
+                "birthDate": "1999-10-17",
+                "age": 25,
+                "birthCity": "Fayetteville, NC",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Fayetteville State",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/wk6opycjhvjymx2iijgg",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 43343,
+                "firstName": "Isiah",
+                "lastName": "Pacheco",
+                "primaryPosition": "RB",
+                "jerseyNumber": 10,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "5'10\"",
+                "weight": 216,
+                "birthDate": "1999-03-02",
+                "age": 26,
+                "birthCity": "Vineland, NJ",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Rutgers",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/rzr8nxjunjeiv8bjir59",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 43381,
+                "firstName": "Daniel",
+                "lastName": "Faalele",
+                "primaryPosition": "T",
+                "jerseyNumber": 77,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'8\"",
+                "weight": 380,
+                "birthDate": "1999-11-09",
+                "age": 25,
+                "birthCity": "Melbourne, Victoria",
+                "birthCountry": "Australia",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Minnesota",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 43382,
+                "firstName": "Jalyn",
+                "lastName": "Armour-Davis",
+                "primaryPosition": "CB",
+                "jerseyNumber": 5,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 197,
+                "birthDate": "1999-09-03",
+                "age": 25,
+                "birthCity": "Mobile, AL",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Alabama",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/bageg3vo6izvdbxzuiab",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 79760,
+                "firstName": "Zay",
+                "lastName": "Flowers",
+                "primaryPosition": "WR",
+                "jerseyNumber": 4,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "5'9\"",
+                "weight": 175,
+                "birthDate": "2000-09-11",
+                "age": 24,
+                "birthCity": "Fort Lauderdale, FL",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Boston College",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 79793,
+                "firstName": "Rashee",
+                "lastName": "Rice",
+                "primaryPosition": "WR",
+                "jerseyNumber": 4,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 204,
+                "birthDate": "2000-04-22",
+                "age": 24,
+                "birthCity": "North Richland Hills, TX",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "SMU",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/zjgi60dvmj5ogvanp201",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 79824,
+                "firstName": "Trenton",
+                "lastName": "Simpson",
+                "primaryPosition": "LB",
+                "jerseyNumber": 23,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'2\"",
+                "weight": 235,
+                "birthDate": "2001-06-14",
+                "age": 23,
+                "birthCity": "Charlotte, NC",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Clemson",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/kiq2xeidfmtesqmd5czf",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 79857,
+                "firstName": "Chamarri",
+                "lastName": "Conner",
+                "primaryPosition": "FS",
+                "jerseyNumber": 27,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 206,
+                "birthDate": "2000-07-11",
+                "age": 24,
+                "birthCity": "Jacksonville, FL",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Virginia Tech",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/rk6i4porc0i5sltnhqvu",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 108852,
+                "firstName": "B.J.",
+                "lastName": "Thompson",
+                "primaryPosition": "LB",
+                "jerseyNumber": 53,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": {
+                    "description": "undisclosed",
+                    "playingProbability": "OUT"
+                },
+                "height": "6'5\"",
+                "weight": 243,
+                "birthDate": "1999-03-23",
+                "age": 25,
+                "birthCity": "England, AR",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Stephen F. Austin",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/u5qdcq1bqjwhdi4nbjjr",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 108864,
+                "firstName": "Eric",
+                "lastName": "Scott Jr.",
+                "primaryPosition": "CB",
+                "jerseyNumber": 37,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 197,
+                "birthDate": "1999-08-07",
+                "age": 25,
+                "birthCity": "Basehor,  KS",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Southern Miss",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 111969,
+                "firstName": "Andrew",
+                "lastName": "Vorhees",
+                "primaryPosition": "G",
+                "jerseyNumber": 72,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'6\"",
+                "weight": 320,
+                "birthDate": "1999-01-21",
+                "age": 26,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "USC",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 112094,
+                "firstName": "Cam",
+                "lastName": "Jones",
+                "primaryPosition": "LB",
+                "jerseyNumber": 95,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'1\"",
+                "weight": 227,
+                "birthDate": "1999-10-21",
+                "age": 25,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Indiana",
+                "handedness": null,
+                "officialImageSrc": "https://static.www.nfl.com/image/private/t_headshot_desktop/league/bvwgro1xi9r2xky2h6jg",
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 133862,
+                "firstName": "Xavier",
+                "lastName": "Worthy",
+                "primaryPosition": "WR",
+                "jerseyNumber": 1,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "5'11\"",
+                "weight": 165,
+                "birthDate": "2003-04-27",
+                "age": 21,
+                "birthCity": "Fresno, CA",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Texas",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 133896,
+                "firstName": "Roger",
+                "lastName": "Rosengarten",
+                "primaryPosition": "OT",
+                "jerseyNumber": 70,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 316,
+                "birthDate": "2002-06-03",
+                "age": 22,
+                "birthCity": "Highlands Ranch, CO",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Washington",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 133897,
+                "firstName": "Kingsley",
+                "lastName": "Suamataia",
+                "primaryPosition": "T",
+                "jerseyNumber": 76,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 326,
+                "birthDate": "2003-01-18",
+                "age": 22,
+                "birthCity": "Orem, UT",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "BYU",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 134064,
+                "firstName": "Nick",
+                "lastName": "Samac",
+                "primaryPosition": "C",
+                "jerseyNumber": 61,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": {
+                    "description": "leg",
+                    "playingProbability": "QUESTIONABLE"
+                },
+                "height": "6'4\"",
+                "weight": 314,
+                "birthDate": "2001-08-21",
+                "age": 23,
+                "birthCity": "Mentor, OH",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Michigan State",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 134084,
+                "firstName": "C.J.",
+                "lastName": "Hanson",
+                "primaryPosition": "G",
+                "jerseyNumber": 61,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'5\"",
+                "weight": 300,
+                "birthDate": "2001-03-03",
+                "age": 24,
+                "birthCity": "Bergen County, NJ",
+                "birthCountry": "USA",
+                "rookie": true,
+                "highSchool": null,
+                "college": "Holy Cross",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 134294,
+                "firstName": "Deion",
+                "lastName": "Jennings",
+                "primaryPosition": "ILB",
+                "jerseyNumber": 56,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'0\"",
+                "weight": 230,
+                "birthDate": "2000-06-19",
+                "age": 24,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Rutgers",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 134295,
+                "firstName": "Bump",
+                "lastName": "Cooper Jr.",
+                "primaryPosition": "CB",
+                "jerseyNumber": 31,
+                "currentTeam": {
+                    "id": 56,
+                    "abbreviation": "BAL"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "5'11\"",
+                "weight": 192,
+                "birthDate": "2001-08-31",
+                "age": 23,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Oregon State",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            },
+            {
+                "id": 134376,
+                "firstName": "Fabien",
+                "lastName": "Lovett Sr.",
+                "primaryPosition": "DT",
+                "jerseyNumber": 99,
+                "currentTeam": {
+                    "id": 73,
+                    "abbreviation": "KC"
+                },
+                "currentRosterStatus": "ROSTER",
+                "currentInjury": null,
+                "height": "6'4\"",
+                "weight": 316,
+                "birthDate": "1999-12-05",
+                "age": 25,
+                "birthCity": null,
+                "birthCountry": null,
+                "rookie": false,
+                "highSchool": null,
+                "college": "Florida State",
+                "handedness": null,
+                "officialImageSrc": null,
+                "socialMediaAccounts": []
+            }
+        ]
+    }
+}

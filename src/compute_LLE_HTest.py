@@ -16,7 +16,7 @@ pg_conn = psycopg2.connect(
 pg_cursor = pg_conn.cursor()
 
 # ✅ User Input: Choose Moneyline to Analyze
-MONEYLINE_TO_TEST = -200  # Change this to test different odds
+MONEYLINE_TO_TEST = -150  # Change this to test different odds
 
 # ✅ Setup Logging
 LOG_DIR = "logs"
