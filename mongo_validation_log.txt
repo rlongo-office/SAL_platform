@@ -1,0 +1,1106 @@
+🔍 MongoDB Validation Report
+==================================================
+
+⚠️ Missing jersey number for Chad Ryland in game 114252, team 50
+⚠️ Missing jersey number for Christian Gonzalez in game 114252, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114276, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114276, team 67
+⚠️ Missing jersey number for Joey Fisher in game 113871, team 59
+⚠️ Missing jersey number for Chad Ryland in game 113875, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113894, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113906, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113906, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113906, team 51
+⚠️ Missing jersey number for Chad Ryland in game 113926, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113926, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113926, team 52
+⚠️ Missing jersey number for Chad Ryland in game 113936, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113954, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113954, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113954, team 74
+⚠️ Missing jersey number for Chad Ryland in game 113963, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113977, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113977, team 50
+⚠️ Missing jersey number for Chad Ryland in game 113977, team 49
+⚠️ Missing jersey number for Chad Ryland in game 113994, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114003, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114038, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114038, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114038, team 53
+⚠️ Missing jersey number for Chad Ryland in game 114047, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114059, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114059, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114059, team 59
+⚠️ Missing jersey number for Chad Ryland in game 114084, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114097, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114097, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114097, team 72
+⚠️ Missing jersey number for Chad Ryland in game 114104, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114104, team 50
+⚠️ Missing jersey number for Chad Ryland in game 114104, team 48
+⚠️ Missing jersey number for Chad Ryland in game 114135, team 50
+⚠️ Missing expected lineup for team 63 in game 134655
+⚠️ expected lineup is completely missing for team 63 in game 134655
+⚠️ Missing expected lineup for team 58 in game 134655
+⚠️ expected lineup is completely missing for team 58 in game 134655
+⚠️ Missing expected lineup for team 51 in game 134648
+⚠️ expected lineup is completely missing for team 51 in game 134648
+⚠️ Missing expected lineup for team 69 in game 134648
+⚠️ expected lineup is completely missing for team 69 in game 134648
+⚠️ Missing expected lineup for team 76 in game 134649
+⚠️ expected lineup is completely missing for team 76 in game 134649
+⚠️ Missing expected lineup for team 65 in game 134649
+⚠️ expected lineup is completely missing for team 65 in game 134649
+⚠️ Missing expected lineup for team 55 in game 134650
+⚠️ expected lineup is completely missing for team 55 in game 134650
+⚠️ Missing expected lineup for team 49 in game 134650
+⚠️ expected lineup is completely missing for team 49 in game 134650
+⚠️ Missing expected lineup for team 48 in game 134651
+⚠️ expected lineup is completely missing for team 48 in game 134651
+⚠️ Missing expected lineup for team 59 in game 134651
+⚠️ expected lineup is completely missing for team 59 in game 134651
+⚠️ Missing expected lineup for team 79 in game 134652
+⚠️ expected lineup is completely missing for team 79 in game 134652
+⚠️ Missing expected lineup for team 67 in game 134652
+⚠️ expected lineup is completely missing for team 67 in game 134652
+⚠️ Missing expected lineup for team 77 in game 134653
+⚠️ expected lineup is completely missing for team 77 in game 134653
+⚠️ Missing expected lineup for team 75 in game 134653
+⚠️ expected lineup is completely missing for team 75 in game 134653
+⚠️ Missing expected lineup for team 71 in game 134656
+⚠️ expected lineup is completely missing for team 71 in game 134656
+⚠️ Missing expected lineup for team 66 in game 134656
+⚠️ expected lineup is completely missing for team 66 in game 134656
+⚠️ Missing expected lineup for team 52 in game 134654
+⚠️ expected lineup is completely missing for team 52 in game 134654
+⚠️ Missing expected lineup for team 74 in game 134654
+⚠️ expected lineup is completely missing for team 74 in game 134654
+⚠️ Missing expected lineup for team 54 in game 83466
+⚠️ Missing actual lineup for team 54 in game 83466
+⚠️ expected lineup is completely missing for team 54 in game 83466
+⚠️ actual lineup is completely missing for team 54 in game 83466
+⚠️ Missing expected lineup for team 65 in game 83466
+⚠️ Missing actual lineup for team 65 in game 83466
+⚠️ expected lineup is completely missing for team 65 in game 83466
+⚠️ actual lineup is completely missing for team 65 in game 83466
+⚠️ Missing expected lineup for team 61 in game 83467
+⚠️ Missing actual lineup for team 61 in game 83467
+⚠️ expected lineup is completely missing for team 61 in game 83467
+⚠️ actual lineup is completely missing for team 61 in game 83467
+⚠️ Missing expected lineup for team 50 in game 83467
+⚠️ Missing actual lineup for team 50 in game 83467
+⚠️ expected lineup is completely missing for team 50 in game 83467
+⚠️ actual lineup is completely missing for team 50 in game 83467
+⚠️ Missing expected lineup for team 66 in game 83468
+⚠️ Missing actual lineup for team 66 in game 83468
+⚠️ expected lineup is completely missing for team 66 in game 83468
+⚠️ actual lineup is completely missing for team 66 in game 83468
+⚠️ Missing expected lineup for team 69 in game 83468
+⚠️ Missing actual lineup for team 69 in game 83468
+⚠️ expected lineup is completely missing for team 69 in game 83468
+⚠️ actual lineup is completely missing for team 69 in game 83468
+⚠️ Missing expected lineup for team 53 in game 83470
+⚠️ Missing actual lineup for team 53 in game 83470
+⚠️ expected lineup is completely missing for team 53 in game 83470
+⚠️ actual lineup is completely missing for team 53 in game 83470
+⚠️ Missing expected lineup for team 51 in game 83470
+⚠️ Missing actual lineup for team 51 in game 83470
+⚠️ expected lineup is completely missing for team 51 in game 83470
+⚠️ actual lineup is completely missing for team 51 in game 83470
+⚠️ Missing expected lineup for team 74 in game 83469
+⚠️ Missing actual lineup for team 74 in game 83469
+⚠️ expected lineup is completely missing for team 74 in game 83469
+⚠️ actual lineup is completely missing for team 74 in game 83469
+⚠️ Missing expected lineup for team 79 in game 83469
+⚠️ Missing actual lineup for team 79 in game 83469
+⚠️ expected lineup is completely missing for team 79 in game 83469
+⚠️ actual lineup is completely missing for team 79 in game 83469
+⚠️ Missing expected lineup for team 49 in game 83471
+⚠️ Missing actual lineup for team 49 in game 83471
+⚠️ expected lineup is completely missing for team 49 in game 83471
+⚠️ actual lineup is completely missing for team 49 in game 83471
+⚠️ Missing expected lineup for team 68 in game 83471
+⚠️ Missing actual lineup for team 68 in game 83471
+⚠️ expected lineup is completely missing for team 68 in game 83471
+⚠️ actual lineup is completely missing for team 68 in game 83471
+⚠️ Missing expected lineup for team 71 in game 83472
+⚠️ Missing actual lineup for team 71 in game 83472
+⚠️ expected lineup is completely missing for team 71 in game 83472
+⚠️ actual lineup is completely missing for team 71 in game 83472
+⚠️ Missing expected lineup for team 59 in game 83472
+⚠️ Missing actual lineup for team 59 in game 83472
+⚠️ expected lineup is completely missing for team 59 in game 83472
+⚠️ actual lineup is completely missing for team 59 in game 83472
+⚠️ Missing expected lineup for team 48 in game 83473
+⚠️ Missing actual lineup for team 48 in game 83473
+⚠️ expected lineup is completely missing for team 48 in game 83473
+⚠️ actual lineup is completely missing for team 48 in game 83473
+⚠️ Missing expected lineup for team 56 in game 83473
+⚠️ Missing actual lineup for team 56 in game 83473
+⚠️ expected lineup is completely missing for team 56 in game 83473
+⚠️ actual lineup is completely missing for team 56 in game 83473
+⚠️ Missing expected lineup for team 64 in game 83474
+⚠️ Missing actual lineup for team 64 in game 83474
+⚠️ expected lineup is completely missing for team 64 in game 83474
+⚠️ actual lineup is completely missing for team 64 in game 83474
+⚠️ Missing expected lineup for team 63 in game 83474
+⚠️ Missing actual lineup for team 63 in game 83474
+⚠️ expected lineup is completely missing for team 63 in game 83474
+⚠️ actual lineup is completely missing for team 63 in game 83474
+⚠️ Missing expected lineup for team 70 in game 83475
+⚠️ Missing actual lineup for team 70 in game 83475
+⚠️ expected lineup is completely missing for team 70 in game 83475
+⚠️ actual lineup is completely missing for team 70 in game 83475
+⚠️ Missing expected lineup for team 77 in game 83475
+⚠️ Missing actual lineup for team 77 in game 83475
+⚠️ expected lineup is completely missing for team 77 in game 83475
+⚠️ actual lineup is completely missing for team 77 in game 83475
+⚠️ Missing expected lineup for team 58 in game 83476
+⚠️ Missing actual lineup for team 58 in game 83476
+⚠️ expected lineup is completely missing for team 58 in game 83476
+⚠️ actual lineup is completely missing for team 58 in game 83476
+⚠️ Missing expected lineup for team 60 in game 83476
+⚠️ Missing actual lineup for team 60 in game 83476
+⚠️ expected lineup is completely missing for team 60 in game 83476
+⚠️ actual lineup is completely missing for team 60 in game 83476
+⚠️ Missing expected lineup for team 76 in game 83477
+⚠️ Missing actual lineup for team 76 in game 83477
+⚠️ expected lineup is completely missing for team 76 in game 83477
+⚠️ actual lineup is completely missing for team 76 in game 83477
+⚠️ Missing expected lineup for team 62 in game 83477
+⚠️ Missing actual lineup for team 62 in game 83477
+⚠️ expected lineup is completely missing for team 62 in game 83477
+⚠️ actual lineup is completely missing for team 62 in game 83477
+⚠️ Missing expected lineup for team 67 in game 83480
+⚠️ Missing actual lineup for team 67 in game 83480
+⚠️ expected lineup is completely missing for team 67 in game 83480
+⚠️ actual lineup is completely missing for team 67 in game 83480
+⚠️ Missing expected lineup for team 55 in game 83480
+⚠️ Missing actual lineup for team 55 in game 83480
+⚠️ expected lineup is completely missing for team 55 in game 83480
+⚠️ actual lineup is completely missing for team 55 in game 83480
+⚠️ Missing expected lineup for team 57 in game 83478
+⚠️ Missing actual lineup for team 57 in game 83478
+⚠️ expected lineup is completely missing for team 57 in game 83478
+⚠️ actual lineup is completely missing for team 57 in game 83478
+⚠️ Missing expected lineup for team 73 in game 83478
+⚠️ Missing actual lineup for team 73 in game 83478
+⚠️ expected lineup is completely missing for team 73 in game 83478
+⚠️ actual lineup is completely missing for team 73 in game 83478
+⚠️ Missing expected lineup for team 78 in game 83479
+⚠️ Missing actual lineup for team 78 in game 83479
+⚠️ expected lineup is completely missing for team 78 in game 83479
+⚠️ actual lineup is completely missing for team 78 in game 83479
+⚠️ Missing expected lineup for team 72 in game 83479
+⚠️ Missing actual lineup for team 72 in game 83479
+⚠️ expected lineup is completely missing for team 72 in game 83479
+⚠️ actual lineup is completely missing for team 72 in game 83479
+⚠️ Missing expected lineup for team 52 in game 83481
+⚠️ Missing actual lineup for team 52 in game 83481
+⚠️ expected lineup is completely missing for team 52 in game 83481
+⚠️ actual lineup is completely missing for team 52 in game 83481
+⚠️ Missing expected lineup for team 75 in game 83481
+⚠️ Missing actual lineup for team 75 in game 83481
+⚠️ expected lineup is completely missing for team 75 in game 83481
+⚠️ actual lineup is completely missing for team 75 in game 83481
+⚠️ Missing expected lineup for team 54 in game 83482
+⚠️ Missing actual lineup for team 54 in game 83482
+⚠️ expected lineup is completely missing for team 54 in game 83482
+⚠️ actual lineup is completely missing for team 54 in game 83482
+⚠️ Missing expected lineup for team 49 in game 83482
+⚠️ Missing actual lineup for team 49 in game 83482
+⚠️ expected lineup is completely missing for team 49 in game 83482
+⚠️ actual lineup is completely missing for team 49 in game 83482
+⚠️ Missing expected lineup for team 69 in game 83483
+⚠️ Missing actual lineup for team 69 in game 83483
+⚠️ expected lineup is completely missing for team 69 in game 83483
+⚠️ actual lineup is completely missing for team 69 in game 83483
+⚠️ Missing expected lineup for team 50 in game 83483
+⚠️ Missing actual lineup for team 50 in game 83483
+⚠️ expected lineup is completely missing for team 50 in game 83483
+⚠️ actual lineup is completely missing for team 50 in game 83483
+⚠️ Missing expected lineup for team 51 in game 83484
+⚠️ Missing actual lineup for team 51 in game 83484
+⚠️ expected lineup is completely missing for team 51 in game 83484
+⚠️ actual lineup is completely missing for team 51 in game 83484
+⚠️ Missing expected lineup for team 61 in game 83484
+⚠️ Missing actual lineup for team 61 in game 83484
+⚠️ expected lineup is completely missing for team 61 in game 83484
+⚠️ actual lineup is completely missing for team 61 in game 83484
+⚠️ Missing expected lineup for team 68 in game 83485
+⚠️ Missing actual lineup for team 68 in game 83485
+⚠️ expected lineup is completely missing for team 68 in game 83485
+⚠️ actual lineup is completely missing for team 68 in game 83485
+⚠️ Missing expected lineup for team 48 in game 83485
+⚠️ Missing actual lineup for team 48 in game 83485
+⚠️ expected lineup is completely missing for team 48 in game 83485
+⚠️ actual lineup is completely missing for team 48 in game 83485
+⚠️ Missing expected lineup for team 63 in game 83486
+⚠️ Missing actual lineup for team 63 in game 83486
+⚠️ expected lineup is completely missing for team 63 in game 83486
+⚠️ actual lineup is completely missing for team 63 in game 83486
+⚠️ Missing expected lineup for team 57 in game 83486
+⚠️ Missing actual lineup for team 57 in game 83486
+⚠️ expected lineup is completely missing for team 57 in game 83486
+⚠️ actual lineup is completely missing for team 57 in game 83486
+⚠️ Missing expected lineup for team 74 in game 83487
+⚠️ Missing actual lineup for team 74 in game 83487
+⚠️ expected lineup is completely missing for team 74 in game 83487
+⚠️ actual lineup is completely missing for team 74 in game 83487
+⚠️ Missing expected lineup for team 78 in game 83487
+⚠️ Missing actual lineup for team 78 in game 83487
+⚠️ expected lineup is completely missing for team 78 in game 83487
+⚠️ actual lineup is completely missing for team 78 in game 83487
+⚠️ Missing expected lineup for team 58 in game 83488
+⚠️ Missing actual lineup for team 58 in game 83488
+⚠️ expected lineup is completely missing for team 58 in game 83488
+⚠️ actual lineup is completely missing for team 58 in game 83488
+⚠️ Missing expected lineup for team 62 in game 83488
+⚠️ Missing actual lineup for team 62 in game 83488
+⚠️ expected lineup is completely missing for team 62 in game 83488
+⚠️ actual lineup is completely missing for team 62 in game 83488
+⚠️ Missing expected lineup for team 56 in game 83489
+⚠️ Missing actual lineup for team 56 in game 83489
+⚠️ expected lineup is completely missing for team 56 in game 83489
+⚠️ actual lineup is completely missing for team 56 in game 83489
+⚠️ Missing expected lineup for team 52 in game 83489
+⚠️ Missing actual lineup for team 52 in game 83489
+⚠️ expected lineup is completely missing for team 52 in game 83489
+⚠️ actual lineup is completely missing for team 52 in game 83489
+⚠️ Missing expected lineup for team 66 in game 83490
+⚠️ Missing actual lineup for team 66 in game 83490
+⚠️ expected lineup is completely missing for team 66 in game 83490
+⚠️ actual lineup is completely missing for team 66 in game 83490
+⚠️ Missing expected lineup for team 71 in game 83490
+⚠️ Missing actual lineup for team 71 in game 83490
+⚠️ expected lineup is completely missing for team 71 in game 83490
+⚠️ actual lineup is completely missing for team 71 in game 83490
+⚠️ Missing expected lineup for team 79 in game 83491
+⚠️ Missing actual lineup for team 79 in game 83491
+⚠️ expected lineup is completely missing for team 79 in game 83491
+⚠️ actual lineup is completely missing for team 79 in game 83491
+⚠️ Missing expected lineup for team 64 in game 83491
+⚠️ Missing actual lineup for team 64 in game 83491
+⚠️ expected lineup is completely missing for team 64 in game 83491
+⚠️ actual lineup is completely missing for team 64 in game 83491
+⚠️ Missing expected lineup for team 53 in game 83494
+⚠️ Missing actual lineup for team 53 in game 83494
+⚠️ expected lineup is completely missing for team 53 in game 83494
+⚠️ actual lineup is completely missing for team 53 in game 83494
+⚠️ Missing expected lineup for team 67 in game 83494
+⚠️ Missing actual lineup for team 67 in game 83494
+⚠️ expected lineup is completely missing for team 67 in game 83494
+⚠️ actual lineup is completely missing for team 67 in game 83494
+⚠️ Missing expected lineup for team 73 in game 83492
+⚠️ Missing actual lineup for team 73 in game 83492
+⚠️ expected lineup is completely missing for team 73 in game 83492
+⚠️ actual lineup is completely missing for team 73 in game 83492
+⚠️ Missing expected lineup for team 76 in game 83492
+⚠️ Missing actual lineup for team 76 in game 83492
+⚠️ expected lineup is completely missing for team 76 in game 83492
+⚠️ actual lineup is completely missing for team 76 in game 83492
+⚠️ Missing expected lineup for team 60 in game 83493
+⚠️ Missing actual lineup for team 60 in game 83493
+⚠️ expected lineup is completely missing for team 60 in game 83493
+⚠️ actual lineup is completely missing for team 60 in game 83493
+⚠️ Missing expected lineup for team 72 in game 83493
+⚠️ Missing actual lineup for team 72 in game 83493
+⚠️ expected lineup is completely missing for team 72 in game 83493
+⚠️ actual lineup is completely missing for team 72 in game 83493
+⚠️ Missing expected lineup for team 77 in game 83495
+⚠️ Missing actual lineup for team 77 in game 83495
+⚠️ expected lineup is completely missing for team 77 in game 83495
+⚠️ actual lineup is completely missing for team 77 in game 83495
+⚠️ Missing expected lineup for team 75 in game 83495
+⚠️ Missing actual lineup for team 75 in game 83495
+⚠️ expected lineup is completely missing for team 75 in game 83495
+⚠️ actual lineup is completely missing for team 75 in game 83495
+⚠️ Missing expected lineup for team 70 in game 83496
+⚠️ Missing actual lineup for team 70 in game 83496
+⚠️ expected lineup is completely missing for team 70 in game 83496
+⚠️ actual lineup is completely missing for team 70 in game 83496
+⚠️ Missing expected lineup for team 59 in game 83496
+⚠️ Missing actual lineup for team 59 in game 83496
+⚠️ expected lineup is completely missing for team 59 in game 83496
+⚠️ actual lineup is completely missing for team 59 in game 83496
+⚠️ Missing expected lineup for team 55 in game 83497
+⚠️ Missing actual lineup for team 55 in game 83497
+⚠️ expected lineup is completely missing for team 55 in game 83497
+⚠️ actual lineup is completely missing for team 55 in game 83497
+⚠️ Missing expected lineup for team 65 in game 83497
+⚠️ Missing actual lineup for team 65 in game 83497
+⚠️ expected lineup is completely missing for team 65 in game 83497
+⚠️ actual lineup is completely missing for team 65 in game 83497
+⚠️ Missing expected lineup for team 61 in game 83498
+⚠️ Missing actual lineup for team 61 in game 83498
+⚠️ expected lineup is completely missing for team 61 in game 83498
+⚠️ actual lineup is completely missing for team 61 in game 83498
+⚠️ Missing expected lineup for team 49 in game 83498
+⚠️ Missing actual lineup for team 49 in game 83498
+⚠️ expected lineup is completely missing for team 49 in game 83498
+⚠️ actual lineup is completely missing for team 49 in game 83498
+⚠️ Missing expected lineup for team 50 in game 83499
+⚠️ Missing actual lineup for team 50 in game 83499
+⚠️ expected lineup is completely missing for team 50 in game 83499
+⚠️ actual lineup is completely missing for team 50 in game 83499
+⚠️ Missing expected lineup for team 54 in game 83499
+⚠️ Missing actual lineup for team 54 in game 83499
+⚠️ expected lineup is completely missing for team 54 in game 83499
+⚠️ actual lineup is completely missing for team 54 in game 83499
+⚠️ Missing expected lineup for team 75 in game 83501
+⚠️ Missing actual lineup for team 75 in game 83501
+⚠️ expected lineup is completely missing for team 75 in game 83501
+⚠️ actual lineup is completely missing for team 75 in game 83501
+⚠️ Missing expected lineup for team 79 in game 83501
+⚠️ Missing actual lineup for team 79 in game 83501
+⚠️ expected lineup is completely missing for team 79 in game 83501
+⚠️ actual lineup is completely missing for team 79 in game 83501
+⚠️ Missing expected lineup for team 76 in game 83500
+⚠️ Missing actual lineup for team 76 in game 83500
+⚠️ expected lineup is completely missing for team 76 in game 83500
+⚠️ actual lineup is completely missing for team 76 in game 83500
+⚠️ Missing expected lineup for team 74 in game 83500
+⚠️ Missing actual lineup for team 74 in game 83500
+⚠️ expected lineup is completely missing for team 74 in game 83500
+⚠️ actual lineup is completely missing for team 74 in game 83500
+⚠️ Missing expected lineup for team 59 in game 83503
+⚠️ Missing actual lineup for team 59 in game 83503
+⚠️ expected lineup is completely missing for team 59 in game 83503
+⚠️ actual lineup is completely missing for team 59 in game 83503
+⚠️ Missing expected lineup for team 51 in game 83503
+⚠️ Missing actual lineup for team 51 in game 83503
+⚠️ expected lineup is completely missing for team 51 in game 83503
+⚠️ actual lineup is completely missing for team 51 in game 83503
+⚠️ Missing expected lineup for team 57 in game 83502
+⚠️ Missing actual lineup for team 57 in game 83502
+⚠️ expected lineup is completely missing for team 57 in game 83502
+⚠️ actual lineup is completely missing for team 57 in game 83502
+⚠️ Missing expected lineup for team 68 in game 83502
+⚠️ Missing actual lineup for team 68 in game 83502
+⚠️ expected lineup is completely missing for team 68 in game 83502
+⚠️ actual lineup is completely missing for team 68 in game 83502
+⚠️ Missing expected lineup for team 78 in game 83504
+⚠️ Missing actual lineup for team 78 in game 83504
+⚠️ expected lineup is completely missing for team 78 in game 83504
+⚠️ actual lineup is completely missing for team 78 in game 83504
+⚠️ Missing expected lineup for team 60 in game 83504
+⚠️ Missing actual lineup for team 60 in game 83504
+⚠️ expected lineup is completely missing for team 60 in game 83504
+⚠️ actual lineup is completely missing for team 60 in game 83504
+⚠️ Missing expected lineup for team 65 in game 83506
+⚠️ Missing actual lineup for team 65 in game 83506
+⚠️ expected lineup is completely missing for team 65 in game 83506
+⚠️ actual lineup is completely missing for team 65 in game 83506
+⚠️ Missing expected lineup for team 48 in game 83506
+⚠️ Missing actual lineup for team 48 in game 83506
+⚠️ expected lineup is completely missing for team 48 in game 83506
+⚠️ actual lineup is completely missing for team 48 in game 83506
+⚠️ Missing expected lineup for team 62 in game 83511
+⚠️ Missing actual lineup for team 62 in game 83511
+⚠️ expected lineup is completely missing for team 62 in game 83511
+⚠️ actual lineup is completely missing for team 62 in game 83511
+⚠️ Missing expected lineup for team 53 in game 83511
+⚠️ Missing actual lineup for team 53 in game 83511
+⚠️ expected lineup is completely missing for team 53 in game 83511
+⚠️ actual lineup is completely missing for team 53 in game 83511
+⚠️ Missing expected lineup for team 73 in game 83505
+⚠️ Missing actual lineup for team 73 in game 83505
+⚠️ expected lineup is completely missing for team 73 in game 83505
+⚠️ actual lineup is completely missing for team 73 in game 83505
+⚠️ Missing expected lineup for team 52 in game 83505
+⚠️ Missing actual lineup for team 52 in game 83505
+⚠️ expected lineup is completely missing for team 52 in game 83505
+⚠️ actual lineup is completely missing for team 52 in game 83505
+⚠️ Missing expected lineup for team 67 in game 83507
+⚠️ Missing actual lineup for team 67 in game 83507
+⚠️ expected lineup is completely missing for team 67 in game 83507
+⚠️ actual lineup is completely missing for team 67 in game 83507
+⚠️ Missing expected lineup for team 71 in game 83507
+⚠️ Missing actual lineup for team 71 in game 83507
+⚠️ expected lineup is completely missing for team 71 in game 83507
+⚠️ actual lineup is completely missing for team 71 in game 83507
+⚠️ Missing expected lineup for team 55 in game 83508
+⚠️ Missing actual lineup for team 55 in game 83508
+⚠️ expected lineup is completely missing for team 55 in game 83508
+⚠️ actual lineup is completely missing for team 55 in game 83508
+⚠️ Missing expected lineup for team 66 in game 83508
+⚠️ Missing actual lineup for team 66 in game 83508
+⚠️ expected lineup is completely missing for team 66 in game 83508
+⚠️ actual lineup is completely missing for team 66 in game 83508
+⚠️ Missing expected lineup for team 64 in game 83509
+⚠️ Missing actual lineup for team 64 in game 83509
+⚠️ expected lineup is completely missing for team 64 in game 83509
+⚠️ actual lineup is completely missing for team 64 in game 83509
+⚠️ Missing expected lineup for team 70 in game 83509
+⚠️ Missing actual lineup for team 70 in game 83509
+⚠️ expected lineup is completely missing for team 70 in game 83509
+⚠️ actual lineup is completely missing for team 70 in game 83509
+⚠️ Missing expected lineup for team 72 in game 83510
+⚠️ Missing actual lineup for team 72 in game 83510
+⚠️ expected lineup is completely missing for team 72 in game 83510
+⚠️ actual lineup is completely missing for team 72 in game 83510
+⚠️ Missing expected lineup for team 77 in game 83510
+⚠️ Missing actual lineup for team 77 in game 83510
+⚠️ expected lineup is completely missing for team 77 in game 83510
+⚠️ actual lineup is completely missing for team 77 in game 83510
+⚠️ Missing expected lineup for team 63 in game 83512
+⚠️ Missing actual lineup for team 63 in game 83512
+⚠️ expected lineup is completely missing for team 63 in game 83512
+⚠️ actual lineup is completely missing for team 63 in game 83512
+⚠️ Missing expected lineup for team 58 in game 83512
+⚠️ Missing actual lineup for team 58 in game 83512
+⚠️ expected lineup is completely missing for team 58 in game 83512
+⚠️ actual lineup is completely missing for team 58 in game 83512
+⚠️ Missing expected lineup for team 69 in game 83513
+⚠️ Missing actual lineup for team 69 in game 83513
+⚠️ expected lineup is completely missing for team 69 in game 83513
+⚠️ actual lineup is completely missing for team 69 in game 83513
+⚠️ Missing expected lineup for team 56 in game 83513
+⚠️ Missing actual lineup for team 56 in game 83513
+⚠️ expected lineup is completely missing for team 56 in game 83513
+⚠️ actual lineup is completely missing for team 56 in game 83513
+⚠️ Missing expected lineup for team 48 in game 83514
+⚠️ Missing actual lineup for team 48 in game 83514
+⚠️ expected lineup is completely missing for team 48 in game 83514
+⚠️ actual lineup is completely missing for team 48 in game 83514
+⚠️ Missing expected lineup for team 61 in game 83514
+⚠️ Missing actual lineup for team 61 in game 83514
+⚠️ expected lineup is completely missing for team 61 in game 83514
+⚠️ actual lineup is completely missing for team 61 in game 83514
+⚠️ Missing expected lineup for team 68 in game 83515
+⚠️ Missing actual lineup for team 68 in game 83515
+⚠️ expected lineup is completely missing for team 68 in game 83515
+⚠️ actual lineup is completely missing for team 68 in game 83515
+⚠️ Missing expected lineup for team 66 in game 83515
+⚠️ Missing actual lineup for team 66 in game 83515
+⚠️ expected lineup is completely missing for team 66 in game 83515
+⚠️ actual lineup is completely missing for team 66 in game 83515
+⚠️ Missing expected lineup for team 50 in game 83528
+⚠️ Missing actual lineup for team 50 in game 83528
+⚠️ expected lineup is completely missing for team 50 in game 83528
+⚠️ actual lineup is completely missing for team 50 in game 83528
+⚠️ Missing expected lineup for team 53 in game 83528
+⚠️ Missing actual lineup for team 53 in game 83528
+⚠️ expected lineup is completely missing for team 53 in game 83528
+⚠️ actual lineup is completely missing for team 53 in game 83528
+⚠️ Missing expected lineup for team 65 in game 83529
+⚠️ Missing actual lineup for team 65 in game 83529
+⚠️ expected lineup is completely missing for team 65 in game 83529
+⚠️ actual lineup is completely missing for team 65 in game 83529
+⚠️ Missing expected lineup for team 57 in game 83529
+⚠️ Missing actual lineup for team 57 in game 83529
+⚠️ expected lineup is completely missing for team 57 in game 83529
+⚠️ actual lineup is completely missing for team 57 in game 83529
+⚠️ Missing expected lineup for team 71 in game 83516
+⚠️ Missing actual lineup for team 71 in game 83516
+⚠️ expected lineup is completely missing for team 71 in game 83516
+⚠️ actual lineup is completely missing for team 71 in game 83516
+⚠️ Missing expected lineup for team 58 in game 83516
+⚠️ Missing actual lineup for team 58 in game 83516
+⚠️ expected lineup is completely missing for team 58 in game 83516
+⚠️ actual lineup is completely missing for team 58 in game 83516
+⚠️ Missing expected lineup for team 59 in game 83517
+⚠️ Missing actual lineup for team 59 in game 83517
+⚠️ expected lineup is completely missing for team 59 in game 83517
+⚠️ actual lineup is completely missing for team 59 in game 83517
+⚠️ Missing expected lineup for team 69 in game 83517
+⚠️ Missing actual lineup for team 69 in game 83517
+⚠️ expected lineup is completely missing for team 69 in game 83517
+⚠️ actual lineup is completely missing for team 69 in game 83517
+⚠️ Missing expected lineup for team 56 in game 83526
+⚠️ Missing actual lineup for team 56 in game 83526
+⚠️ expected lineup is completely missing for team 56 in game 83526
+⚠️ actual lineup is completely missing for team 56 in game 83526
+⚠️ Missing expected lineup for team 55 in game 83526
+⚠️ Missing actual lineup for team 55 in game 83526
+⚠️ expected lineup is completely missing for team 55 in game 83526
+⚠️ actual lineup is completely missing for team 55 in game 83526
+⚠️ Missing expected lineup for team 51 in game 83527
+⚠️ Missing actual lineup for team 51 in game 83527
+⚠️ expected lineup is completely missing for team 51 in game 83527
+⚠️ actual lineup is completely missing for team 51 in game 83527
+⚠️ Missing expected lineup for team 54 in game 83527
+⚠️ Missing actual lineup for team 54 in game 83527
+⚠️ expected lineup is completely missing for team 54 in game 83527
+⚠️ actual lineup is completely missing for team 54 in game 83527
+⚠️ Missing expected lineup for team 60 in game 83518
+⚠️ Missing actual lineup for team 60 in game 83518
+⚠️ expected lineup is completely missing for team 60 in game 83518
+⚠️ actual lineup is completely missing for team 60 in game 83518
+⚠️ Missing expected lineup for team 67 in game 83518
+⚠️ Missing actual lineup for team 67 in game 83518
+⚠️ expected lineup is completely missing for team 67 in game 83518
+⚠️ actual lineup is completely missing for team 67 in game 83518
+⚠️ Missing expected lineup for team 62 in game 83519
+⚠️ Missing actual lineup for team 62 in game 83519
+⚠️ expected lineup is completely missing for team 62 in game 83519
+⚠️ actual lineup is completely missing for team 62 in game 83519
+⚠️ Missing expected lineup for team 73 in game 83519
+⚠️ Missing actual lineup for team 73 in game 83519
+⚠️ expected lineup is completely missing for team 73 in game 83519
+⚠️ actual lineup is completely missing for team 73 in game 83519
+⚠️ Missing expected lineup for team 49 in game 83520
+⚠️ Missing actual lineup for team 49 in game 83520
+⚠️ expected lineup is completely missing for team 49 in game 83520
+⚠️ actual lineup is completely missing for team 49 in game 83520
+⚠️ Missing expected lineup for team 70 in game 83520
+⚠️ Missing actual lineup for team 70 in game 83520
+⚠️ expected lineup is completely missing for team 70 in game 83520
+⚠️ actual lineup is completely missing for team 70 in game 83520
+⚠️ Missing expected lineup for team 52 in game 83521
+⚠️ Missing actual lineup for team 52 in game 83521
+⚠️ expected lineup is completely missing for team 52 in game 83521
+⚠️ actual lineup is completely missing for team 52 in game 83521
+⚠️ Missing expected lineup for team 64 in game 83521
+⚠️ Missing actual lineup for team 64 in game 83521
+⚠️ expected lineup is completely missing for team 64 in game 83521
+⚠️ actual lineup is completely missing for team 64 in game 83521
+⚠️ Missing expected lineup for team 79 in game 83525
+⚠️ Missing actual lineup for team 79 in game 83525
+⚠️ expected lineup is completely missing for team 79 in game 83525
+⚠️ actual lineup is completely missing for team 79 in game 83525
+⚠️ Missing expected lineup for team 63 in game 83525
+⚠️ Missing actual lineup for team 63 in game 83525
+⚠️ expected lineup is completely missing for team 63 in game 83525
+⚠️ actual lineup is completely missing for team 63 in game 83525
+⚠️ Missing expected lineup for team 72 in game 83522
+⚠️ Missing actual lineup for team 72 in game 83522
+⚠️ expected lineup is completely missing for team 72 in game 83522
+⚠️ actual lineup is completely missing for team 72 in game 83522
+⚠️ Missing expected lineup for team 76 in game 83522
+⚠️ Missing actual lineup for team 76 in game 83522
+⚠️ expected lineup is completely missing for team 76 in game 83522
+⚠️ actual lineup is completely missing for team 76 in game 83522
+⚠️ Missing expected lineup for team 75 in game 83523
+⚠️ Missing actual lineup for team 75 in game 83523
+⚠️ expected lineup is completely missing for team 75 in game 83523
+⚠️ actual lineup is completely missing for team 75 in game 83523
+⚠️ Missing expected lineup for team 78 in game 83523
+⚠️ Missing actual lineup for team 78 in game 83523
+⚠️ expected lineup is completely missing for team 78 in game 83523
+⚠️ actual lineup is completely missing for team 78 in game 83523
+⚠️ Missing expected lineup for team 77 in game 83524
+⚠️ Missing actual lineup for team 77 in game 83524
+⚠️ expected lineup is completely missing for team 77 in game 83524
+⚠️ actual lineup is completely missing for team 77 in game 83524
+⚠️ Missing expected lineup for team 74 in game 83524
+⚠️ Missing actual lineup for team 74 in game 83524
+⚠️ expected lineup is completely missing for team 74 in game 83524
+⚠️ actual lineup is completely missing for team 74 in game 83524
+⚠️ Missing jersey number for Clyde Edwards-Helaire in game 56752, team 73
+⚠️ Missing jersey number for Tyler Bass in game 56759, team 48
+⚠️ Missing jersey number for Bryan Edwards in game 56760, team 74
+⚠️ Missing jersey number for Henry Ruggs III in game 56760, team 74
+⚠️ Missing jersey number for Kenny Robinson in game 56760, team 69
+⚠️ Missing jersey number for D'Andre Swift in game 56761, team 61
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56762, team 65
+⚠️ Missing jersey number for Julian Blackmon in game 56762, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56762, team 65
+⚠️ Missing jersey number for James Robinson in game 56762, team 66
+⚠️ Missing jersey number for Laviska Shenault Jr. in game 56762, team 66
+⚠️ Missing jersey number for Shaquille Quarterman in game 56762, team 66
+⚠️ Missing jersey number for J.R. Reed in game 56762, team 66
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56762, team 66
+⚠️ Missing jersey number for Justin Jefferson in game 56763, team 63
+⚠️ Missing jersey number for Brian Cole II in game 56763, team 63
+⚠️ Missing jersey number for Donell Stanley in game 56764, team 49
+⚠️ Missing jersey number for Jalen Reagor in game 56765, team 54
+⚠️ Missing jersey number for Joe Burrow in game 56766, team 57
+⚠️ Missing jersey number for Tee Higgins in game 56766, team 57
+⚠️ Missing jersey number for Brandon Aiyuk in game 56768, team 78
+⚠️ Missing jersey number for CeeDee Lamb in game 56769, team 52
+⚠️ Missing jersey number for Cam Akers in game 56769, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56769, team 77
+⚠️ Missing jersey number for Chris Jackson in game 56771, team 67
+⚠️ Missing jersey number for Jerry Jeudy in game 56771, team 72
+⚠️ Missing jersey number for Netane Muti in game 56771, team 72
+⚠️ Missing jersey number for Lloyd Cushenberry in game 56771, team 72
+⚠️ Missing jersey number for Jerry Jeudy in game 56779, team 72
+⚠️ Missing jersey number for Sam Sloman in game 56780, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56780, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56780, team 54
+⚠️ Missing jersey number for Brandon Aiyuk in game 56781, team 78
+⚠️ Missing jersey number for Tyler Bass in game 56782, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56782, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56782, team 49
+⚠️ Missing jersey number for Justin Jefferson in game 56783, team 63
+⚠️ Missing jersey number for Jonathan Taylor in game 56783, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56783, team 65
+⚠️ Missing jersey number for Marquez Callaway in game 56787, team 70
+⚠️ Missing jersey number for Justin Jefferson in game 56799, team 63
+⚠️ Missing jersey number for Sam Sloman in game 56801, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56801, team 77
+⚠️ Missing jersey number for Tyler Bass in game 56801, team 48
+⚠️ Missing jersey number for Sam Sloman in game 56801, team 48
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56794, team 65
+⚠️ Missing jersey number for Michael Pittman in game 56794, team 65
+⚠️ Missing jersey number for K.J. Hamler in game 56791, team 72
+⚠️ Missing jersey number for K.J. Hill in game 56811, team 75
+⚠️ Missing jersey number for Adam Trautman in game 56814, team 70
+⚠️ Missing jersey number for Sam Sloman in game 56808, team 77
+⚠️ Missing jersey number for Tyler Bass in game 56806, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56806, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56806, team 74
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56817, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56817, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56817, team 60
+⚠️ Missing jersey number for Tyler Johnson in game 56820, team 71
+⚠️ Missing jersey number for Sam Sloman in game 56825, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56825, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56825, team 55
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56823, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56823, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56823, team 58
+⚠️ Missing jersey number for Joshua Kelley in game 56834, team 75
+⚠️ Missing jersey number for Marquez Callaway in game 56834, team 70
+⚠️ Missing jersey number for Tyler Bass in game 56826, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56826, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56826, team 67
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56846, team 65
+⚠️ Missing jersey number for Sam Sloman in game 56836, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56836, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56836, team 78
+⚠️ Missing jersey number for Tyler Bass in game 56835, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56855, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56855, team 48
+⚠️ Missing jersey number for Denzel Mims in game 56855, team 51
+⚠️ Missing jersey number for Tyler Bass in game 56855, team 51
+⚠️ Missing jersey number for Joshua Kelley in game 56867, team 75
+⚠️ Missing jersey number for Sam Sloman in game 56862, team 77
+⚠️ Missing jersey number for Sam Sloman in game 56868, team 77
+⚠️ Missing jersey number for Tua Tagovailoa in game 56868, team 49
+⚠️ Missing jersey number for La'Mical Perine in game 56869, team 51
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56871, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56871, team 65
+⚠️ Missing jersey number for D'Andre Swift in game 56871, team 61
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56871, team 61
+⚠️ Missing jersey number for Tyler Bass in game 56874, team 48
+⚠️ Missing jersey number for Joshua Kelley in game 56907, team 75
+⚠️ Missing jersey number for Ben DiNucci in game 56864, team 52
+⚠️ Missing jersey number for JaMycal Hasty in game 56876, team 78
+⚠️ Missing jersey number for D'Andre Swift in game 56883, team 61
+⚠️ Missing jersey number for Jake Luton in game 56885, team 66
+⚠️ Missing jersey number for Devin Duvernay in game 56886, team 56
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56886, team 65
+⚠️ Missing jersey number for Tyler Bass in game 56887, team 48
+⚠️ Missing jersey number for La'Mical Perine in game 56889, team 51
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56890, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56890, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56890, team 67
+⚠️ Missing jersey number for D'Andre Swift in game 56900, team 61
+⚠️ Missing jersey number for Joshua Kelley in game 56857, team 75
+⚠️ Missing jersey number for Tyler Bass in game 56896, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56896, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56896, team 76
+⚠️ Missing jersey number for La'Mical Perine in game 56838, team 51
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56911, team 65
+⚠️ Missing jersey number for Collin Johnson in game 56927, team 66
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56928, team 65
+⚠️ Missing jersey number for Tyler Bass in game 56931, team 48
+⚠️ Missing jersey number for Devin Duvernay in game 56919, team 56
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56944, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56944, team 65
+⚠️ Missing jersey number for Isaiah Coulter in game 56944, team 64
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56944, team 64
+⚠️ Missing jersey number for Tyler Bass in game 56947, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56947, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56947, team 78
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56954, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56954, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56954, team 74
+⚠️ Missing jersey number for Jalen Hurts in game 56951, team 54
+⚠️ Missing jersey number for Tyler Bass in game 56949, team 48
+⚠️ Missing jersey number for J.K. Dobbins in game 56963, team 56
+⚠️ Missing jersey number for Zack Moss in game 56978, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56978, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56978, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56978, team 72
+⚠️ Missing jersey number for Dalton Keene in game 56971, team 50
+⚠️ Missing jersey number for J.K. Dobbins in game 56972, team 56
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56976, team 65
+⚠️ Missing jersey number for Austin Mack in game 56986, team 53
+⚠️ Missing jersey number for J.K. Dobbins in game 56986, team 56
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56991, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56991, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 56991, team 59
+⚠️ Missing jersey number for Zack Moss in game 56995, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56995, team 48
+⚠️ Missing jersey number for Tyler Bass in game 56995, team 48
+⚠️ Missing jersey number for Dalton Keene in game 56995, team 50
+⚠️ Missing jersey number for Tyler Bass in game 56995, team 50
+⚠️ Missing jersey number for Zack Moss in game 57015, team 48
+⚠️ Missing jersey number for Tyler Bass in game 57015, team 48
+⚠️ Missing jersey number for Van Jefferson in game 57003, team 77
+⚠️ Missing jersey number for Rodrigo Blankenship in game 57004, team 65
+⚠️ Missing jersey number for John Bates in game 65279, team 55
+⚠️ Missing jersey number for Samuel Cosmi in game 65279, team 55
+⚠️ Missing jersey number for Dax Milne in game 65279, team 55
+⚠️ Missing jersey number for Dyami Brown in game 65279, team 55
+⚠️ Missing jersey number for Jamin Davis in game 65279, team 55
+⚠️ Missing jersey number for Christian Barmore in game 65279, team 50
+⚠️ Missing jersey number for Mac Jones in game 65279, team 50
+⚠️ Missing jersey number for Tre Nixon in game 65279, team 50
+⚠️ Missing jersey number for Anthony McFarland in game 65281, team 59
+⚠️ Missing jersey number for Pat Freiermuth in game 65281, team 59
+⚠️ Missing jersey number for Milton Williams in game 65281, team 54
+⚠️ Missing jersey number for Darrynton Evans in game 65282, team 67
+⚠️ Missing jersey number for Racey McMath in game 65282, team 67
+⚠️ Missing jersey number for Dez Fitzpatrick in game 65282, team 67
+⚠️ Missing jersey number for Chris Rowland in game 65282, team 68
+⚠️ Missing jersey number for Frank Darby in game 65282, team 68
+⚠️ Missing jersey number for Chris Williamson in game 65282, team 68
+⚠️ Missing jersey number for Ryan Neuzil in game 65282, team 68
+⚠️ Missing jersey number for Tommy Doyle in game 65283, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65283, team 48
+⚠️ Missing jersey number for Marquez Stevenson in game 65283, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65283, team 48
+⚠️ Missing jersey number for Jermar Jefferson in game 65283, team 61
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 65283, team 61
+⚠️ Missing jersey number for Tyler Bass in game 65283, team 61
+⚠️ Missing jersey number for Osa Odighizuwa in game 65284, team 52
+⚠️ Missing jersey number for Leki Fotu in game 65284, team 76
+⚠️ Missing jersey number for Daniel Archibong in game 65285, team 60
+⚠️ Missing jersey number for Albert Okwuegbunam in game 65286, team 72
+⚠️ Missing jersey number for Kellen Mond in game 65286, team 63
+⚠️ Missing jersey number for Blake Proehl in game 65286, team 63
+⚠️ Missing jersey number for K.J. Osborn in game 65286, team 63
+⚠️ Missing jersey number for Myles Dorn in game 65286, team 63
+⚠️ Missing jersey number for Pete Werner in game 65287, team 70
+⚠️ Missing jersey number for Deuce Wallace in game 65287, team 70
+⚠️ Missing jersey number for James Proche in game 65287, team 56
+⚠️ Missing jersey number for Tylan Wallace in game 65287, team 56
+⚠️ Missing jersey number for Grant Delpit in game 65288, team 58
+⚠️ Missing jersey number for Aaron Patrick in game 65288, team 66
+⚠️ Missing jersey number for Collin Johnson in game 65288, team 66
+⚠️ Missing jersey number for DJ Daniel in game 65288, team 66
+⚠️ Missing jersey number for Tyson Campbell in game 65288, team 66
+⚠️ Missing jersey number for Andre Cisco in game 65288, team 66
+⚠️ Missing jersey number for Michael Carter in game 65289, team 51
+⚠️ Missing jersey number for Kenny Yeboah in game 65289, team 51
+⚠️ Missing jersey number for Jonathan Marshall in game 65289, team 51
+⚠️ Missing jersey number for James Morgan in game 65289, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65289, team 51
+⚠️ Missing jersey number for David Moa in game 65289, team 53
+⚠️ Missing jersey number for Cameron Brown in game 65289, team 53
+⚠️ Missing jersey number for Rodarius Williams in game 65289, team 53
+⚠️ Missing jersey number for Matt Ammendola in game 65289, team 53
+⚠️ Missing jersey number for Kyle Trask in game 65290, team 71
+⚠️ Missing jersey number for Grant Stuard in game 65290, team 71
+⚠️ Missing jersey number for Chris Wilcox in game 65290, team 71
+⚠️ Missing jersey number for Brevin Jordan in game 65291, team 64
+⚠️ Missing jersey number for Josh Myers in game 65291, team 62
+⚠️ Missing jersey number for Kylin Hill in game 65291, team 62
+⚠️ Missing jersey number for A.J. Dillon in game 65291, team 62
+⚠️ Missing jersey number for Carlo Kemp in game 65291, team 62
+⚠️ Missing jersey number for Coy Cronk in game 65291, team 62
+⚠️ Missing jersey number for Josh Avery in game 65291, team 62
+⚠️ Missing jersey number for Tedarrell Slaton in game 65291, team 62
+⚠️ Missing jersey number for Jordan Love in game 65291, team 62
+⚠️ Missing jersey number for Reggie Begelton in game 65291, team 62
+⚠️ Missing jersey number for Jon Runyan in game 65291, team 62
+⚠️ Missing jersey number for Trey Sermon in game 65292, team 78
+⚠️ Missing jersey number for Justin Hilliard in game 65292, team 78
+⚠️ Missing jersey number for Ambry Thomas in game 65292, team 78
+⚠️ Missing jersey number for Darrell Taylor in game 65293, team 79
+⚠️ Missing jersey number for Aaron Fuller in game 65293, team 79
+⚠️ Missing jersey number for Asmar Bilal in game 65293, team 74
+⚠️ Missing jersey number for Trevon Moehrig in game 65293, team 74
+⚠️ Missing jersey number for Joshua Kelley in game 65294, team 75
+⚠️ Missing jersey number for K.J. Hill in game 65294, team 75
+⚠️ Missing jersey number for Joe Reed in game 65294, team 75
+⚠️ Missing jersey number for Raymond Calais in game 65294, team 77
+⚠️ Missing jersey number for Jacob Harris in game 65294, team 77
+⚠️ Missing jersey number for Eric Banks in game 65294, team 77
+⚠️ Missing jersey number for Trishton Jackson in game 65294, team 77
+⚠️ Missing jersey number for Chuba Hubbard in game 65295, team 69
+⚠️ Missing jersey number for Daviyon Nixon in game 65295, team 69
+⚠️ Missing jersey number for Omar Bayless in game 65295, team 69
+⚠️ Missing jersey number for Deonte Brown in game 65295, team 69
+⚠️ Missing jersey number for Kenny Robinson in game 65295, team 69
+⚠️ Missing jersey number for Kwity Paye in game 65295, team 65
+⚠️ Missing jersey number for Jacob Eason in game 65295, team 65
+⚠️ Missing jersey number for Dezmon Patmon in game 65295, team 65
+⚠️ Missing jersey number for Mike Strachan in game 65295, team 65
+⚠️ Missing jersey number for Tyler Bass in game 65299, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65299, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65299, team 60
+⚠️ Missing jersey number for Matt Ammendola in game 65300, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65300, team 51
+⚠️ Missing jersey number for Michael Carter in game 65300, team 51
+⚠️ Missing jersey number for Kylin Hill in game 65300, team 62
+⚠️ Missing jersey number for Carlo Kemp in game 65300, team 62
+⚠️ Missing jersey number for Coy Cronk in game 65300, team 62
+⚠️ Missing jersey number for Josh Avery in game 65300, team 62
+⚠️ Missing jersey number for Reggie Begelton in game 65300, team 62
+⚠️ Missing jersey number for Matt Ammendola in game 65300, team 62
+⚠️ Missing jersey number for Rodrigo Blankenship in game 65305, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 65305, team 63
+⚠️ Missing jersey number for Brevin Jordan in game 65306, team 64
+⚠️ Missing jersey number for Osa Odighizuwa in game 65306, team 52
+⚠️ Missing jersey number for Asmar Bilal in game 65307, team 74
+⚠️ Missing jersey number for Raymond Calais in game 65307, team 77
+⚠️ Missing jersey number for Jacob Harris in game 65307, team 77
+⚠️ Missing jersey number for Eric Banks in game 65307, team 77
+⚠️ Missing jersey number for Kiondre Thomas in game 65309, team 58
+⚠️ Missing jersey number for Justin Hilliard in game 65310, team 78
+⚠️ Missing jersey number for Ambry Thomas in game 65310, team 78
+⚠️ Missing jersey number for Joshua Kelley in game 65310, team 75
+⚠️ Missing jersey number for K.J. Hill in game 65310, team 75
+⚠️ Missing jersey number for Joe Reed in game 65310, team 75
+⚠️ Missing jersey number for Rodrigo Blankenship in game 65312, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 65312, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 65312, team 61
+⚠️ Missing jersey number for Matt Ammendola in game 65314, team 51
+⚠️ Missing jersey number for Tyler Bass in game 65319, team 48
+⚠️ Missing expected lineup for team 76 in game 81973
+⚠️ Missing actual lineup for team 76 in game 81973
+⚠️ expected lineup is completely missing for team 76 in game 81973
+⚠️ actual lineup is completely missing for team 76 in game 81973
+⚠️ Missing expected lineup for team 70 in game 81973
+⚠️ Missing actual lineup for team 70 in game 81973
+⚠️ expected lineup is completely missing for team 70 in game 81973
+⚠️ actual lineup is completely missing for team 70 in game 81973
+⚠️ Missing jersey number for Brian Johnson in game 65321, team 60
+⚠️ Missing jersey number for Brian Johnson in game 65321, team 67
+⚠️ Missing jersey number for Jose Borregales in game 65323, team 71
+⚠️ Missing jersey number for Jose Borregales in game 65323, team 64
+⚠️ Missing jersey number for Dyami Brown in game 64898, team 55
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64900, team 65
+⚠️ Missing jersey number for Matt Ammendola in game 64901, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64901, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64901, team 69
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 64906, team 61
+⚠️ Missing jersey number for Marlon Tuipulotu in game 64907, team 54
+⚠️ Missing jersey number for Tyler Bass in game 64908, team 48
+⚠️ Missing jersey number for Mac Jones in game 64905, team 50
+⚠️ Missing jersey number for Geno Stone in game 64910, team 56
+⚠️ Missing jersey number for Matt Ammendola in game 64916, team 51
+⚠️ Missing jersey number for Tyler Bass in game 64918, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64918, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64918, team 49
+⚠️ Missing jersey number for Elijah Mitchell in game 64919, team 78
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64921, team 65
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 64926, team 61
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64931, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64931, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64931, team 67
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 64938, team 61
+⚠️ Missing jersey number for Tyler Bass in game 64941, team 48
+⚠️ Missing jersey number for Matt Ammendola in game 64929, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64929, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64929, team 72
+⚠️ Missing jersey number for Matt Ammendola in game 64947, team 51
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 64954, team 61
+⚠️ Missing jersey number for Tyler Bass in game 64955, team 48
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64956, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64956, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64956, team 49
+⚠️ Missing jersey number for Matt Ammendola in game 64973, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64973, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64973, team 68
+⚠️ Missing jersey number for Amon-Ra St. Brown in game 64962, team 61
+⚠️ Missing jersey number for Tyler Bass in game 64960, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64960, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64960, team 73
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64974, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64974, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 64974, team 56
+⚠️ Missing jersey number for Tyler Bass in game 64988, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64988, team 48
+⚠️ Missing jersey number for Tyler Bass in game 64988, team 67
+⚠️ Missing jersey number for Matt Ammendola in game 64994, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64994, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 64994, team 50
+⚠️ Missing jersey number for Brian Johnson in game 65001, team 70
+⚠️ Missing jersey number for Brian Johnson in game 65001, team 70
+⚠️ Missing jersey number for Brian Johnson in game 65001, team 79
+⚠️ Missing jersey number for Matt Ammendola in game 65005, team 51
+⚠️ Missing jersey number for Kenneth Gainwell in game 65012, team 54
+⚠️ Missing jersey number for Shi Smith in game 65014, team 69
+⚠️ Missing jersey number for Tyler Bass in game 65015, team 48
+⚠️ Missing jersey number for Brian Johnson in game 65006, team 70
+⚠️ Missing jersey number for Matt Ammendola in game 65017, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65017, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65017, team 65
+⚠️ Missing jersey number for Brian Johnson in game 65022, team 70
+⚠️ Missing jersey number for Tyler Bass in game 65027, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65027, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65027, team 66
+⚠️ Missing jersey number for Tyler Bass in game 65034, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65034, team 48
+⚠️ Missing jersey number for Matt Ammendola in game 65034, team 51
+⚠️ Missing jersey number for Tyler Bass in game 65034, team 51
+⚠️ Missing jersey number for Brian Johnson in game 65039, team 70
+⚠️ Missing jersey number for Brian Johnson in game 65039, team 70
+⚠️ Missing jersey number for Brian Johnson in game 65039, team 67
+⚠️ Missing jersey number for Matt Ammendola in game 65050, team 51
+⚠️ Missing jersey number for Tyler Bass in game 65052, team 48
+⚠️ Missing jersey number for Riley Patterson in game 65055, team 61
+⚠️ Missing jersey number for Tyler Bass in game 65061, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65061, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65061, team 70
+⚠️ Missing jersey number for Matt Ammendola in game 65065, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65065, team 51
+⚠️ Missing jersey number for Matt Ammendola in game 65065, team 64
+⚠️ Missing jersey number for Dez Fitzpatrick in game 65068, team 67
+⚠️ Missing jersey number for Riley Patterson in game 65082, team 61
+⚠️ Missing jersey number for Matt Ammendola in game 65083, team 51
+⚠️ Missing jersey number for Brian Johnson in game 65084, team 55
+⚠️ Missing jersey number for Brian Johnson in game 65084, team 74
+⚠️ Missing jersey number for Tyler Bass in game 65089, team 48
+⚠️ Missing jersey number for Brian Johnson in game 65093, team 55
+⚠️ Missing jersey number for Riley Patterson in game 65098, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65098, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65098, team 72
+⚠️ Missing jersey number for Tyler Bass in game 65097, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65097, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65097, team 71
+⚠️ Missing jersey number for Riley Patterson in game 65109, team 61
+⚠️ Missing jersey number for Tyler Bass in game 65118, team 48
+⚠️ Missing jersey number for Brian Johnson in game 65114, team 55
+⚠️ Missing jersey number for Brian Johnson in game 65114, team 55
+⚠️ Missing jersey number for Brian Johnson in game 65114, team 54
+⚠️ Missing jersey number for Chris Naggar in game 65134, team 58
+⚠️ Missing jersey number for Chris Naggar in game 65134, team 58
+⚠️ Missing jersey number for Chris Naggar in game 65134, team 62
+⚠️ Missing jersey number for Jake Fromm in game 65121, team 53
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65123, team 69
+⚠️ Missing jersey number for Tyler Bass in game 65124, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65124, team 48
+⚠️ Missing jersey number for Tyler Bass in game 65124, team 50
+⚠️ Missing jersey number for Riley Patterson in game 65126, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65126, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65126, team 68
+⚠️ Missing jersey number for Brian Johnson in game 65132, team 55
+⚠️ Missing jersey number for Ian Book in game 65135, team 70
+⚠️ Missing jersey number for Kenny Yeboah in game 65141, team 51
+⚠️ Missing jersey number for Tyler Bass in game 65148, team 48
+⚠️ Missing jersey number for Jaret Patterson in game 65151, team 55
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65140, team 69
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65140, team 69
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65140, team 70
+⚠️ Missing jersey number for Jared Pinkney in game 65142, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65142, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65142, team 61
+⚠️ Missing jersey number for Riley Patterson in game 65142, team 79
+⚠️ Missing jersey number for Chris Naggar in game 65167, team 58
+⚠️ Missing jersey number for Kenneth Gainwell in game 65152, team 54
+⚠️ Missing jersey number for Riley Patterson in game 65153, team 61
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65159, team 69
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65159, team 69
+⚠️ Missing jersey number for Lirim Hajrullahu in game 65159, team 71
+⚠️ Missing jersey number for Kenny Yeboah in game 65165, team 51
+⚠️ Missing jersey number for Tyler Bass in game 65165, team 48
+⚠️ Missing jersey number for Rodrigo Blankenship in game 63190, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 63190, team 65
+⚠️ Missing jersey number for Zack Moss in game 63190, team 48
+⚠️ Missing jersey number for Tyler Bass in game 63190, team 48
+⚠️ Missing jersey number for Rodrigo Blankenship in game 63190, team 48
+⚠️ Missing jersey number for Keith Ismael in game 63192, team 55
+⚠️ Missing jersey number for Tyler Bass in game 63197, team 48
+⚠️ Missing jersey number for Tyler Bass in game 63201, team 48
+⚠️ Missing jersey number for Tyler Bass in game 63201, team 48
+⚠️ Missing jersey number for Tyler Bass in game 63201, team 73
+⚠️ Missing jersey number for Evan Neal in game 73847, team 53
+⚠️ Missing jersey number for LaBryan Ray in game 73847, team 50
+⚠️ Missing jersey number for Treylon Burks in game 73849, team 67
+⚠️ Missing jersey number for Tyler Linderbaum in game 73849, team 56
+⚠️ Missing jersey number for Drake London in game 73850, team 68
+⚠️ Missing jersey number for Aidan Hutchinson in game 73850, team 61
+⚠️ Missing jersey number for Jameson Williams in game 73850, team 61
+⚠️ Missing jersey number for Luke Fortner in game 73851, team 66
+⚠️ Missing jersey number for Devin Lloyd in game 73851, team 66
+⚠️ Missing expected lineup for team 51 in game 73853
+⚠️ expected lineup is completely missing for team 51 in game 73853
+⚠️ Missing jersey number for Quay Walker in game 73854, team 62
+⚠️ Missing jersey number for Aaron Banks in game 73854, team 78
+⚠️ Missing jersey number for Ikem Ekwonu in game 73855, team 69
+⚠️ Missing jersey number for Jahan Dotson in game 73855, team 55
+⚠️ Missing jersey number for George Karlaftis in game 73856, team 73
+⚠️ Missing jersey number for Trent McDuffie in game 73856, team 73
+⚠️ Missing jersey number for Braxton Jones in game 73856, team 60
+⚠️ Missing jersey number for Kyler Gordon in game 73856, team 60
+⚠️ Missing jersey number for Alec Pierce in game 73857, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 73857, team 65
+⚠️ Missing jersey number for Kaiir Elam in game 73857, team 48
+⚠️ Missing jersey number for Rodrigo Blankenship in game 73857, team 48
+⚠️ Missing jersey number for Charles Cross in game 73858, team 79
+⚠️ Missing jersey number for George Pickens in game 73858, team 59
+⚠️ Missing jersey number for Benito Jones in game 73859, team 49
+⚠️ Missing jersey number for Chris Olave in game 73860, team 70
+⚠️ Missing jersey number for Derek Stingley Jr. in game 73860, team 64
+⚠️ Missing jersey number for Jalen Tolbert in game 73861, team 52
+⚠️ Missing jersey number for Tyler Smith in game 73861, team 52
+⚠️ Missing jersey number for Elijah Garcia in game 73862, team 77
+⚠️ Missing jersey number for Cameron Dicker in game 73862, team 77
+⚠️ Missing jersey number for Zion Johnson in game 73862, team 75
+⚠️ Missing jersey number for Cameron Dicker in game 73862, team 75
+⚠️ Missing jersey number for Cameron Dicker in game 73867, team 77
+⚠️ Missing jersey number for Riley Patterson in game 73868, team 61
+⚠️ Missing jersey number for Rodrigo Blankenship in game 73868, team 65
+⚠️ Missing jersey number for Riley Patterson in game 73868, team 65
+⚠️ Missing jersey number for Jose Borregales in game 73871, team 71
+⚠️ Missing jersey number for Jose Borregales in game 73871, team 67
+⚠️ Missing jersey number for Ramiz Ahmed in game 73880, team 62
+⚠️ Missing jersey number for Ramiz Ahmed in game 73880, team 73
+⚠️ Missing jersey number for Tyler Bass in game 73882, team 48
+⚠️ Missing jersey number for Tyler Bass in game 73882, team 69
+⚠️ Missing actual lineup for team 79 in game 73883
+⚠️ actual lineup is completely missing for team 79 in game 73883
+⚠️ Missing jersey number for Jose Borregales in game 73892, team 71
+⚠️ Missing jersey number for Jose Borregales in game 73892, team 71
+⚠️ Missing jersey number for Jose Borregales in game 73892, team 65
+⚠️ Missing jersey number for Riley Patterson in game 73848, team 61
+⚠️ Missing jersey number for Tyler Bass in game 71714, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71714, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71714, team 77
+⚠️ Missing jersey number for Scottie Dill in game 71717, team 68
+⚠️ Missing jersey number for Daniel Archibong in game 71720, team 59
+⚠️ Missing jersey number for Rodrigo Blankenship in game 71722, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 71722, team 65
+⚠️ Missing jersey number for Rodrigo Blankenship in game 71722, team 64
+⚠️ Missing jersey number for Riley Patterson in game 71727, team 66
+⚠️ Missing jersey number for Simon Stepaniak in game 71729, team 62
+⚠️ Missing jersey number for Rodrigo Blankenship in game 71736, team 65
+⚠️ Missing jersey number for Tristen Hoge in game 71743, team 72
+⚠️ Missing jersey number for Tyler Bass in game 71746, team 48
+⚠️ Missing jersey number for Matt Ammendola in game 71751, team 73
+⚠️ Missing jersey number for Matt Ammendola in game 71751, team 65
+⚠️ Missing jersey number for Tyler Bass in game 71752, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71752, team 49
+⚠️ Missing jersey number for Tyler Bass in game 71767, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71767, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71767, team 56
+⚠️ Missing jersey number for Matt Ammendola in game 71778, team 73
+⚠️ Missing jersey number for Tyler Bass in game 71782, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71807, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71807, team 73
+⚠️ Missing jersey number for Tyler Bass in game 71838, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71847, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71847, team 51
+⚠️ Missing jersey number for Tyler Bass in game 71856, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71882, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71882, team 61
+⚠️ Missing jersey number for Tyler Bass in game 71901, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71901, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71901, team 50
+⚠️ Missing jersey number for Tyler Bass in game 71069, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71077, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71077, team 48
+⚠️ Missing jersey number for Tyler Bass in game 71077, team 73
+⚠️ Missing expected lineup for team 55 in game 146825
+⚠️ expected lineup is completely missing for team 55 in game 146825
+⚠️ Missing expected lineup for team 54 in game 146825
+⚠️ expected lineup is completely missing for team 54 in game 146825
+⚠️ Missing expected lineup for team 48 in game 146826
+⚠️ expected lineup is completely missing for team 48 in game 146826
+⚠️ Missing expected lineup for team 73 in game 146826
+⚠️ expected lineup is completely missing for team 73 in game 146826
+
+==================================================
+🔍 MongoDB Validation Summary:
+Games with missing teams: 0
+Teams missing expected/actual lineups: 284
+Lineups without positions: 284
+Duplicate teams in games: 0
+Missing player IDs or jersey numbers: 527

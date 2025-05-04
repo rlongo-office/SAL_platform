@@ -1,0 +1,731 @@
+["pass": {
+    "team": {
+      "id": 56,
+      "abbreviation": "BAL"
+    },
+    "passingPlayer": {
+      "id": 14523,
+      "firstName": "Lamar",
+      "lastName": "Jackson",
+      "position": "QB",
+      "jerseyNumber": 8
+    },
+    "passedFromPosition": null,
+    "receivingPlayer": {
+      "id": 79760,
+      "firstName": "Zay",
+      "lastName": "Flowers",
+      "position": "WR",
+      "jerseyNumber": 4
+    },
+    "receivedAtPosition": null,
+    "interceptingPlayer": null,
+    "interceptedAtPosition": null,
+    "soloTacklingPlayer": {
+      "id": 16546,
+      "firstName": "Drue",
+      "lastName": "Tranquill",
+      "position": "LB",
+      "jerseyNumber": 23
+    },
+    "assistedTacklingPlayer1": null,
+    "assistedTacklingPlayer2": null,
+    "passType": null,
+    "passDirection": null,
+    "passDistance": null,
+    "stoppedAtPosition": {
+      "team": {
+        "id": 56,
+        "abbreviation": "BAL"
+      },
+      "yardLine": 34,
+      "point": null
+    },
+    "isCompleted": true,
+    "isOutOfBounds": false,
+    "isTackled": true,
+    "isEndedWithTouchdown": false,
+    "isTwoPointConversion": false,
+    "isFirstDownPenalty": false,
+    "isNoPlay": true,
+    "yardsPassed": 0,
+    "yardsRushed": 0,
+    "yardsIntercepted": 0,
+    "totalYardsGained": 2,
+    "subPlays": [],
+    "penalties": [
+      {
+        "penalty": {
+          "team": {
+            "id": 56,
+            "abbreviation": "BAL"
+          },
+          "penalizedPlayer": {
+            "id": 9761,
+            "firstName": "Ronnie",
+            "lastName": "Stanley",
+            "position": "T",
+            "jerseyNumber": 79
+          },
+          "enforcedAtPosition": {
+            "team": {
+              "id": 56,
+              "abbreviation": "BAL"
+            },
+            "yardLine": 32,
+            "point": null
+          },
+          "description": "Illegal Formation",
+          "isCancelsPlay": true,
+          "yardsPenalized": 5
+        }
+      }
+    ]
+  },
+  "playStatus": {
+    "quarter": 1,
+    "secondsElapsed": 41,
+    "teamInPossession": {
+      "id": 56,
+      "abbreviation": "BAL"
+    },
+    "overallDriveNum": null,
+    "teamDriveNum": null,
+    "currentDown": 2,
+    "yardsRemaining": 8,
+    "lineOfScrimmage": {
+      "team": {
+        "id": 56,
+        "abbreviation": "BAL"
+      },
+      "yardLine": 32
+    },
+    "awayPlayersOnField": [
+      {
+        "player": {
+          "id": 14523,
+          "firstName": "Lamar",
+          "lastName": "Jackson",
+          "position": "QB",
+          "jerseyNumber": 8
+        },
+        "position": null
+      },
+      {
+        "player": {
+          "id": 79760,
+          "firstName": "Zay",
+          "lastName": "Flowers",
+          "position": "WR",
+          "jerseyNumber": 4
+        },
+        "position": null
+      }
+    ],
+    "homePlayersOnField": [
+      {
+        "player": {
+          "id": 16546,
+          "firstName": "Drue",
+          "lastName": "Tranquill",
+          "position": "LB",
+          "jerseyNumber": 23
+        },
+        "position": null
+      }
+    ]
+  }
+}
+
+PASS PLAY WITH NO PENALTY
+{
+  "description": "(13:55) (Shotgun) 8-L.Jackson pass short right to 43-J.Hill pushed ob at BAL 29 for 2 yards (27-C.Conner).",
+  "pass": {
+    "team": {
+      "id": 56,
+      "abbreviation": "BAL"
+    },
+    "passingPlayer": {
+      "id": 14523,
+      "firstName": "Lamar",
+      "lastName": "Jackson",
+      "position": "QB",
+      "jerseyNumber": 8
+    },
+    "passedFromPosition": null,
+    "receivingPlayer": {
+      "id": 16932,
+      "firstName": "Justice",
+      "lastName": "Hill",
+      "position": "RB",
+      "jerseyNumber": 43
+    },
+    "receivedAtPosition": null,
+    "interceptingPlayer": null,
+    "interceptedAtPosition": null,
+    "soloTacklingPlayer": {
+      "id": 79857,
+      "firstName": "Chamarri",
+      "lastName": "Conner",
+      "position": "DB",
+      "jerseyNumber": 27
+    },
+    "assistedTacklingPlayer1": null,
+    "assistedTacklingPlayer2": null,
+    "passType": null,
+    "passDirection": null,
+    "passDistance": null,
+    "stoppedAtPosition": {
+      "team": null,
+      "yardLine": 29,
+      "point": null
+    },
+    "isCompleted": true,
+    "isOutOfBounds": true,
+    "isTackled": true,
+    "isEndedWithTouchdown": false,
+    "isTwoPointConversion": false,
+    "isFirstDownPenalty": false,
+    "isNoPlay": false,
+    "yardsPassed": 0,
+    "yardsRushed": 0,
+    "yardsIntercepted": 0,
+    "totalYardsGained": 2,
+    "subPlays": [],
+    "penalties": []
+  },
+  "playStatus": {
+    "quarter": 1,
+    "secondsElapsed": 65,
+    "teamInPossession": {
+      "id": 56,
+      "abbreviation": "BAL"
+    },
+    "overallDriveNum": null,
+    "teamDriveNum": null,
+    "currentDown": 2,
+    "yardsRemaining": 13,
+    "lineOfScrimmage": {
+      "team": {
+        "id": 56,
+        "abbreviation": "BAL"
+      },
+      "yardLine": 27
+    },
+    "awayPlayersOnField": [
+      {
+        "player": {
+          "id": 14523,
+          "firstName": "Lamar",
+          "lastName": "Jackson",
+          "position": "QB",
+          "jerseyNumber": 8
+        },
+        "position": null
+      },
+      {
+        "player": {
+          "id": 16932,
+          "firstName": "Justice",
+          "lastName": "Hill",
+          "position": "RB",
+          "jerseyNumber": 43
+        },
+        "position": null
+      }
+    ],
+    "homePlayersOnField": [
+      {
+        "player": {
+          "id": 79857,
+          "firstName": "Chamarri",
+          "lastName": "Conner",
+          "position": "DB",
+          "jerseyNumber": 27
+        },
+        "position": null
+      }
+    ]
+  }
+}
+
+RUSH PLAY
+
+{
+      "description": "(12:43) 22-D.Henry up the middle to BAL 48 for 1 yard (95-C.Jones; 69-M.Pennel).",
+      "rush": {
+          "team": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "rushingPlayer": {
+              "id": 10043,
+              "firstName": "Derrick",
+              "lastName": "Henry",
+              "position": "RB",
+              "jerseyNumber": 22
+          },
+          "rushedFromPosition": {
+              "team": {
+                  "id": 56,
+                  "abbreviation": "BAL"
+              },
+              "yardLine": 47,
+              "point": null
+          },
+          "soloTacklingPlayer": null,
+          "assistedTacklingPlayer1": {
+              "id": 9911,
+              "firstName": "Chris",
+              "lastName": "Jones",
+              "position": "DT",
+              "jerseyNumber": 95
+          },
+          "assistedTacklingPlayer2": {
+              "id": 6963,
+              "firstName": "Mike",
+              "lastName": "Pennel",
+              "position": "DT",
+              "jerseyNumber": 69
+          },
+          "stoppedAtPosition": {
+              "team": {
+                  "id": 56,
+                  "abbreviation": "BAL"
+              },
+              "yardLine": 48,
+              "point": null
+          },
+          "rushType": null,
+          "rushDirection": null,
+          "isOutOfBounds": false,
+          "isTackled": true,
+          "isEndedWithTouchdown": false,
+          "isTwoPointConversion": false,
+          "isFirstDownPenalty": false,
+          "isNoPlay": false,
+          "yardsRushed": 1,
+          "subPlays": [],
+          "penalties": []
+      },
+      "playStatus": {
+          "quarter": 1,
+          "secondsElapsed": 137,
+          "teamInPossession": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "overallDriveNum": null,
+          "teamDriveNum": null,
+          "currentDown": 1,
+          "yardsRemaining": 10,
+          "lineOfScrimmage": {
+              "team": {
+                  "id": 56,
+                  "abbreviation": "BAL"
+              },
+              "yardLine": 47
+          },
+          "awayPlayersOnField": [
+              {
+                  "player": {
+                      "id": 10043,
+                      "firstName": "Derrick",
+                      "lastName": "Henry",
+                      "position": "RB",
+                      "jerseyNumber": 22
+                  },
+                  "position": null
+              }
+          ],
+          "homePlayersOnField": [
+              {
+                  "player": {
+                      "id": 9911,
+                      "firstName": "Chris",
+                      "lastName": "Jones",
+                      "position": "DT",
+                      "jerseyNumber": 95
+                  },
+                  "position": null
+              },
+              {
+                  "player": {
+                      "id": 6963,
+                      "firstName": "Mike",
+                      "lastName": "Pennel",
+                      "position": "DT",
+                      "jerseyNumber": 69
+                  },
+                  "position": null
+              }
+          ]
+      }
+  }
+
+PUNT PLAY
+
+  {
+      "description": "(3:03) 11-J.Stout punts 40 yards to KC 10, Center-46-N.Moore, fair catch by 17-M.Hardman.",
+      "punt": {
+          "kickingTeam": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "kickingPlayer": {
+              "id": 39774,
+              "firstName": "Jordan",
+              "lastName": "Stout",
+              "position": "P",
+              "jerseyNumber": 11
+          },
+          "kickedFromPosition": {
+              "team": null,
+              "yardLine": 50,
+              "point": null
+          },
+          "blockingPlayer": null,
+          "retrievingTeam": {
+              "id": 73,
+              "abbreviation": "KC"
+          },
+          "retrievingPlayer": {
+              "id": 16765,
+              "firstName": "Mecole",
+              "lastName": "Hardman",
+              "position": "WR",
+              "jerseyNumber": 17
+          },
+          "retrievedAtPosition": {
+              "team": {
+                  "id": 73,
+                  "abbreviation": "KC"
+              },
+              "yardLine": 10,
+              "point": null
+          },
+          "soloTacklingPlayer": null,
+          "assistedTacklingPlayer1": null,
+          "assistedTacklingPlayer2": null,
+          "stoppedAtPosition": {
+              "team": {
+                  "id": 73,
+                  "abbreviation": "KC"
+              },
+              "yardLine": 10,
+              "point": null
+          },
+          "isBlocked": false,
+          "isTouchback": false,
+          "isSafety": false,
+          "isOutOfBounds": false,
+          "isTouchdown": false,
+          "isFairCatch": true,
+          "isLanded": false,
+          "isOnside": false,
+          "isFirstDownPenalty": false,
+          "isNoPlay": false,
+          "yardsKicked": 40,
+          "yardsReturned": 0,
+          "subPlays": [],
+          "penalties": []
+      },
+      "playStatus": {
+          "quarter": 1,
+          "secondsElapsed": 717,
+          "teamInPossession": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "overallDriveNum": null,
+          "teamDriveNum": null,
+          "currentDown": 4,
+          "yardsRemaining": 5,
+          "lineOfScrimmage": {
+              "team": null,
+              "yardLine": 50
+          },
+          "awayPlayersOnField": [
+              {
+                  "player": {
+                      "id": 39774,
+                      "firstName": "Jordan",
+                      "lastName": "Stout",
+                      "position": "P",
+                      "jerseyNumber": 11
+                  },
+                  "position": null
+              }
+          ],
+          "homePlayersOnField": [
+              {
+                  "player": {
+                      "id": 16765,
+                      "firstName": "Mecole",
+                      "lastName": "Hardman",
+                      "position": "WR",
+                      "jerseyNumber": 17
+                  },
+                  "position": null
+              }
+          ]
+      }
+  }
+
+FIELD GOAL ATTEMPT
+  {
+      "description": "(13:40) 7-H.Butker 32 yard field goal is GOOD, Center-41-J.Winchester, Holder-14-M.Araiza.",
+      "fieldGoalAttempt": {
+          "team": {
+              "id": 73,
+              "abbreviation": "KC"
+          },
+          "kickingPlayer": {
+              "id": 12796,
+              "firstName": "Harrison",
+              "lastName": "Butker",
+              "position": "K",
+              "jerseyNumber": 7
+          },
+          "centerPlayer": {
+              "id": 7364,
+              "firstName": "James",
+              "lastName": "Winchester",
+              "position": "LS",
+              "jerseyNumber": 41
+          },
+          "holdingPlayer": {
+              "id": 47857,
+              "firstName": "Matt",
+              "lastName": "Araiza",
+              "position": "P",
+              "jerseyNumber": 14
+          },
+          "kickedFromPosition": {
+              "team": {
+                  "id": 56,
+                  "abbreviation": "BAL"
+              },
+              "yardLine": 22,
+              "point": null
+          },
+          "blockingPlayer": null,
+          "blockedAtPosition": null,
+          "isBlocked": false,
+          "isGood": true,
+          "isFirstDownPenalty": false,
+          "isNoPlay": false,
+          "yardsKicked": 32,
+          "subPlays": [],
+          "penalties": []
+      },
+      "playStatus": {
+          "quarter": 2,
+          "secondsElapsed": 80,
+          "teamInPossession": {
+              "id": 73,
+              "abbreviation": "KC"
+          },
+          "overallDriveNum": null,
+          "teamDriveNum": null,
+          "currentDown": null,
+          "yardsRemaining": null,
+          "lineOfScrimmage": null,
+          "awayPlayersOnField": [],
+          "homePlayersOnField": [
+              {
+                  "player": {
+                      "id": 12796,
+                      "firstName": "Harrison",
+                      "lastName": "Butker",
+                      "position": "K",
+                      "jerseyNumber": 7
+                  },
+                  "position": null
+              },
+              {
+                  "player": {
+                      "id": 47857,
+                      "firstName": "Matt",
+                      "lastName": "Araiza",
+                      "position": "P",
+                      "jerseyNumber": 14
+                  },
+                  "position": null
+              },
+              {
+                  "player": {
+                      "id": 7364,
+                      "firstName": "James",
+                      "lastName": "Winchester",
+                      "position": "LS",
+                      "jerseyNumber": 41
+                  },
+                  "position": null
+              }
+          ]
+      }
+  }
+
+EXTRA POINT ATTEMPT
+
+  {
+      "description": "9-J.Tucker extra point is GOOD, Center-46-N.Moore, Holder-11-J.Stout.",
+      "extraPointAttempt": {
+          "team": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "kickingPlayer": {
+              "id": 6198,
+              "firstName": "Justin",
+              "lastName": "Tucker",
+              "position": "K",
+              "jerseyNumber": 9
+          },
+          "centerPlayer": {
+              "id": 16284,
+              "firstName": "Nick",
+              "lastName": "Moore",
+              "position": "LS",
+              "jerseyNumber": 46
+          },
+          "holdingPlayer": {
+              "id": 39774,
+              "firstName": "Jordan",
+              "lastName": "Stout",
+              "position": "P",
+              "jerseyNumber": 11
+          },
+          "kickedFromPosition": {
+              "team": {
+                  "id": 73,
+                  "abbreviation": "KC"
+              },
+              "yardLine": 15,
+              "point": null
+          },
+          "blockingPlayer": null,
+          "blockedAtPosition": null,
+          "isBlocked": false,
+          "isGood": true,
+          "isFirstDownPenalty": false,
+          "isNoPlay": false,
+          "yardsKicked": 25,
+          "subPlays": [],
+          "penalties": []
+      },
+      "playStatus": {
+          "quarter": 1,
+          "secondsElapsed": 406,
+          "teamInPossession": {
+              "id": 56,
+              "abbreviation": "BAL"
+          },
+          "overallDriveNum": null,
+          "teamDriveNum": null,
+          "currentDown": null,
+          "yardsRemaining": null,
+          "lineOfScrimmage": null,
+          "awayPlayersOnField": [
+              {
+                  "player": {
+                      "id": 6198,
+                      "firstName": "Justin",
+                      "lastName": "Tucker",
+                      "position": "K",
+                      "jerseyNumber": 9
+                  },
+                  "position": null
+              },
+              {
+                  "player": {
+                      "id": 39774,
+                      "firstName": "Jordan",
+                      "lastName": "Stout",
+                      "position": "P",
+                      "jerseyNumber": 11
+                  },
+                  "position": null
+              },
+              {
+                  "player": {
+                      "id": 16284,
+                      "firstName": "Nick",
+                      "lastName": "Moore",
+                      "position": "LS",
+                      "jerseyNumber": 46
+                  },
+                  "position": null
+              }
+          ],
+          "homePlayersOnField": []
+      }
+  }
+
+PENALTY PLAY WHEN IT IS THE PLAY ITSELF (SO NOT A SUB PENALTY UNDER ANOTHER PENALTY TYPE)
+
+  {
+      "description": "False Start",
+      "penalty": {
+          "penalty": {
+              "team": {
+                  "id": 73,
+                  "abbreviation": "KC"
+              },
+              "penalizedPlayer": {
+                  "id": 16720,
+                  "firstName": "Jawaan",
+                  "lastName": "Taylor",
+                  "position": "T",
+                  "jerseyNumber": 74
+              },
+              "enforcedAtPosition": {
+                  "team": {
+                      "id": 56,
+                      "abbreviation": "BAL"
+                  },
+                  "yardLine": 48,
+                  "point": null
+              },
+              "description": "False Start",
+              "isCancelsPlay": true,
+              "yardsPenalized": 5
+          },
+          "isFirstDownPenalty": false,
+          "isNoPlay": false
+      },
+      "playStatus": {
+          "quarter": 2,
+          "secondsElapsed": 400,
+          "teamInPossession": {
+              "id": 73,
+              "abbreviation": "KC"
+          },
+          "overallDriveNum": null,
+          "teamDriveNum": null,
+          "currentDown": 3,
+          "yardsRemaining": 7,
+          "lineOfScrimmage": {
+              "team": {
+                  "id": 56,
+                  "abbreviation": "BAL"
+              },
+              "yardLine": 48
+          },
+          "awayPlayersOnField": [],
+          "homePlayersOnField": [
+              {
+                  "player": {
+                      "id": 16720,
+                      "firstName": "Jawaan",
+                      "lastName": "Taylor",
+                      "position": "T",
+                      "jerseyNumber": 74
+                  },
+                  "position": null
+              }
+          ]
+      }
+  }
+]

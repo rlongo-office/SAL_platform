@@ -22,7 +22,7 @@ db = client[DATABASE_NAME]
 players_collection = db[PLAYER_COLLECTION]
 
 # Season to Fetch
-SEASON = "2024-2025-regular"
+SEASON = "2020-2024-regular"
 
 # Ensure 'logs' directory exists
 LOG_DIR = "logs"
