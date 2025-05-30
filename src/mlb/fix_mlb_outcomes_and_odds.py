@@ -158,7 +158,7 @@ def backfill_outcomes(conn, start_dt, end_dt):
     for sched_date in missing_dates:
         iso = sched_date.isoformat()
         logger.info("↪ backfilling outcomes around %s", iso)
-        # this call will upsert every Final game for sched_date±1 day
+        # PLEASE WRITE THE CODE TO TO THE INSERTION OF THE OUTCOMES
         games = fetch_mlb_outcomes(iso)  # :contentReference[oaicite:0]{index=0}
         backfilled.extend([g["game_id"] for g in games])
 

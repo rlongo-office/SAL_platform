@@ -229,7 +229,7 @@ def main():
     cur  = conn.cursor(cursor_factory=DictCursor)
 
     # 1) fetch raw h2h snapshots
-    logger.info("Fetching raw h2h snapshots…")
+    logger.info("Fetching raw spreads snapshots…")
     cur.execute("""
     WITH first_snap AS (
       SELECT DISTINCT ON (go.mlb_game_pk, go.book_id)
@@ -255,7 +255,7 @@ def main():
       fs.away_team_id,
       fs.home_team_id,
       away_o.odds_american AS away_odds,
-      home_o.odds_american AS home_odds
+      home_o.odds_american AS home_odds,
     FROM first_snap AS fs
       JOIN msf_mlb.odds AS away_o
         ON fs.go_id = away_o.game_odds_id

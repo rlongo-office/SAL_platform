@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import os
 import logging
+from datetime import date, datetime, timedelta
 import psycopg2
-import psycopg2.extras
+from psycopg2.extras import DictCursor
+from psycopg2.errors import UniqueViolation
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -11,19 +13,36 @@ from dotenv import load_dotenv, find_dotenv
 # ─── CONFIG & LOGGING ────────────────────────────────────────────────────────────
 load_dotenv(find_dotenv())
 DB_PARAMS = {
-    "dbname":   os.getenv("POSTGRES_DB",   "SAL-db"),
-    "user":     os.getenv("POSTGRES_USER", "postgres"),
-    "password": os.getenv("POSTGRES_PASSWORD"),
-    "host":     os.getenv("POSTGRES_HOST", "localhost"),
-    "port":     os.getenv("POSTGRES_PORT", "5432"),
+    "dbname":   os.getenv("DB_NAME",   "neondb"),
+    "user":     os.getenv("DB_USER",   "neondb_owner"),
+    "password": os.getenv("DB_PASS",   "npg_aKWdUeCXV10c"),
+    "host":     os.getenv("DB_HOST",   "ep-sweet-field-a5764df7-pooler.us-east-2.aws.neon.tech"),
+    "port":     os.getenv("DB_PORT",   "5432"),
+    "sslmode":  "require",
 }
+
 MLB_API_BASE = "https://statsapi.mlb.com/api/v1"
+
+# ─── LOGGING ────────────────────────────────────────────────────
+LOG_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "logs")
+)
+os.makedirs(LOG_DIR, exist_ok=True)
+log_file = os.path.join(LOG_DIR, f"backfill_outcomes_{datetime.now():%Y%m%d_%H%M%S}.log")
+
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)-8s %(message)s"
 )
 logger = logging.getLogger(__name__)
+
+# ─── DB CONNECT ─────────────────────────────────────────────────
+def pg_connect():
+    conn = psycopg2.connect(**DB_PARAMS)
+    with conn.cursor() as cur:
+        cur.execute("SET search_path TO msf_mlb,public;")
+    return conn
 
 # ─── HTTP SESSION WITH RETRIES ───────────────────────────────────────────────────
 retry_strategy = Retry(
@@ -40,8 +59,8 @@ session.mount("http://", adapter)
 # ─── MAIN ────────────────────────────────────────────────────────────────────────
 def main():
     # connect to DB
-    conn = psycopg2.connect(**DB_PARAMS, options="-c search_path=msf_mlb,public")
-    cur  = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    conn = pg_connect()
+    cur = conn.cursor(cursor_factory=DictCursor)
 
     # fetch all games
     cur.execute("""
