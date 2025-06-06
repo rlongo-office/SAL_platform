@@ -3,12 +3,12 @@ import os
 import math
 import logging
 import psycopg2
-import math
-from psycopg2.extras import DictCursor
 import psycopg2.extras
 from collections import defaultdict
 from typing import Iterable, List, Dict, Any, Callable, Tuple
 from decimal import Decimal 
+import math
+from scipy.stats import t
 from psycopg2.extras import DictCursor
 from datetime import datetime
 from dotenv import load_dotenv, find_dotenv
@@ -211,9 +211,10 @@ def get_staff_allowed(
     cur,
     game_pk: int,
     side: str,
-    ts,                              # timestamp “now” (≈ game start)
-    assume_total_outs: int = 27,     # one 9-inning game
-    min_outings: int = 5,            # ignore fringe arms
+    ts,                 # timestamp “now”  (≈ game start)
+    beg_date,           # NEW → lower-bound for reliever snapshots
+    assume_total_outs: int = 27,
+    min_outings: int   = 5,
 ) -> Tuple[float, float]:
     """
     Estimate OBP/SLG *allowed* for the pitching staff we expect to use
@@ -271,17 +272,18 @@ def get_staff_allowed(
     cur.execute(
         """
         SELECT sn.player_id, sn.cum_outs, sn.cum_outings,
-               sn.obp_allowed, sn.slg_allowed
-          FROM msf_mlb.pitcher_stats_snapshots AS sn
-          JOIN msf_mlb.players                  AS p
+            sn.obp_allowed, sn.slg_allowed
+        FROM msf_mlb.pitcher_stats_snapshots AS sn
+        JOIN msf_mlb.players                  AS p
             ON p.id = sn.player_id
-         WHERE p.team_id = %s
-           AND sn.snapshot_date < %s
-           AND sn.player_id <> %s
-           AND sn.cum_outings >= %s
-         ORDER BY sn.snapshot_date DESC
+        WHERE p.team_id        = %s
+        AND sn.snapshot_date < %s           -- upper bound (unchanged)
+        AND sn.snapshot_date >= %s          -- NEW lower bound
+        AND sn.player_id     <> %s
+        AND sn.cum_outings   >= %s
+        ORDER BY sn.snapshot_date DESC
         """,
-        (team_id, ts, starter_pid, min_outings),
+        (team_id, ts, beg_date, starter_pid, min_outings),
     )
 
     relievers_seen: set[int] = set()
@@ -324,80 +326,10 @@ def get_staff_allowed(
 
     return (staff_obp, staff_slg)
 
-def get_pitcher_staff_allowed_older(cur, game_pk: int, side: str, ts) -> tuple[float,float]:
-    """
-    Build a weighted-average staff OBP/SLG for the favorite side in game `game_pk`.
-    Weights are based on at-bats faced by each pitcher in that game.
-    Fallback for missing pitcher stats uses team‐allowed, controlled by ESTIMATE_STATS.
-    """
-    #logger.debug("[get_staff_allowed] game_pk=%s  side=%s  as_of=%s",game_pk, side, ts)
-
-    # fetch the team_id for this side
-    cur.execute("""
-      SELECT away_team_id, home_team_id
-        FROM msf_mlb.mlb_game_outcomes
-       WHERE game_id = %s
-    """, (game_pk,))
-    game = cur.fetchone()
-    team_id = game["away_team_id"] if side == "away" else game["home_team_id"]
-
-    # 1) fetch who pitched, in sequence order
-    cur.execute("""
-      SELECT player_id, at_bats, sequence
-        FROM msf_mlb.pitcher_boxscores
-       WHERE game_id = %s
-         AND side    = %s
-       ORDER BY sequence
-    """, (game_pk, side))
-    pitchers = cur.fetchall()
-    #logger.debug("  → pitchers fetched: %d rows", len(pitchers))
-
-    total_ab = sum(row["at_bats"] for row in pitchers)
-    #logger.debug("  → total_ab across staff = %d", total_ab)
-    if total_ab <= 0:
-        logger.debug("  → no at_bats recorded, cannot compute staff stats")
-        return (None, None)
-
-    # 2) for each, grab their snapshot stats *before* this game, weight by at_bats
-    staff_obp = 0.0
-    staff_slg = 0.0
-
-    for row in pitchers:
-        pid, ab, seq = row["player_id"], row["at_bats"], row["sequence"]
-        #logger.debug("    → pitcher %s faced %d AB (seq=%d)", pid, ab, seq)
-
-        obp, slg = get_latest_pitcher_stats(cur, pid, ts)
-        if obp is None or slg is None:
-            # Fallback logic
-            if seq == 1:
-                # starter
-                if not ESTIMATE_STATS:
-                    #logger.debug("      → missing starter %s stats and ESTIMATE_STATS=False, skip game",pid)
-                    return (None, None)
-                else:
-                    obp, slg = get_latest_team_allowed(cur, team_id, ts)
-                    #logger.debug("      → using team‐allowed for new starter: obp=%.3f, slg=%.3f",obp, slg)
-                    if obp is None or slg is None:
-                        return (None, None)
-            else:
-                # reliever
-                obp, slg = get_latest_team_allowed(cur, team_id, ts)
-                #logger.debug("      → using team‐allowed for reliever %s: obp=%.3f, slg=%.3f",pid, obp, slg)
-                if obp is None or slg is None:
-                    # if team‐allowed also missing, just skip this reliever
-                    continue
-
-        weight = ab / total_ab
-        staff_obp += obp * weight
-        staff_slg += slg * weight
-        #logger.debug("      → weighted contrib: obp=%.3f, slg=%.3f (weight=%.3f)", obp, slg, weight)
-
-    #logger.debug("  → aggregated staff stats: obp=%.3f, slg=%.3f",staff_obp, staff_slg)
-    return (staff_obp, staff_slg)
-
-
 # ─── MAIN ────────────────────────────────────────────────────────────────────────
-
+import math
+from scipy.stats import t
+from psycopg2.extras import DictCursor
 
 #DELTA_PI = 0.08  # keep whatever threshold you set elsewhere
 
@@ -486,32 +418,45 @@ WITH first_snap AS (
            outc.home_team_id,
            go.away_team,
            go.home_team
-    FROM   msf_mlb.game_odds         AS go
-    JOIN   msf_mlb.mlb_game_outcomes AS outc
-           ON outc.game_id = go.mlb_game_pk
-    WHERE  go.odds_type = %s                   -- filled with TEST_TYPE
-    ORDER  BY go.mlb_game_pk, go.book_id, go.as_of_time
+      FROM msf_mlb.game_odds         AS go
+      JOIN msf_mlb.mlb_game_outcomes AS outc
+        ON outc.game_id = go.mlb_game_pk
+     WHERE go.odds_type = %s
+       AND go.game_time::date BETWEEN %s AND %s          -- NEW filter
+     ORDER BY go.mlb_game_pk, go.book_id, go.as_of_time
 )
 SELECT fs.*,
        aw.odds_american AS away_odds,
        hm.odds_american AS home_odds,
        aw.spread        AS away_spread,
        hm.spread        AS home_spread
-FROM   first_snap        AS fs
-JOIN   msf_mlb.odds AS aw ON aw.game_odds_id = fs.go_id
+  FROM first_snap        AS fs
+  JOIN msf_mlb.odds AS aw ON aw.game_odds_id = fs.go_id
                          AND aw.outcome_type = 'away'
-JOIN   msf_mlb.odds AS hm ON hm.game_odds_id = fs.go_id
+  JOIN msf_mlb.odds AS hm ON hm.game_odds_id = fs.go_id
                          AND hm.outcome_type = 'home';
 """
 
 # ──────────────────────────── main ──────────────────────────────────
-def main() -> None:
+def main(start_date, end_date) -> None:
+    """
+    Analyze opening-line value for games whose scheduled date is within
+    [start_date, end_date] (both inclusive).
+
+    Parameters
+    ----------
+    start_date : datetime.date
+    end_date   : datetime.date
+    """
     conn = pg_connect()
     cur  = conn.cursor(cursor_factory=DictCursor)
 
-    # 1) opening-line rows for the chosen market
-    logger.info("Fetching opening %s snapshots…", TEST_TYPE)
-    cur.execute(OPENING_QUERY, (TEST_TYPE,))
+    # 1) opening-line snapshots for the chosen market inside the date window
+    logger.info(
+        "Fetching opening %s snapshots between %s and %s…",
+        TEST_TYPE, start_date, end_date
+    )
+    cur.execute(OPENING_QUERY, (TEST_TYPE, start_date, end_date))
     raw = cur.fetchall()
     logger.info("→ fetched %d raw rows", len(raw))
 
@@ -532,7 +477,7 @@ def main() -> None:
             best[gid] = sel
     logger.info("→ reduced to %d best lines (TEST_SIDE=%s)", len(best), TEST_SIDE)
 
-    # 3) handicap & simulate
+    # 3) handicap & simulate (unchanged)
     team_cache, staff_cache, profits = {}, {}, []
     for r in best.values():
         ts      = r["as_of_time"]
@@ -547,7 +492,7 @@ def main() -> None:
         # pitching (opponent)
         skey = (r["mlb_game_pk"], r["opp_side"])
         if skey not in staff_cache:
-            staff_cache[skey] = get_staff_allowed(cur, r["mlb_game_pk"], r["opp_side"], ts)
+            staff_cache[skey] = get_staff_allowed(cur, r["mlb_game_pk"], r["opp_side"], ts,start_date)
         p_obp, p_slg = staff_cache[skey]
 
         if None in (b_obp, b_slg, p_obp, p_slg):
@@ -558,7 +503,7 @@ def main() -> None:
         won = (r["winner"] == r["bet_side"])
         profits.append(profit_factor(r["bet_odds"]) if won else -1.0)
 
-    # 4) summary
+    # 4) summary (unchanged)
     n = len(profits)
     mean = sum(profits) / n if n else 0.0
     sd   = math.sqrt(sum((x - mean) ** 2 for x in profits) / (n-1)) if n > 1 else 0.0
@@ -579,4 +524,25 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    from datetime import datetime
+
+    parser = argparse.ArgumentParser(
+        description="Analyze MLB under-dog / favorite value for a date range",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--start", required=True,
+        help="First game date to include (YYYY-MM-DD)",
+    )
+    parser.add_argument(
+        "--end",   required=True,
+        help="Last game date to include (YYYY-MM-DD, inclusive)",
+    )
+    args = parser.parse_args()
+
+    # safer to pass date objects into psycopg2
+    start_date = datetime.fromisoformat(args.start).date()
+    end_date   = datetime.fromisoformat(args.end).date()
+
+    main(start_date, end_date)

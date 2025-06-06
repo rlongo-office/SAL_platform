@@ -102,7 +102,7 @@ def fetch_games_on(d: date):
 
             out.append({
                 "game_id":          g["gamePk"],
-                "date_played":      st.date(),
+                "date_played":      st,
                 "start_time":       st,
                 "away_id":          away["id"],
                 "home_id":          home["id"],
@@ -124,7 +124,7 @@ def backfill_all(conn, start_dt: date, end_dt: date):
     # pull all distinct schedule dates
     cur.execute("""
         SELECT DISTINCT start_time::date
-          FROM schedule
+          FROM msf_mlb.schedule
          WHERE start_time::date BETWEEN %s AND %s
          ORDER BY 1
     """, (start_dt, end_dt))
@@ -132,7 +132,7 @@ def backfill_all(conn, start_dt: date, end_dt: date):
     logger.info("Will backfill outcomes on %d dates", len(dates))
 
     upsert_sql = """
-    INSERT INTO mlb_game_outcomes
+    INSERT INTO msf_mlb.mlb_game_outcomes
       (game_id, date_played, away_team_id, home_team_id,
        away_score, home_score, winner, loser,
        status_code, coded_game_state, detailed_state, created_at)

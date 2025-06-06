@@ -39,6 +39,7 @@ def upsert_day(conn, current_date: date, season: int):
     params = {
         "sportId": 1,
         "date":    current_date.isoformat(),
+        "gameTypes": "R",          # ← fetch ONLY regular-season (‘R’) games
         "hydrate": "teams"
     }
     resp = requests.get(API_URL, params=params, timeout=10)
