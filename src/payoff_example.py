@@ -9,7 +9,7 @@ Bankroll Monte‑Carlo simulator
     - True win‑prob = implied_p + bettor_advantage
     (The vig is already baked into implied_p.)
 
-Each wager risks stake_pct × current bankroll.
+Each wager risks stake_pct × benchmark bankroll (recalculated only when bankroll grows by ≥ threshold).
 Logs every bet to CSV: bet # | description | rng roll | W/L | profit | bankroll
 """
 
@@ -24,13 +24,14 @@ from typing import List
 LOG_DIR = Path(__file__).resolve().parents[1] / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
-initial_bankroll   = 10_000.0      # starting cash
-stake_pct          = 0.01          # 1 % of bankroll per bet
-num_wagers         = 2_000         # bets to simulate
-bettor_advantage   = 0.05          # +5 percentage‑points edge
-use_moneylines     = True         # True → include money‑lines
-random_seed        = None          # None → use system time
-output_csv         = LOG_DIR / f"sim_results_{datetime.now():%Y%m%d_%H%M%S}.csv"
+initial_bankroll         = 10_000.0      # starting cash
+stake_pct                = 0.01          # 1 % of bankroll per bet
+rebalance_threshold_pct  = 0.1          # stake recalculated if bankroll ↑ by ≥ 50%
+num_wagers               = 1000         # bets to simulate
+bettor_advantage         = 0.05          # +5 percentage‑points edge
+use_moneylines           = True          # True → include money‑lines
+random_seed              = None          # None → use system time
+output_csv               = LOG_DIR / f"sim_results_{datetime.now():%Y%m%d_%H%M%S}.csv"
 # ──────────────────────────────────────────────────────────────────────────────
 
 MONEYLINE_ODDS = [-400, -300, -250, -200, -150, -120,
@@ -54,7 +55,8 @@ def simulate() -> None:
     seed_rng(random_seed)
 
     bankroll = initial_bankroll
-    peak     = bankroll
+    benchmark_bankroll = bankroll
+    peak = bankroll
     track: List[float] = [bankroll]
     wins = losses = 0
 
@@ -70,8 +72,13 @@ def simulate() -> None:
                 print(f"Bankroll exhausted after {n-1} wagers.")
                 break
 
+            # Recalculate benchmark if bankroll grew by threshold
+            if bankroll >= benchmark_bankroll * (1 + rebalance_threshold_pct):
+                benchmark_bankroll = bankroll
+
+            risk = benchmark_bankroll * stake_pct
+
             bet_type = random.choice(bet_menu)
-            risk     = bankroll * stake_pct   # stake
 
             # -------- determine probabilities & payouts -----------------
             if bet_type in {"spread", "total"}:
