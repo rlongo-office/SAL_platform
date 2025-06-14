@@ -27,14 +27,14 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 ODDS_API_KEY = os.getenv("ODDS_API_KEY")
 SPORT_KEY    = "baseball_mlb"
-DB_PARAMS    = {
-    "dbname":   os.getenv("DB_NAME",   "neondb"),
-    "user":     os.getenv("DB_USER",   "neondb_owner"),
-    "password": os.getenv("DB_PASS"),
-    "host":     os.getenv("DB_HOST"),
-    "port":     os.getenv("DB_PORT",   "5432"),
-    "sslmode":  "require",
-}
+DB = dict(
+    dbname   = os.getenv("DB_NAME",   "neondb"),
+    user     = os.getenv("DB_USER",   "neondb_owner"),
+    password = os.getenv("DB_PASS",   "npg_aKWdUeCXV10c"),
+    host     = os.getenv("DB_HOST",   "ep-sweet-field-a5764df7-pooler.us-east-2.aws.neon.tech"),
+    port     = os.getenv("DB_PORT",   "5432"),
+    sslmode  = "require",
+)
 
 LOG_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "logs")
@@ -49,7 +49,7 @@ logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
 
 def pg_connect():
-    conn = psycopg2.connect(**DB_PARAMS)
+    conn = psycopg2.connect(**DB)
     with conn.cursor() as cur:
         cur.execute("SET search_path TO msf_mlb,public;")
     return conn

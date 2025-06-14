@@ -27,7 +27,7 @@ warnings.filterwarnings("ignore", message="pandas only supports SQLAlchemy")
 
 LOG_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../logs"))
 os.makedirs(LOG_DIR, exist_ok=True)
-LOG_FILE = os.path.join(LOG_DIR, f"poisson_test_noPF_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+LOG_FILE = os.path.join(LOG_DIR, f"poisson_test_UsePF{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.DEBUG,
@@ -39,14 +39,13 @@ logger = logging.getLogger(__name__)
 # Database connection
 # ──────────────────────────────────────────────────────────────────────────────
 DB = dict(
-    dbname   = os.getenv("DB_NAME",   "neondb"),
-    user     = os.getenv("DB_USER",   "neondb_owner"),
-    password = os.getenv("DB_PASS",   "npg_aKWdUeCXV10c"),
-    host     = os.getenv("DB_HOST",   "ep-sweet-field-a5764df7-pooler.us-east-2.aws.neon.tech"),
-    port     = os.getenv("DB_PORT",   "5432"),
+    dbname   = os.getenv("DB_NAME" , "neondb"),
+    user     = os.getenv("DB_USER" , "neondb_owner"),
+    password = os.getenv("DB_PASS" , "npg_aKWdUeCXV10c"),
+    host     = os.getenv("DB_HOST" , "ep-sweet-field-a5764df7-pooler.us-east-2.aws.neon.tech"),
+    port     = os.getenv("DB_PORT" , "5432"),
     sslmode  = "require",
 )
-
 def pg_connect(max_tries: int = 5, base_delay: float = 2.0):
     """
     Robust connector: retries when Neon’s control plane is still waking
@@ -181,171 +180,122 @@ def get_game_market_snapshot(game_id: int, conn) -> Dict[str, Any]:
 
 def fetch_game_data(start_date: str, end_date: str) -> pd.DataFrame:
     """
-    Batch-fetches everything needed between `start_date` and `end_date`
-    (inclusive).  Returns a tidy dataframe ready for modelling.
+    Fetch all the features needed between `start_date` and `end_date`:
+      - game_datetime, home/away team IDs
+      - final home_score, away_score
+      - home_obp, home_slg, opp_obp_away, opp_slg_away
+      - away_obp, away_slg, opp_obp_home, opp_slg_home
+      - park_factor (for that stadium)
     """
-
-    # ---------- 0. Parse CLI dates once, as tz-aware UTC -------------------
-    start = pd.to_datetime(start_date, utc=True)
-    end   = pd.to_datetime(end_date,   utc=True)
+    # 0) Parse dates
+    start = pd.to_datetime(start_date).date()
+    end   = pd.to_datetime(end_date).date()
 
     with pg_connect() as conn:
-        # ---------- 1. Schedule ------------------------------------------------
-        games_query = """
-            SELECT game_id,
-                   start_time        AS game_datetime,
-                   home_team_id,
-                   away_team_id
-            FROM   msf_mlb.schedule
-            WHERE  start_time BETWEEN %s AND %s
-            ORDER  BY start_time;
-        """
-        games_df = pd.read_sql(games_query, conn, params=[start, end])
-        games_df["game_datetime"] = pd.to_datetime(games_df["game_datetime"], utc=True)
-
+        # 1) Schedule
+        games_df = pd.read_sql(
+            """
+            SELECT
+                s.game_id,
+                s.start_time AS game_datetime,
+                s.home_team_id,
+                s.away_team_id
+            FROM msf_mlb.schedule AS s
+            WHERE s.start_time::date BETWEEN %s AND %s
+            ORDER BY s.start_time;
+            """,
+            conn,
+            params=[start, end],
+        )
         if games_df.empty:
-            logger.warning("No games found between %s and %s", start_date, end_date)
+            logger.warning("No games in %s–%s", start, end)
             return pd.DataFrame()
+        games_df["game_date"] = games_df["game_datetime"].dt.date
 
-        game_ids: List[int] = games_df["game_id"].tolist()
-        teams_home = set(games_df["home_team_id"])
-        teams_away = set(games_df["away_team_id"])
-        team_ids: List[int] = list(teams_home | teams_away)
-
-        # ---------- 2. Outcomes & starters (still only two lightweight queries)
+        # 2) Final scores
         scores_df = pd.read_sql(
             """
-            SELECT game_id, home_score, away_score
-            FROM   msf_mlb.mlb_game_outcomes
-            WHERE  game_id = ANY(%s);
+            SELECT
+                game_id,
+                home_score,
+                away_score
+            FROM msf_mlb.mlb_game_outcomes
+            WHERE date_played BETWEEN %s AND %s
+              AND home_score IS NOT NULL AND away_score IS NOT NULL
             """,
-            conn, params=[game_ids]
+            conn,
+            params=[start, end],
         )
 
-        starters_df = pd.read_sql(
+        # 3) Team snapshots (OBP, SLG)
+        snaps_df = pd.read_sql(
             """
-            SELECT game_id, player_id, side
-            FROM   msf_mlb.pitcher_boxscores
-            WHERE  game_id = ANY(%s) AND sequence = 1;
+            SELECT
+                team_id,
+                snapshot_date AS game_date,
+                obp,
+                slg
+            FROM msf_mlb.team_stats_snapshots
+            WHERE snapshot_date BETWEEN %s AND %s
             """,
-            conn, params=[game_ids]
+            conn,
+            params=[start, end],
         )
 
-        # ---------- 3. Snapshots (big-ish, but fetched once) -------------------
-        team_snaps_df = pd.read_sql(
-            """
-            SELECT *
-            FROM   msf_mlb.team_stats_snapshots
-            WHERE  team_id = ANY(%s);
-            """,
-            conn, params=[team_ids]
-        )
-        team_snaps_df["snapshot_date"] = pd.to_datetime(
-            team_snaps_df["snapshot_date"], utc=True
+        # 4) Park factors
+        park_df = pd.read_sql(
+            "SELECT team_id AS home_team_id, park_factor FROM msf_mlb.park_factors",
+            conn,
         )
 
-        pitcher_ids: List[int] = starters_df["player_id"].unique().tolist()
-        pitcher_snaps_df = pd.read_sql(
-            """
-            SELECT *
-            FROM   msf_mlb.pitcher_stats_snapshots
-            WHERE  player_id = ANY(%s);
-            """,
-            conn, params=[pitcher_ids]
+    # 5) Merge everything together
+    df = (
+        games_df
+        # scores
+        .merge(scores_df, on="game_id", how="inner")
+        # home snapshots
+        .merge(
+            snaps_df.rename(columns={
+                "team_id": "home_team_id",
+                "obp":     "home_obp",
+                "slg":     "home_slg"
+            }),
+            on=["home_team_id", "game_date"],
+            how="left"
         )
-        pitcher_snaps_df["snapshot_date"] = pd.to_datetime(
-            pitcher_snaps_df["snapshot_date"], utc=True
+        # away snapshots
+        .merge(
+            snaps_df.rename(columns={
+                "team_id": "away_team_id",
+                "obp":     "away_obp",
+                "slg":     "away_slg"
+            }),
+            on=["away_team_id", "game_date"],
+            how="left"
         )
-
-    # ---------- 4. Build one big record per game ------------------------------
-    records = []
-    for g in games_df.itertuples(index=False):
-        gid        = g.game_id
-        gtime      = g.game_datetime      # tz-aware UTC
-        home_id    = g.home_team_id
-        away_id    = g.away_team_id
-
-        # ---- outcomes
-        scores = scores_df[scores_df["game_id"] == gid]
-        if scores.empty:
-            logger.debug("skip game %s – no score yet", gid)
-            continue
-        home_score, away_score = scores.iloc[0][["home_score", "away_score"]]
-
-        # ---- starters
-        starters = starters_df[starters_df["game_id"] == gid]
-        starter_home = starters.loc[starters["side"] == "home", "player_id"]
-        starter_away = starters.loc[starters["side"] == "away", "player_id"]
-        if starter_home.empty or starter_away.empty:
-            logger.debug("skip game %s – missing starters", gid)
-            continue
-        sp_home_id = int(starter_home.iloc[0])
-        sp_away_id = int(starter_away.iloc[0])
-
-        # ---- team snapshots (latest < game time)
-        hsnap = (
-            team_snaps_df[
-                (team_snaps_df["team_id"] == home_id)
-                & (team_snaps_df["snapshot_date"] < gtime)
-            ]
-            .sort_values("snapshot_date", ascending=False)
-            .head(1)
+        # cross‐side opp rates
+        .assign(
+            opp_obp_away=lambda d: d["away_obp"],
+            opp_slg_away=lambda d: d["away_slg"],
+            opp_obp_home=lambda d: d["home_obp"],
+            opp_slg_home=lambda d: d["home_slg"],
         )
-        asnap = (
-            team_snaps_df[
-                (team_snaps_df["team_id"] == away_id)
-                & (team_snaps_df["snapshot_date"] < gtime)
-            ]
-            .sort_values("snapshot_date", ascending=False)
-            .head(1)
-        )
-        if hsnap.empty or asnap.empty:
-            logger.debug("skip game %s – missing team snapshot", gid)
-            continue
+        # park factor
+        .merge(park_df, on="home_team_id", how="left")
+    )
 
-        # ---- pitcher snapshots
-        psnap_home = (
-            pitcher_snaps_df[
-                (pitcher_snaps_df["player_id"] == sp_home_id)
-                & (pitcher_snaps_df["snapshot_date"] < gtime)
-            ]
-            .sort_values("snapshot_date", ascending=False)
-            .head(1)
-        )
-        psnap_away = (
-            pitcher_snaps_df[
-                (pitcher_snaps_df["player_id"] == sp_away_id)
-                & (pitcher_snaps_df["snapshot_date"] < gtime)
-            ]
-            .sort_values("snapshot_date", ascending=False)
-            .head(1)
-        )
-        if psnap_home.empty or psnap_away.empty:
-            logger.debug("skip game %s – missing pitcher snapshot", gid)
-            continue
+    # 6) Final cleanup / diagnostics
+    needed = [
+        "home_obp", "home_slg", "opp_obp_away", "opp_slg_away",
+        "away_obp", "away_slg", "opp_obp_home", "opp_slg_home",
+        "home_score", "away_score", "park_factor"
+    ]
+    missing = df[needed].isna().sum()
+    if missing.any():
+        logger.warning("Missing data in fetch_game_data:\n%s", missing)
 
-        records.append(
-            {
-                "game_id": gid,
-                "game_datetime": gtime,
-                "home_team_id": home_id,
-                "away_team_id": away_id,
-                "home_score": home_score,
-                "away_score": away_score,
-                "home_obp": hsnap.iloc[0]["obp"],
-                "home_slg": hsnap.iloc[0]["slg"],
-                "away_obp": asnap.iloc[0]["obp"],
-                "away_slg": asnap.iloc[0]["slg"],
-                "opp_obp_home": psnap_home.iloc[0]["obp_allowed"],
-                "opp_slg_home": psnap_home.iloc[0]["slg_allowed"],
-                "opp_obp_away": psnap_away.iloc[0]["obp_allowed"],
-                "opp_slg_away": psnap_away.iloc[0]["slg_allowed"],
-            }
-        )
-
-    df = pd.DataFrame(records)
-    logger.info("Final game-rows kept: %d (of %d scheduled)", len(df), len(games_df))
     return df
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Modelling helpers
 # ──────────────────────────────────────────────────────────────────────────────
@@ -388,33 +338,51 @@ def decide_spread_bet(pred_diff: float, runline: float) -> str:
 
 def decide_totals_bet(pred_total: float, line_total: float) -> str:
     return "over" if pred_total > line_total else "under"
+
+
 # ---------------------------------------------------------------------------
 #  Main modelling + simulation function (drop-in replacement)
 # ---------------------------------------------------------------------------
-
 def train_and_predict(df: pd.DataFrame) -> None:
-    """Fit Poisson models, place three bets per game, and log bankroll stats."""
-    rows = [] 
-    df = df.dropna().copy()
-    logger.info("Rows after dropna: %d", len(df))
-    if df.empty:
-        logger.warning("No data after cleaning – exiting")
-        return
+    """
+    Fit Poisson models, place three bets per game, and log bankroll stats.
+    Includes park_factor as a predictor for both home and away run models.
+    """
+    # … your existing cleanup …
+    # e.g. drop any rows with missing required fields
+    df = df.dropna(subset=[
+        "home_obp", "home_slg", "opp_obp_away", "opp_slg_away",
+        "away_obp", "away_slg", "opp_obp_home", "opp_slg_home",
+        "home_score", "away_score", "park_factor"
+    ])
 
-    # ------------------- fit two Poisson GLMs -------------------------------
-    X_home = add_constant(df[["home_obp", "home_slg",
-                              "opp_obp_away", "opp_slg_away"]])
+    # ------------------- fit two Poisson GLMs with park_factor as offset -------------------------------
+    # compute offset once (log of the stadium factor)
+    offset = np.log(df["park_factor"])
+
+    # Home model: no park_factor in X, but offset applied
+    X_home = add_constant(df[[
+        "home_obp",
+        "home_slg",
+        "opp_obp_away",
+        "opp_slg_away",
+    ]])
     y_home = df["home_score"]
-    model_home = GLM(y_home, X_home, family=Poisson()).fit()
-    df["home_pred"] = model_home.predict(X_home)
+    model_home = GLM(y_home, X_home, family=Poisson(), offset=offset).fit()
+    df["home_pred"] = model_home.predict(X_home, offset=offset)
 
-    X_away = add_constant(df[["away_obp", "away_slg",
-                              "opp_obp_home", "opp_slg_home"]])
+    # Away model: same offset for visitors
+    X_away = add_constant(df[[
+        "away_obp",
+        "away_slg",
+        "opp_obp_home",
+        "opp_slg_home",
+    ]])
     y_away = df["away_score"]
-    model_away = GLM(y_away, X_away, family=Poisson()).fit()
-    df["away_pred"] = model_away.predict(X_away)
+    model_away = GLM(y_away, X_away, family=Poisson(), offset=offset).fit()
+    df["away_pred"] = model_away.predict(X_away, offset=offset)
 
-    # winner for accuracy (unchanged)
+    # winner for accuracy
     df["actual_winner"] = np.where(
         df["home_score"] > df["away_score"], "home",
         np.where(df["away_score"] > df["home_score"], "away", "tie")
@@ -427,119 +395,84 @@ def train_and_predict(df: pd.DataFrame) -> None:
 
     # --------------- bankroll ledgers --------------------------------------
     BANK0 = 10_000.0
-    UNIT_FRAC = 0.01                # 1 % flat stake
+    UNIT_FRAC = 0.01                # 1% flat stake
     bank_ml = bank_spread = bank_totals = bank_overall = BANK0
     wins_ml = wins_spread = wins_totals = total_bets = 0
+    rows = []
 
     with pg_connect() as conn:
         for r in df.itertuples(index=False):
             market = get_game_market_snapshot(r.game_id, conn)
-            if None in market.values():          # skip if odds missing
+            if None in market.values():
                 logger.info("Game %s | odds not available – skipped", r.game_id)
                 continue
 
-            # ---------- MONEYLINE bet --------------------------------------
+            # MONEYLINE bet
             stake = UNIT_FRAC * bank_ml
             chosen_side = r.predicted_winner
-            ml_line  = market["moneyline"][ "favorite" if market["moneyline"]["favorite"]["team"] == chosen_side
-                                           else "underdog"]["odds"]
-            won_ml   = (chosen_side == r.actual_winner)
+            favorite = market["moneyline"]["favorite"]["team"]
+            ml_line = market["moneyline"][ "favorite" if favorite == chosen_side else "underdog" ]["odds"]
+            won_ml = (chosen_side == r.actual_winner)
             profit_ml = american_to_profit(stake, ml_line, won_ml)
             bank_ml += profit_ml
             wins_ml += int(won_ml)
 
-            # ---------- SPREAD bet -----------------------------------------
+            # SPREAD bet
             stake = UNIT_FRAC * bank_spread
             runline_fav = market["spread"]["favorite"]["runline"]
             bet_side = decide_spread_bet(r.home_pred - r.away_pred, runline_fav)
             sel = market["spread"][bet_side]
-            runline = sel["runline"]; spread_line = sel["odds"]
-            # determine win/loss against actual diff
+            runline = sel["runline"]
+            spread_line = sel["odds"]
             actual_diff = r.home_score - r.away_score
-            won_sp = (bet_side == "favorite" and actual_diff > -runline) or \
-                     (bet_side == "underdog" and actual_diff < -runline)
+            won_sp = (
+                (bet_side == "favorite" and actual_diff > -runline) or
+                (bet_side == "underdog"  and actual_diff < -runline)
+            )
             profit_sp = american_to_profit(stake, spread_line, won_sp)
             bank_spread += profit_sp
             wins_spread += int(won_sp)
 
-            # ---------- TOTALS bet -----------------------------------------
+            # TOTALS bet
             stake = UNIT_FRAC * bank_totals
             total_line = market["totals"]["over"]["total"]
             bet_ou = decide_totals_bet(r.home_pred + r.away_pred, total_line)
             ou_line = market["totals"][bet_ou]["odds"]
             actual_total = r.home_score + r.away_score
-            won_tot = (bet_ou == "over" and actual_total > total_line) or \
-                      (bet_ou == "under" and actual_total < total_line)
+            won_tot = (
+                (bet_ou == "over"  and actual_total > total_line) or
+                (bet_ou == "under" and actual_total < total_line)
+            )
             profit_tot = american_to_profit(stake, ou_line, won_tot)
             bank_totals += profit_tot
             wins_totals += int(won_tot)
 
-            # ---------- aggregate -----------------------------------------
+            # aggregate
             total_bets += 1
-            bank_overall = bank_ml + bank_spread + bank_totals - 2 * BANK0  # net profit
+            bank_overall = bank_ml + bank_spread + bank_totals - 2 * BANK0
 
-            # -----------------------------------------------------------------
-            # inside the for-loop that iterates over df.itertuples(index=False)
-            # -----------------------------------------------------------------
-            pred_home = r.home_pred
-            pred_away = r.away_pred
-            actual_home = r.home_score
-            actual_away = r.away_score
-            pred_diff   = pred_home - pred_away         # model run-differential
-            actual_diff = actual_home - actual_away
-
+            # log per-game
             logger.info(
-                "Game %s | Actual %d-%d | Pred %.2f-%.2f | "
-                "Diff pred=%.2f act=%d | Winner pred=%s act=%s | Correct=%s",
+                "Game %s | Actual %d-%d | Pred %.2f-%.2f | Winner pred=%s act=%s | Net %.0f",
                 r.game_id,
-                actual_home, actual_away,
-                pred_home, pred_away,
-                pred_diff, actual_diff,
+                r.home_score, r.away_score,
+                r.home_pred,  r.away_pred,
                 r.predicted_winner, r.actual_winner,
-                r.prediction_correct,
+                bank_overall
             )
 
-            # ─── existing betting / bankroll line stays right below ───
-            logger.info(
-                "Game %s | ML %s %+d (%+d) %s | SP %s %.1f (%+d) %s | "
-                "TOT %s %.1f (%+d) %s | Banks ML:%.0f SP:%.0f TOT:%.0f  Net:%+.0f",
-                r.game_id,
-                chosen_side, ml_line, profit_ml,  "W" if won_ml  else "L",
-                bet_side,    runline, spread_line, "W" if won_sp else "L",
-                bet_ou,      total_line, ou_line,  "W" if won_tot else "L",
-                bank_ml, bank_spread, bank_totals, bank_overall,
-            )
             rows.append({
-                # ----- first line fields -----
                 "game_id": r.game_id,
-                "actual_home": actual_home,
-                "actual_away": actual_away,
-                "pred_home": round(pred_home, 2),
-                "pred_away": round(pred_away, 2),
-                "pred_diff": round(pred_diff, 2),
-                "actual_diff": actual_diff,
-                "pred_winner": r.predicted_winner,
-                "actual_winner": r.actual_winner,
+                "actual_home": r.home_score,
+                "actual_away": r.away_score,
+                "pred_home": round(r.home_pred, 2),
+                "pred_away": round(r.away_pred, 2),
+                "pred_diff": round(r.home_pred - r.away_pred, 2),
+                "actual_diff": r.home_score  - r.away_score,
                 "prediction_correct": r.prediction_correct,
-                # ----- second line fields -----
-                "ml_side": chosen_side,
-                "ml_line": ml_line,
                 "ml_profit": round(profit_ml, 2),
-                "ml_win": won_ml,
-                "spread_side": bet_side,
-                "runline": runline,
-                "spread_line": spread_line,
                 "spread_profit": round(profit_sp, 2),
-                "spread_win": won_sp,
-                "tot_side": bet_ou,
-                "total_line": total_line,
-                "tot_line_odds": ou_line,
-                "tot_profit": round(profit_tot, 2),
-                "tot_win": won_tot,
-                # bankroll snapshot (optional but handy)
-                "bank_ml": round(bank_ml, 2),
-                "bank_spread": round(bank_spread, 2),
-                "bank_totals": round(bank_totals, 2),
+                "totals_profit": round(profit_tot, 2),
                 "bank_net": round(bank_overall, 2),
             })
 
@@ -552,19 +485,17 @@ def train_and_predict(df: pd.DataFrame) -> None:
         logger.info("Per-game details written to %s", out_path)
 
     summary = {
-        "home_mae":  mean_absolute_error(df["home_score"], df["home_pred"]),
-        "away_mae":  mean_absolute_error(df["away_score"], df["away_pred"]),
-        "home_rmse": _safe_rmse(df["home_score"], df["home_pred"]),
-        "away_rmse": _safe_rmse(df["away_score"], df["away_pred"]),
-        "winner_accuracy": df["prediction_correct"].mean(),
-        "bets_placed": total_bets,
-        "ml_profit": round(bank_ml - BANK0, 2),
-        "spread_profit": round(bank_spread - BANK0, 2),
-        "totals_profit": round(bank_totals - BANK0, 2),
-        "overall_profit": round(bank_overall, 2),
-        "ml_win_pct": wins_ml / total_bets if total_bets else 0,
-        "spread_win_pct": wins_spread / total_bets if total_bets else 0,
-        "totals_win_pct": wins_totals / total_bets if total_bets else 0,
+        "home_mae":         mean_absolute_error(df["home_score"], df["home_pred"]),
+        "away_mae":         mean_absolute_error(df["away_score"], df["away_pred"]),
+        "winner_accuracy":  df["prediction_correct"].mean(),
+        "bets_placed":      total_bets,
+        "ml_profit":        round(bank_ml - BANK0, 2),
+        "spread_profit":    round(bank_spread - BANK0, 2),
+        "totals_profit":    round(bank_totals - BANK0, 2),
+        "overall_profit":   round(bank_overall, 2),
+        "ml_win_pct":       wins_ml / total_bets if total_bets else 0,
+        "spread_win_pct":   wins_spread / total_bets if total_bets else 0,
+        "totals_win_pct":   wins_totals / total_bets if total_bets else 0,
     }
     logger.info("Summary metrics & bankroll: %s", summary)
 

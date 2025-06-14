@@ -29,6 +29,7 @@ DB = dict(
     port     = os.getenv("DB_PORT",   "5432"),
     sslmode  = "require",
 )
+
 LOG_DIR = os.path.join(os.getcwd(), "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 log_file = os.path.join(LOG_DIR, f"validate_game_odds_{datetime.now():%Y%m%d_%H%M%S}.log")

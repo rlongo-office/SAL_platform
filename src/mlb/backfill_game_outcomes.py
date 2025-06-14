@@ -2,12 +2,13 @@
 """
 backfill_mlb_outcomes.py
 
-Fetches missing MLB game outcomes from the MLB Stats API and upserts them into
-mlb_game_outcomes. Optionally (PROCESS_ODDS) can trigger odds processing, but
-by default it focuses only on outcomes.
+Fetches MLB game outcomes from the MLB Stats API and upserts them into
+mlb_game_outcomes, ensuring status_code, coded_game_state, and detailed_state
+are populated. By default only missing or incomplete records are processed;
+if --overwrite is specified, all games in the date range are (re-)upserted.
 
 Usage:
-    python backfill_mlb_outcomes.py --start 2024-07-01 --end 2024-09-29
+    python backfill_game_outcomes.py --start YYYY-MM-DD --end YYYY-MM-DD [--overwrite]
 """
 import os
 import logging
@@ -15,13 +16,11 @@ from datetime import date, datetime, timedelta
 import argparse
 import requests
 import psycopg2
-from psycopg2.extras import DictCursor
+from psycopg2.extras import DictCursor, execute_values
 from dotenv import load_dotenv, find_dotenv
 
 # ─── CONFIG ─────────────────────────────────────────────────────
-# If you later add odds-processing logic, guard it with this flag:
 PROCESS_ODDS = False
-
 load_dotenv(find_dotenv())
 DB_PARAMS = {
     "dbname":   os.getenv("DB_NAME",   "neondb"),
@@ -37,9 +36,12 @@ LOG_DIR = os.path.abspath(
     os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "logs")
 )
 os.makedirs(LOG_DIR, exist_ok=True)
-log_file = os.path.join(LOG_DIR, f"backfill_outcomes_{datetime.now():%Y%m%d_%H%M%S}.log")
-
+log_file = os.path.join(
+    LOG_DIR,
+    f"backfill_outcomes_{datetime.now():%Y%m%d_%H%M%S}.log"
+)
 logging.basicConfig(
+    filename=log_file,
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s"
 )
@@ -53,152 +55,177 @@ def pg_connect():
     return conn
 
 # ─── MLB OUTCOMES FETCHER ────────────────────────────────────────
+API = "https://statsapi.mlb.com/api/v1"
+
 def fetch_mlb_outcomes(target_date: str):
     """
-    Pulls final MLB game outcomes for target_date ±1 day.
-    Returns a list of dicts with keys:
-      game_id, away_id, home_id, away_runs, home_runs, start_time
+    Pulls only Final games for target_date ±1 day, capturing status fields.
+    Returns list of dicts with keys including status_code, coded_game_state, detailed_state.
     """
-    API = "https://statsapi.mlb.com/api/v1"
     sess = requests.Session()
-    def games_for(d):
+
+    def games_for(d: date):
         resp = sess.get(
             f"{API}/schedule",
             params={
                 "sportId": 1,
                 "date": d.isoformat(),
-                "hydrate": "teams,linescore"
+                "hydrate": "teams,linescore,status"
             },
             timeout=10
         )
         resp.raise_for_status()
         out = []
-        for day in resp.json().get("dates", []):
+        data = resp.json().get("dates", [])
+        for day in data:
             for g in day.get("games", []):
-                if g.get("status", {}).get("detailedState") != "Final":
+                status = g.get("status", {})
+                if status.get("detailedState") != "Final":
                     continue
                 st = datetime.fromisoformat(g["gameDate"].replace("Z", "+00:00"))
-                away = g["teams"]["away"]["team"]
-                home = g["teams"]["home"]["team"]
-                lines = g["linescore"]["teams"]
+                away_id = g["teams"]["away"]["team"]["id"]
+                home_id = g["teams"]["home"]["team"]["id"]
+                runs = g["linescore"]["teams"]
                 out.append({
-                    "game_id":   g["gamePk"],
-                    "date_played": st.date(),
-                    "away_id":   away["id"],
-                    "home_id":   home["id"],
-                    "away_runs": lines["away"]["runs"],
-                    "home_runs": lines["home"]["runs"],
-                    "start_time": st,
+                    "game_id":           g["gamePk"],
+                    "date_played":       st,
+                    "away_team_id":      away_id,
+                    "home_team_id":      home_id,
+                    "away_score":        runs["away"]["runs"],
+                    "home_score":        runs["home"]["runs"],
+                    "winner":            "home" if runs["home"]["runs"] > runs["away"]["runs"] else "away",
+                    "loser":             "away" if runs["home"]["runs"] > runs["away"]["runs"] else "home",
+                    "status_code":       status.get("statusCode"),
+                    "coded_game_state":  status.get("codedGameState"),
+                    "detailed_state":    status.get("detailedState"),
                 })
         return out
 
-    d0 = date.fromisoformat(target_date)
-    games = []
-    for off in (-1, 0, 1):
-        games.extend(games_for(d0 + timedelta(days=off)))
-    logger.info("Fetched %d final games around %s", len(games), target_date)
-    return games
+    today = date.fromisoformat(target_date)
+    all_games = []
+    for delta in (-1, 0, 1):
+        all_games.extend(games_for(today + timedelta(days=delta)))
 
-# ─── BACKFILL OUTCOMES ───────────────────────────────────────────
-from datetime import timedelta
+    # de-duplicate by game_id, keep last
+    unique = {g["game_id"]: g for g in all_games}
+    return list(unique.values())
 
-def backfill_outcomes(conn, start_dt, end_dt):
+# ─── BACKFILL FUNCTION ────────────────────────────────────────────
+def backfill_outcomes(conn, start_dt, end_dt, overwrite=False):
+    """
+    Upserts MLB game outcomes. If overwrite=False, only missing/incomplete games
+    (game_id NULL or status fields NULL) are fetched; if overwrite=True, all
+    scheduled games in the date range are processed.
+    """
     cur = conn.cursor()
 
-    # 1) find exactly which game_ids are missing
-    cur.execute("""
-        SELECT s.game_id, s.start_time::date
-          FROM schedule s
-     LEFT JOIN mlb_game_outcomes o ON o.game_id = s.game_id
-         WHERE s.start_time::date BETWEEN %s AND %s
-           AND o.game_id IS NULL
-    """, (start_dt, end_dt))
-    missing = cur.fetchall()
-    missing_ids = {gid for gid, _ in missing}
-    if not missing_ids:
-        logger.info("No missing outcomes between %s and %s", start_dt, end_dt)
+    if overwrite:
+        # fetch every scheduled game_id in window
+        cur.execute(
+            "SELECT game_id, start_time::date FROM msf_mlb.schedule "
+            "WHERE start_time::date BETWEEN %s AND %s",
+            (start_dt, end_dt)
+        )
+        missing = cur.fetchall()
+    else:
+        # fetch only missing or incomplete outcomes
+        cur.execute(
+            "SELECT s.game_id, s.start_time::date "
+            "FROM msf_mlb.schedule AS s "
+            "LEFT JOIN msf_mlb.mlb_game_outcomes AS o "
+            "  ON o.game_id = s.game_id "
+            "WHERE s.start_time::date BETWEEN %s AND %s "
+            "  AND (o.game_id IS NULL OR o.status_code IS NULL "
+            "       OR o.coded_game_state IS NULL OR o.detailed_state IS NULL)",
+            (start_dt, end_dt)
+        )
+        missing = cur.fetchall()
+
+    if not missing:
+        msg = "All outcomes up-to-date" if not overwrite else "No scheduled games in range"
+        logger.info(msg + " between %s and %s", start_dt, end_dt)
         return []
 
-    # one API call per unique calendar date
+    missing_ids = {gid for gid, _ in missing}
     missing_dates = sorted({d for _, d in missing})
-    logger.info("Found %d missing outcome(s) on %d date(s) to backfill",
-                len(missing), len(missing_dates))
-
     backfilled = []
-    for sched_date in missing_dates:
-        logger.info("↪ backfilling outcomes around %s", sched_date)
 
-        # try date offsets 0, -1, +1
+    for sched_date in missing_dates:
+        logger.info("↪ processing date %s", sched_date)
         fetched = []
         for delta in (0, -1, 1):
             iso = (sched_date + timedelta(days=delta)).isoformat()
-            games = fetch_mlb_outcomes(iso)  # your existing API helper
-
-            # match on whichever field the API really uses
-            def pk_of(g):
-                return g.get("game_id") or g.get("gamePk") or g.get("game_pk")
-
-            matched = [g for g in games if pk_of(g) in missing_ids]
-            if matched:
+            games = fetch_mlb_outcomes(iso)
+            matches = [g for g in games if g["game_id"] in missing_ids]
+            if matches:
                 if delta != 0:
-                    logger.warning("   ⚠️ used fallback date %s for schedule date %s", iso, sched_date)
-                fetched = matched
+                    logger.warning(" used fallback date %s", iso)
+                fetched = matches
                 break
-
         if not fetched:
-            logger.error("   ❌ no API data found for any date around %s", sched_date)
+            logger.error(" no API data for %s (±1 day)", sched_date)
             continue
 
-        # upsert only the truly missing ones
+        # upsert all fetched games
+        sql = (
+            "INSERT INTO msf_mlb.mlb_game_outcomes ("
+            "game_id, date_played, away_team_id, home_team_id,"
+            "away_score, home_score, winner, loser,"
+            "status_code, coded_game_state, detailed_state) VALUES %s "
+            "ON CONFLICT (game_id) DO UPDATE SET "
+            "date_played       = EXCLUDED.date_played,"
+            "away_score        = EXCLUDED.away_score,"
+            "home_score        = EXCLUDED.home_score,"
+            "winner            = EXCLUDED.winner,"
+            "loser             = EXCLUDED.loser,"
+            "status_code       = EXCLUDED.status_code,"
+            "coded_game_state  = EXCLUDED.coded_game_state,"
+            "detailed_state    = EXCLUDED.detailed_state"
+        )
+        values = [(
+            g["game_id"],
+            g["date_played"],
+            g["away_team_id"],
+            g["home_team_id"],
+            g["away_score"],
+            g["home_score"],
+            g["winner"],
+            g["loser"],
+            g["status_code"],
+            g["coded_game_state"],
+            g["detailed_state"]
+        ) for g in fetched]
+
+        execute_values(cur, sql, values)
+        conn.commit()
+
         for g in fetched:
-            game_pk    = pk_of(g)
-            date_str   = sched_date  # or g["start_time"].date()
-            away_id    = g["away_id"]
-            home_id    = g["home_id"]
-            away_runs  = g["away_runs"]
-            home_runs  = g["home_runs"]
-            winner     = "away" if away_runs > home_runs else "home"
-            loser      = "home" if winner == "away" else "away"
+            backfilled.append(g["game_id"])
+            missing_ids.discard(g["game_id"])
+            logger.info(" upserted game %s", g["game_id"])
 
-            cur.execute("""
-                INSERT INTO mlb_game_outcomes
-                  (game_id, date_played, away_team_id, home_team_id,
-                   away_score, home_score, winner, loser, created_at)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, now())
-                ON CONFLICT (game_id) DO UPDATE
-                  SET away_score = EXCLUDED.away_score,
-                      home_score = EXCLUDED.home_score,
-                      winner     = EXCLUDED.winner,
-                      loser      = EXCLUDED.loser
-            """, (
-                game_pk, date_str, away_id, home_id,
-                away_runs, home_runs, winner, loser
-            ))
-            logger.info("   ✓ upserted outcome for game %s", game_pk)
-            backfilled.append(game_pk)
-            missing_ids.discard(game_pk)
-
-    conn.commit()
     cur.close()
     return backfilled
 
 # ─── MAIN ───────────────────────────────────────────────────────────
-def main():
-    p = argparse.ArgumentParser("Backfill MLB game outcomes")
-    p.add_argument("--start", required=True, help="YYYY-MM-DD")
-    p.add_argument("--end",   required=True, help="YYYY-MM-DD")
-    args = p.parse_args()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser("Backfill MLB game outcomes")
+    parser.add_argument("--start", required=True, help="YYYY-MM-DD")
+    parser.add_argument("--end",   required=True, help="YYYY-MM-DD")
+    parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="If set, re-fetch and upsert EVERY scheduled game in the date range"
+    )
+    args = parser.parse_args()
 
     start_dt = date.fromisoformat(args.start)
     end_dt   = date.fromisoformat(args.end)
     if end_dt < start_dt:
-        p.error("--end must be on or after --start")
+        parser.error("--end must be on or after --start")
 
     conn = pg_connect()
-    filled = backfill_outcomes(conn, start_dt, end_dt)
+    filled = backfill_outcomes(conn, start_dt, end_dt, overwrite=args.overwrite)
     conn.close()
 
     logger.info("Completed backfill for %d outcomes", len(filled))
-
-if __name__ == "__main__":
-    main()

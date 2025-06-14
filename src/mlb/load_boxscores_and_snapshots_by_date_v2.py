@@ -381,27 +381,39 @@ def load_pitcher_boxscores(
 # Stage 3 — Pitcher cumulative snapshots                                      #
 ###############################################################################
 
-def build_pitcher_snapshots(conn: psycopg2.extensions.connection) -> None:
-    """
-    Re-build msf_mlb.pitcher_stats_snapshots from pitcher_boxscores,
-    including workload totals and cumulative outings.
-    """
+def build_pitcher_snapshots(conn, start_date=None, end_date=None):
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    # ── 1 ─ fetch every appearance in player/date/seq order ───────────
-    cur.execute(
-        """
+    sql = """
         SELECT player_id, date_played, sequence,
                at_bats, hits_allowed, bb_allowed, hbp_allowed, sf_allowed,
                total_bases,
                outs_recorded, batters_faced, pitches_thrown,
-               strike_outs,   earned_runs
-          FROM msf_mlb.pitcher_boxscores
-         ORDER BY player_id, date_played, sequence
-        """
-    )
+               strike_outs, earned_runs
+        FROM msf_mlb.pitcher_boxscores
+    """
+
+    conditions = []
+    params = []
+
+    if start_date:
+        conditions.append("date_played >= %s")
+        params.append(start_date)
+    if end_date:
+        conditions.append("date_played <= %s")
+        params.append(end_date)
+
+    if conditions:
+        sql += " WHERE " + " AND ".join(conditions)
+
+    sql += " ORDER BY player_id, date_played, sequence"
+
+    cur.execute(sql, tuple(params))
     rows = cur.fetchall()
+
     logger.info("[Stage 3] Building snapshots from %d pitcher_boxscore rows", len(rows))
+    
+    # existing accumulation and insertion logic unchanged...
 
     # ── 2 ─ prepared UPSERT (now includes cum_outings) ────────────────
     insert_ps = """
@@ -494,7 +506,7 @@ def build_pitcher_snapshots(conn: psycopg2.extensions.connection) -> None:
 # Stage 4 — Team cumulative snapshots                                         #
 ###############################################################################
 
-def fetch_season_stats(session: requests.Session, team_id: int, season: int = 2022) -> tuple[dict, dict]:
+def fetch_season_stats(session: requests.Session, team_id: int, season: int = 2023  ) -> tuple[dict, dict]:
     """Return (offense_stat_dict, defense_stat_dict) for a given season."""
     url = f"{MLB_API_BASE}/teams/{team_id}/stats"
 
@@ -763,221 +775,141 @@ def get_season_baseline_stats(
 #   # opening_day is the first 'reg' game in 2025, e.g. 2025-03-27
 #   # prev_year_cutoff is the last 'reg' game in 2024, e.g. 2024-09-29
 
+
 def build_team_snapshots(
     conn: psycopg2.extensions.connection,
-    session,
-    season: int = 2022
+    session: requests.Session,
+    start_date: date | None = None,
+    end_date: date | None = None
 ) -> None:
     """
-    Stage 4 — Build cumulative team snapshots for one season.
-
-    - Creates a “game 0” (Opening-Day) baseline per team.
-    - Walks every game that season, incrementing cumulative totals.
+    Stage 4 — Team cumulative snapshots within a specified date range.
+    Builds cumulative snapshots from start_date to end_date inclusive.
     """
-
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    # ── 1 ─ Team list ──────────────────────────────────────────────────
+    if not start_date or not end_date:
+        logger.error("Both start_date and end_date must be specified.")
+        return
+
+    # Fetch all team IDs
     cur.execute("SELECT id FROM msf_mlb.teams;")
     teams = [r["id"] for r in cur.fetchall()]
 
-    # Season boundary dates
-    opening_day      = get_game_date(cur, season, cutoff=False)
-    prev_year_cutoff = get_game_date(cur, season, cutoff=True)
-    cur_year_cutoff  = get_game_date(cur, season + 1, cutoff=True)
+    logger.info(f"[Stage 4] Building team snapshots for dates {start_date} to {end_date}")
 
-    logger.info(
-        "[Stage 4] season=%s  teams=%s  opening_day=%s  prev_cutoff=%s  next_cutoff=%s",
-        season, len(teams), opening_day, prev_year_cutoff, cur_year_cutoff,
-    )
-
-    if opening_day is None:
-        raise RuntimeError(
-            f"[Stage 4] Could not determine Opening Day for {season} – "
-            "is the schedule table populated?"
-        )
-
-    # ── 2 ─ Baseline UPSERT SQL ───────────────────────────────────────
     upsert_sql = """
-        INSERT INTO msf_mlb.team_stats_snapshots (
-            team_id, snapshot_date,
-            cum_ab, cum_h, cum_bb, cum_hbp, cum_sf, cum_tb,
-            obp, slg,
-            cum_allowed_ab, cum_allowed_h, cum_allowed_bb, cum_allowed_hbp, cum_allowed_tb,
-            allowed_obp, allowed_slg,
-            cum_runs_scored, cum_runs_allowed
-        )
-        VALUES (
-            %(team_id)s, %(snapshot_date)s,
-            %(cum_ab)s, %(cum_h)s, %(cum_bb)s, %(cum_hbp)s, %(cum_sf)s, %(cum_tb)s,
-            %(obp)s, %(slg)s,
-            %(cum_allowed_ab)s, %(cum_allowed_h)s, %(cum_allowed_bb)s, %(cum_allowed_hbp)s, %(cum_allowed_tb)s,
-            %(allowed_obp)s, %(allowed_slg)s,
-            %(cum_runs_scored)s, %(cum_runs_allowed)s
-        )
-        ON CONFLICT (team_id, snapshot_date) DO NOTHING
+    INSERT INTO msf_mlb.team_stats_snapshots (
+        team_id, snapshot_date,
+        cum_ab, cum_h, cum_bb, cum_hbp, cum_sf, cum_tb,
+        obp, slg,
+        cum_allowed_ab, cum_allowed_h, cum_allowed_bb, cum_allowed_hbp, cum_allowed_tb,
+        allowed_obp, allowed_slg,
+        cum_runs_scored, cum_runs_allowed
+    )
+    VALUES (
+        %(team_id)s, %(snapshot_date)s,
+        %(cum_ab)s, %(cum_h)s, %(cum_bb)s, %(cum_hbp)s, %(cum_sf)s, %(cum_tb)s,
+        %(obp)s, %(slg)s,
+        %(cum_allowed_ab)s, %(cum_allowed_h)s, %(cum_allowed_bb)s, %(cum_allowed_hbp)s, %(cum_allowed_tb)s,
+        %(allowed_obp)s, %(allowed_slg)s,
+        %(cum_runs_scored)s, %(cum_runs_allowed)s
+    )
+    ON CONFLICT (team_id, snapshot_date) DO NOTHING
     """
 
-    # ── 3 ─ Opening-Day baseline rows ─────────────────────────────────
-    team_state: dict[int, dict[str, Any]] = {}
-    rows_baseline = 0
+    snapshot_rows = 0
 
     for tid in teams:
-        baseline = get_season_baseline_stats(cur, session, tid, season, prev_year_cutoff)
+        # Fetch the latest snapshot before the start_date for a baseline
+        cur.execute(
+            """
+            SELECT * FROM msf_mlb.team_stats_snapshots
+            WHERE team_id = %s AND snapshot_date <= %s
+            ORDER BY snapshot_date DESC LIMIT 1
+            """,
+            (tid, start_date)
+        )
+        baseline = cur.fetchone()
 
         if baseline is None:
-            logger.warning("[Stage 4] No baseline for team_id=%s – skipped", tid)
+            logger.warning(f"[Stage 4] No baseline snapshot found for team {tid}; skipping.")
             continue
 
-        payload = {"team_id": tid, "snapshot_date": opening_day, **baseline}
+        team_state = dict(baseline)
 
-        try:
-            cur.execute(upsert_sql, payload)
-        except IntegrityError as exc:
-            conn.rollback()
-            logger.error(
-                "[Stage 4] Baseline insert failed  team_id=%s  date=%s  error=%s",
-                tid, opening_day, exc,
-            )
-            raise
-        rows_baseline += cur.rowcount
-        team_state[tid] = baseline.copy()
+        cur.execute(
+            """
+            SELECT game_id, date_played, away_team_id, home_team_id, away_score, home_score
+            FROM mlb_game_outcomes
+            WHERE date_played BETWEEN %s AND %s
+            AND (away_team_id = %s OR home_team_id = %s)
+            ORDER BY date_played, game_id
+            """,
+            (start_date, end_date, tid, tid)
+        )
 
-    conn.commit()
-    logger.info("[Stage 4] Inserted %s Opening-Day baseline rows", rows_baseline)
+        games = cur.fetchall()
 
-    # ── 4 ─ Fetch games for this season ───────────────────────────────
-    cur.execute(
+        box_query = """
+            SELECT * FROM team_boxscores 
+            WHERE team_id = %s AND game_date BETWEEN %s AND %s
         """
-        SELECT game_id, date_played,
-               away_team_id, home_team_id,
-               away_score,  home_score
-        FROM   mlb_game_outcomes
-        WHERE  date_played BETWEEN %s AND %s
-        ORDER  BY date_played, game_id
-        """,
-        (opening_day, cur_year_cutoff),
-    )
-    games = cur.fetchall()
-    total_games = len(games)
-    logger.info("[Stage 4] Found %s games to process", total_games)
+        cur.execute(box_query, (tid, start_date, end_date))
+        team_boxes = {row['game_id']: row for row in cur.fetchall()}
 
-    # Pre-load team boxscores for speed
-    cur.execute("SELECT * FROM msf_mlb.team_boxscores")
-    boxes     = cur.fetchall()
-    box_map   = {(b["game_id"], b["team_id"]): b for b in boxes}
+        for game in games:
+            gid = game["game_id"]
+            date_played = game["date_played"]
 
-    # ── 5 ─ Walk the schedule ─────────────────────────────────────────
-    snapshot_rows      = 0
-    ROWS_BEFORE_COMMIT = 50
-    rows_since_commit  = 0
-    commits_done       = 0
-
-    for g in games:
-        gid, date_played = g["game_id"], g["date_played"]
-
-        for side in ("away", "home"):
-            tid     = g[f"{side}_team_id"]
-            opp_tid = g["home_team_id"] if side == "away" else g["away_team_id"]
-            rs, ra  = g[f"{side}_score"], g[f"{'home' if side == 'away' else 'away'}_score"]
-
-            if rs is None or ra is None:
-                logger.warning("[Stage 4] Skipping game %s (%s) – missing score", gid, side)
+            box = team_boxes.get(gid)
+            if box is None:
+                logger.warning(f"[Stage 4] Missing boxscore for team {tid} in game {gid}")
                 continue
 
-            box, opp_box = box_map.get((gid, tid)), box_map.get((gid, opp_tid))
-            if not box or not opp_box:
-                logger.warning("[Stage 4] Missing boxscore game=%s team=%s", gid, tid)
+            opp_tid = game["home_team_id"] if tid == game["away_team_id"] else game["away_team_id"]
+            cur.execute(box_query, (opp_tid, date_played, date_played))
+            opp_box = cur.fetchone()
+
+            if opp_box is None:
+                logger.warning(f"[Stage 4] Missing opponent boxscore for team {opp_tid} in game {gid}")
                 continue
 
-            st = team_state.get(tid)
-            if st is None:         # should not happen – but guard anyway
-                logger.warning("[Stage 4] No running state for team=%s", tid)
-                continue
+            # Update stats
+            team_state["cum_ab"] += box["at_bats"]
+            team_state["cum_h"] += box["hits"]
+            team_state["cum_bb"] += box["base_on_balls"]
+            team_state["cum_hbp"] += box["hit_by_pitch"]
+            team_state["cum_sf"] += box["sacrifice_flys"]
+            team_state["cum_tb"] += box["total_bases"]
+            team_state["cum_runs_scored"] += box["hits"]
 
-            # Offense
-            st["cum_ab"]          += box["at_bats"]
-            st["cum_h"]           += box["hits"]
-            st["cum_bb"]          += box["base_on_balls"]
-            st["cum_hbp"]         += box["hit_by_pitch"]
-            st["cum_sf"]          += box["sacrifice_flys"]
-            st["cum_tb"]          += box["total_bases"]
-            st["cum_runs_scored"] += rs
+            team_state["cum_allowed_ab"] += opp_box["at_bats"]
+            team_state["cum_allowed_h"] += opp_box["hits"]
+            team_state["cum_allowed_bb"] += opp_box["base_on_balls"]
+            team_state["cum_allowed_hbp"] += opp_box["hit_by_pitch"]
+            team_state["cum_allowed_tb"] += opp_box["total_bases"]
+            team_state["cum_runs_allowed"] += opp_box["hits"]
 
-            # Defense (allowed)
-            st["cum_allowed_ab"] += opp_box["at_bats"]
-            st["cum_allowed_h"]  += opp_box["hits"]
-            st["cum_allowed_bb"] += opp_box["base_on_balls"]
-            st["cum_allowed_hbp"]+= opp_box["hit_by_pitch"]
-            st["cum_allowed_tb"] += opp_box["total_bases"]
-            st["cum_runs_allowed"] += ra
-
-            # Rates
-            obp = compute_rate(
-                st["cum_h"] + st["cum_bb"] + st["cum_hbp"],
-                st["cum_ab"] + st["cum_bb"] + st["cum_hbp"] + st["cum_sf"],
+            # Recompute rates
+            team_state["obp"] = compute_rate(
+                team_state["cum_h"] + team_state["cum_bb"] + team_state["cum_hbp"],
+                team_state["cum_ab"] + team_state["cum_bb"] + team_state["cum_hbp"] + team_state["cum_sf"]
             )
-            slg = compute_rate(st["cum_tb"], st["cum_ab"])
-            allowed_obp = compute_rate(
-                st["cum_allowed_h"] + st["cum_allowed_bb"] + st["cum_allowed_hbp"],
-                st["cum_allowed_ab"] + st["cum_allowed_bb"] + st["cum_allowed_hbp"],
+            team_state["slg"] = compute_rate(team_state["cum_tb"], team_state["cum_ab"])
+            team_state["allowed_obp"] = compute_rate(
+                team_state["cum_allowed_h"] + team_state["cum_allowed_bb"] + team_state["cum_allowed_hbp"],
+                team_state["cum_allowed_ab"] + team_state["cum_allowed_bb"] + team_state["cum_allowed_hbp"]
             )
-            allowed_slg = compute_rate(st["cum_allowed_tb"], st["cum_allowed_ab"])
+            team_state["allowed_slg"] = compute_rate(team_state["cum_allowed_tb"], team_state["cum_allowed_ab"])
 
-            try:
-                cur.execute(
-                    upsert_sql,
-                    {
-                        "team_id":          tid,
-                        "snapshot_date":    date_played,
-                        "cum_ab":           st["cum_ab"],
-                        "cum_h":            st["cum_h"],
-                        "cum_bb":           st["cum_bb"],
-                        "cum_hbp":          st["cum_hbp"],
-                        "cum_sf":           st["cum_sf"],
-                        "cum_tb":           st["cum_tb"],
-                        "obp":              obp,
-                        "slg":              slg,
-                        "cum_allowed_ab":   st["cum_allowed_ab"],
-                        "cum_allowed_h":    st["cum_allowed_h"],
-                        "cum_allowed_bb":   st["cum_allowed_bb"],
-                        "cum_allowed_hbp":  st["cum_allowed_hbp"],
-                        "cum_allowed_tb":   st["cum_allowed_tb"],
-                        "allowed_obp":      allowed_obp,
-                        "allowed_slg":      allowed_slg,
-                        "cum_runs_scored":  st["cum_runs_scored"],
-                        "cum_runs_allowed": st["cum_runs_allowed"],
-                    },
-                )
-            except IntegrityError as exc:
-                conn.rollback()
-                logger.error(
-                    "[Stage 4] Snapshot insert failed  game_id=%s team_id=%s date=%s  error=%s",
-                    gid, tid, date_played, exc,
-                )
-                raise
-
-            snapshot_rows     += cur.rowcount
-            rows_since_commit += 1
-
-        # Commit every N games
-        if rows_since_commit >= ROWS_BEFORE_COMMIT:
-            conn.commit()
-            commits_done      += 1
-            rows_since_commit  = 0
-            logger.info(
-                "[Stage 4]  ✔ commit %-4s (%5s/%5s games) – through %s",
-                commits_done,
-                commits_done * ROWS_BEFORE_COMMIT,
-                total_games,
-                date_played,
-            )
+            payload = {"team_id": tid, "snapshot_date": date_played, **team_state}
+            cur.execute(upsert_sql, payload)
+            snapshot_rows += cur.rowcount
 
     conn.commit()
-    logger.info(
-        "[Stage 4] Inserted %s incremental snapshot rows for season %s",
-        snapshot_rows, season,
-    )
+    logger.info(f"[Stage 4] Inserted {snapshot_rows} snapshot rows for dates {start_date} to {end_date}")
+
 ###############################################################################
 # Main                                                                         #
 ###############################################################################
@@ -985,26 +917,24 @@ def build_team_snapshots(
 def run_pipeline(skip, start_date, end_date):
     session = get_http_session()
     conn = pg_connect()
-    SEASON = 2022
 
     try:
         if "team" not in skip:
             load_team_boxscores(conn, session, start_date, end_date)
 
         if "pitcher" not in skip:
-            load_pitcher_boxscores(conn, session,start_date, end_date)
+            load_pitcher_boxscores(conn, session, start_date, end_date)
 
         if "pitcher_snapshots" not in skip:
-            build_pitcher_snapshots(conn)
+            build_pitcher_snapshots(conn, start_date, end_date)
 
         if "team_snapshots" not in skip:
-            build_team_snapshots(conn, session, SEASON)
+            build_team_snapshots(conn, session, start_date, end_date)
 
     except psycopg2.OperationalError as e:
         logger.warning("DB connection lost, reconnecting…")
         conn.close()
         conn = pg_connect()
-        # you could call each stage again where it left off, or simply fail
         raise
 
     finally:

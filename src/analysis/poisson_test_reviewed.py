@@ -392,181 +392,448 @@ def decide_totals_bet(pred_total: float, line_total: float) -> str:
 #  Main modelling + simulation function (drop-in replacement)
 # ---------------------------------------------------------------------------
 
+# ──────────────────────────────────────────────────────────────────────────────
+# Statistical helpers
+# ──────────────────────────────────────────────────────────────────────────────
+
+def compute_ci(p: float, n: int, z: float = 1.96) -> Tuple[float, float]:
+    """
+    Compute normal-approx 95% confidence interval for a proportion p with n samples.
+    """
+    if n <= 0:
+        return 0.0, 0.0
+    se = np.sqrt(p * (1 - p) / n)
+    lower = max(p - z * se, 0.0)
+    upper = min(p + z * se, 1.0)
+    return lower, upper
+
 def train_and_predict(df: pd.DataFrame) -> None:
-    """Fit Poisson models, place three bets per game, and log bankroll stats."""
-    rows = [] 
-    df = df.dropna().copy()
+    """
+    Fit Poisson models, place bets at multiple tolerance levels, and log results.
+    """
+    # 1) clean
+    df = df.dropna(subset=[
+        "home_obp","home_slg","opp_obp_away","opp_slg_away",
+        "away_obp","away_slg","opp_obp_home","opp_slg_home",
+        "home_score","away_score"
+    ]).copy()
     logger.info("Rows after dropna: %d", len(df))
     if df.empty:
         logger.warning("No data after cleaning – exiting")
         return
 
-    # ------------------- fit two Poisson GLMs -------------------------------
-    X_home = add_constant(df[["home_obp", "home_slg",
-                              "opp_obp_away", "opp_slg_away"]])
-    y_home = df["home_score"]
-    model_home = GLM(y_home, X_home, family=Poisson()).fit()
-    df["home_pred"] = model_home.predict(X_home)
+    # 2) fit the two Poisson models (no park factor)
+    df = fit_models(df)
 
-    X_away = add_constant(df[["away_obp", "away_slg",
-                              "opp_obp_home", "opp_slg_home"]])
-    y_away = df["away_score"]
-    model_away = GLM(y_away, X_away, family=Poisson()).fit()
-    df["away_pred"] = model_away.predict(X_away)
+    # 3) simulate bets at multiple tolerances
+    tolerances = [0.0, 0.2, 0.3, 0.5]
+    rows_by_tol, summary_by_tol = simulate_bets(df, tolerances)
 
-    # winner for accuracy (unchanged)
-    df["actual_winner"] = np.where(
-        df["home_score"] > df["away_score"], "home",
-        np.where(df["away_score"] > df["home_score"], "away", "tie")
-    )
-    df["predicted_winner"] = np.where(
-        df["home_pred"] > df["away_pred"], "home",
-        np.where(df["away_pred"] > df["home_pred"], "away", "tie")
-    )
-    df["prediction_correct"] = df["actual_winner"] == df["predicted_winner"]
-
-    # --------------- bankroll ledgers --------------------------------------
-    BANK0 = 10_000.0
-    UNIT_FRAC = 0.01                # 1 % flat stake
-    bank_ml = bank_spread = bank_totals = bank_overall = BANK0
-    wins_ml = wins_spread = wins_totals = total_bets = 0
-
-    with pg_connect() as conn:
-        for r in df.itertuples(index=False):
-            market = get_game_market_snapshot(r.game_id, conn)
-            if None in market.values():          # skip if odds missing
-                logger.info("Game %s | odds not available – skipped", r.game_id)
-                continue
-
-            # ---------- MONEYLINE bet --------------------------------------
-            stake = UNIT_FRAC * bank_ml
-            chosen_side = r.predicted_winner
-            ml_line  = market["moneyline"][ "favorite" if market["moneyline"]["favorite"]["team"] == chosen_side
-                                           else "underdog"]["odds"]
-            won_ml   = (chosen_side == r.actual_winner)
-            profit_ml = american_to_profit(stake, ml_line, won_ml)
-            bank_ml += profit_ml
-            wins_ml += int(won_ml)
-
-            # ---------- SPREAD bet -----------------------------------------
-            stake = UNIT_FRAC * bank_spread
-            runline_fav = market["spread"]["favorite"]["runline"]
-            bet_side = decide_spread_bet(r.home_pred - r.away_pred, runline_fav)
-            sel = market["spread"][bet_side]
-            runline = sel["runline"]; spread_line = sel["odds"]
-            # determine win/loss against actual diff
-            actual_diff = r.home_score - r.away_score
-            won_sp = (bet_side == "favorite" and actual_diff > -runline) or \
-                     (bet_side == "underdog" and actual_diff < -runline)
-            profit_sp = american_to_profit(stake, spread_line, won_sp)
-            bank_spread += profit_sp
-            wins_spread += int(won_sp)
-
-            # ---------- TOTALS bet -----------------------------------------
-            stake = UNIT_FRAC * bank_totals
-            total_line = market["totals"]["over"]["total"]
-            bet_ou = decide_totals_bet(r.home_pred + r.away_pred, total_line)
-            ou_line = market["totals"][bet_ou]["odds"]
-            actual_total = r.home_score + r.away_score
-            won_tot = (bet_ou == "over" and actual_total > total_line) or \
-                      (bet_ou == "under" and actual_total < total_line)
-            profit_tot = american_to_profit(stake, ou_line, won_tot)
-            bank_totals += profit_tot
-            wins_totals += int(won_tot)
-
-            # ---------- aggregate -----------------------------------------
-            total_bets += 1
-            bank_overall = bank_ml + bank_spread + bank_totals - 2 * BANK0  # net profit
-
-            # -----------------------------------------------------------------
-            # inside the for-loop that iterates over df.itertuples(index=False)
-            # -----------------------------------------------------------------
-            pred_home = r.home_pred
-            pred_away = r.away_pred
-            actual_home = r.home_score
-            actual_away = r.away_score
-            pred_diff   = pred_home - pred_away         # model run-differential
-            actual_diff = actual_home - actual_away
-
-            logger.info(
-                "Game %s | Actual %d-%d | Pred %.2f-%.2f | "
-                "Diff pred=%.2f act=%d | Winner pred=%s act=%s | Correct=%s",
-                r.game_id,
-                actual_home, actual_away,
-                pred_home, pred_away,
-                pred_diff, actual_diff,
-                r.predicted_winner, r.actual_winner,
-                r.prediction_correct,
-            )
-
-            # ─── existing betting / bankroll line stays right below ───
-            logger.info(
-                "Game %s | ML %s %+d (%+d) %s | SP %s %.1f (%+d) %s | "
-                "TOT %s %.1f (%+d) %s | Banks ML:%.0f SP:%.0f TOT:%.0f  Net:%+.0f",
-                r.game_id,
-                chosen_side, ml_line, profit_ml,  "W" if won_ml  else "L",
-                bet_side,    runline, spread_line, "W" if won_sp else "L",
-                bet_ou,      total_line, ou_line,  "W" if won_tot else "L",
-                bank_ml, bank_spread, bank_totals, bank_overall,
-            )
-            rows.append({
-                # ----- first line fields -----
-                "game_id": r.game_id,
-                "actual_home": actual_home,
-                "actual_away": actual_away,
-                "pred_home": round(pred_home, 2),
-                "pred_away": round(pred_away, 2),
-                "pred_diff": round(pred_diff, 2),
-                "actual_diff": actual_diff,
-                "pred_winner": r.predicted_winner,
-                "actual_winner": r.actual_winner,
-                "prediction_correct": r.prediction_correct,
-                # ----- second line fields -----
-                "ml_side": chosen_side,
-                "ml_line": ml_line,
-                "ml_profit": round(profit_ml, 2),
-                "ml_win": won_ml,
-                "spread_side": bet_side,
-                "runline": runline,
-                "spread_line": spread_line,
-                "spread_profit": round(profit_sp, 2),
-                "spread_win": won_sp,
-                "tot_side": bet_ou,
-                "total_line": total_line,
-                "tot_line_odds": ou_line,
-                "tot_profit": round(profit_tot, 2),
-                "tot_win": won_tot,
-                # bankroll snapshot (optional but handy)
-                "bank_ml": round(bank_ml, 2),
-                "bank_spread": round(bank_spread, 2),
-                "bank_totals": round(bank_totals, 2),
-                "bank_net": round(bank_overall, 2),
-            })
-
-    # ---------------- summary / accuracy -----------------------------------
-    if rows:
-        df_rows = pd.DataFrame(rows)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        out_path = os.path.join(LOG_DIR, f"poisson_game_details_{timestamp}.csv")
+    # 4) write out the per-game details for tol = 0.0 (no rejection)
+    if rows_by_tol[0.0]:
+        df_rows = pd.DataFrame(rows_by_tol[0.0])
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        out_path = os.path.join(LOG_DIR, f"poisson_game_details_{ts}.csv")
         df_rows.to_csv(out_path, index=False)
         logger.info("Per-game details written to %s", out_path)
 
-    summary = {
-        "home_mae":  mean_absolute_error(df["home_score"], df["home_pred"]),
-        "away_mae":  mean_absolute_error(df["away_score"], df["away_pred"]),
-        "home_rmse": _safe_rmse(df["home_score"], df["home_pred"]),
-        "away_rmse": _safe_rmse(df["away_score"], df["away_pred"]),
-        "winner_accuracy": df["prediction_correct"].mean(),
-        "bets_placed": total_bets,
-        "ml_profit": round(bank_ml - BANK0, 2),
-        "spread_profit": round(bank_spread - BANK0, 2),
-        "totals_profit": round(bank_totals - BANK0, 2),
-        "overall_profit": round(bank_overall, 2),
-        "ml_win_pct": wins_ml / total_bets if total_bets else 0,
-        "spread_win_pct": wins_spread / total_bets if total_bets else 0,
-        "totals_win_pct": wins_totals / total_bets if total_bets else 0,
+    # 5) log enriched summary metrics for each tolerance
+    for tol in tolerances:
+        summary = summary_by_tol[tol]
+        ml_profit = summary["ml_profit"]
+        ml_bets   = summary["ml_bets"]
+        ml_win    = summary["ml_win_pct"]
+        roi_ml    = summary["roi_ml_per_bet"]
+        ci_ml_lo, ci_ml_hi = summary["ml_win_ci95"]
+
+        tot_profit = summary["totals_profit"]
+        tot_bets   = summary["totals_bets"]
+        tot_win    = summary["totals_win_pct"]
+        roi_tot    = summary["roi_totals_per_bet"]
+        ci_tot_lo, ci_tot_hi = summary["totals_win_ci95"]
+
+        logger.info(
+            "Tolerance %.2f → ML: profit=%.2f on %d bets (win%%=%.2f); ROI=%.4f; 95%% CI=[%.4f–%.4f] | "
+            "Totals: profit=%.2f on %d bets (win%%=%.2f); ROI=%.4f; 95%% CI=[%.4f–%.4f]",
+            tol,
+            ml_profit, ml_bets, ml_win, roi_ml, ci_ml_lo, ci_ml_hi,
+            tot_profit, tot_bets, tot_win, roi_tot, ci_tot_lo, ci_tot_hi
+        )
+
+    # 6) granular breakdown on the full (tol=0) cohort
+    log_granular_stats(pd.DataFrame(rows_by_tol[0.0]))
+
+def fit_models(df: pd.DataFrame) -> pd.DataFrame:
+    # home model
+    Xh = add_constant(df[["home_obp","home_slg","opp_obp_away","opp_slg_away"]])
+    yh = df["home_score"]
+    mh = GLM(yh, Xh, family=Poisson()).fit()
+    df["home_pred"] = mh.predict(Xh)
+
+    # away model
+    Xa = add_constant(df[["away_obp","away_slg","opp_obp_home","opp_slg_home"]])
+    ya = df["away_score"]
+    ma = GLM(ya, Xa, family=Poisson()).fit()
+    df["away_pred"] = ma.predict(Xa)
+
+    # winners
+    df["actual_winner"] = np.where(df.home_score > df.away_score, "home",
+                            np.where(df.away_score > df.home_score, "away","tie"))
+    df["predicted_winner"] = np.where(df.home_pred > df.away_pred, "home",
+                              np.where(df.away_pred > df.home_pred, "away","tie"))
+    df["prediction_correct"] = df.actual_winner == df.predicted_winner
+
+    return df
+
+def simulate_bets_raw(df: pd.DataFrame, tolerances: list[float]):
+    """
+    For each tol in tolerances, maintain its own bankroll ledgers
+    and rows list, but now:
+      - ML & Spread use abs(run_diff) >= tol
+      - Totals use abs(total_pred - O/U) >= tol
+    Returns:
+      - rows_by_tol: dict[tol -> list of per-game dicts]
+      - summary_by_tol: dict[tol -> summary dict]
+    """
+    BANK0 = 10_000.0
+    UNIT  = 0.01
+
+    # one ledger per tolerance
+    state = {
+        tol: {
+            "bank_ml": BANK0,
+            "bank_spread": BANK0,
+            "bank_totals": BANK0,
+            "wins_ml": 0,
+            "wins_spread": 0,
+            "wins_totals": 0,
+            "total_bets": 0,
+            "rows": []
+        }
+        for tol in tolerances
     }
-    logger.info("Summary metrics & bankroll: %s", summary)
+
+    with pg_connect() as conn:
+        for r in df.itertuples(index=False):
+            pred_diff   = r.home_pred - r.away_pred
+            actual_diff = r.home_score  - r.away_score
+
+            market = get_game_market_snapshot(r.game_id, conn)
+            if None in market.values():
+                continue
+
+            # precompute total_pred and O/U line
+            total_pred = r.home_pred + r.away_pred
+            over_line  = market["totals"]["over"]["total"]
+            total_diff = total_pred - over_line
+
+            for tol in tolerances:
+                s = state[tol]
+
+                # — MONEYLINE & SPREAD gating on run_diff —
+                if abs(pred_diff) >= tol:
+                    # MONEYLINE
+                    stake     = UNIT * s["bank_ml"]
+                    fav       = market["moneyline"]["favorite"]["team"]
+                    ml_side   = "favorite" if fav == r.predicted_winner else "underdog"
+                    ml_line   = market["moneyline"][ml_side]["odds"]
+                    ml_win    = (r.predicted_winner == r.actual_winner)
+                    prof_ml   = american_to_profit(stake, ml_line, ml_win)
+                    s["bank_ml"]   += prof_ml
+                    s["wins_ml"]   += int(ml_win)
+
+                    # SPREAD
+                    stake      = UNIT * s["bank_spread"]
+                    run_fav    = market["spread"]["favorite"]["runline"]
+                    spread_side= decide_spread_bet(pred_diff, run_fav)
+                    sel        = market["spread"][spread_side]
+                    rl         = sel["runline"]
+                    spread_odds= sel["odds"]
+                    spread_win = (
+                        (spread_side=="favorite" and actual_diff > -rl) or
+                        (spread_side=="underdog"  and actual_diff < -rl)
+                    )
+                    prof_sp    = american_to_profit(stake, spread_odds, spread_win)
+                    s["bank_spread"]   += prof_sp
+                    s["wins_spread"]   += int(spread_win)
+                else:
+                    # skip ML & spread
+                    ml_side = None
+                    ml_line = None
+                    ml_win  = None
+                    prof_ml = 0.0
+                    spread_side = None
+                    spread_win  = None
+                    prof_sp      = 0.0
+                    rl           = None
+
+                # — TOTALS gating on total_diff —
+                if abs(total_diff) >= tol:
+                    stake    = UNIT * s["bank_totals"]
+                    tot_side = decide_totals_bet(total_pred, over_line)
+                    tot_odds = market["totals"][tot_side]["odds"]
+                    tot_win  = (
+                        (tot_side=="over"  and r.home_score + r.away_score > over_line) or
+                        (tot_side=="under" and r.home_score + r.away_score < over_line)
+                    )
+                    prof_to  = american_to_profit(stake, tot_odds, tot_win)
+                    s["bank_totals"]  += prof_to
+                    s["wins_totals"]  += int(tot_win)
+                else:
+                    tot_side = None
+                    tot_win  = None
+                    prof_to  = 0.0
+
+                # only record if we placed at least one bet this tol
+                if all(x is None for x in (ml_side, spread_side, tot_side)):
+                    continue
+
+                s["total_bets"] += 1
+                bank_net = (
+                    s["bank_ml"]
+                  + s["bank_spread"]
+                  + s["bank_totals"]
+                  - 3 * BANK0
+                )
+
+                s["rows"].append({
+                    "game_id":       r.game_id,
+                    "ml_side":       ml_side,
+                    "ml_line":       ml_line,
+                    "ml_win":        ml_win,
+                    "ml_profit":     prof_ml,
+                    "spread_side":   spread_side,
+                    "runline":       rl,
+                    "spread_win":    spread_win,
+                    "spread_profit": prof_sp,
+                    "tot_side":      tot_side,
+                    "total_line":    over_line,
+                    "tot_win":       tot_win,
+                    "tot_profit":    prof_to,
+                    "pred_diff":     pred_diff,
+                    "actual_diff":   actual_diff,
+                    "bank_net":      round(bank_net, 2),
+                })
+
+    # build summaries
+    summary_by_tol = {}
+    for tol in tolerances:
+        s = state[tol]
+        summary_by_tol[tol] = {
+            "ml_profit":      round(s["bank_ml"]   - BANK0,  2),
+            "spread_profit":  round(s["bank_spread"] - BANK0, 2),
+            "totals_profit":  round(s["bank_totals"] - BANK0, 2),
+            "bets_placed":    s["total_bets"],
+            "ml_win_pct":     s["wins_ml"]   / s["total_bets"] if s["total_bets"] else 0,
+            "spread_win_pct": s["wins_spread"]/ s["total_bets"] if s["total_bets"] else 0,
+            "totals_win_pct": s["wins_totals"]/ s["total_bets"] if s["total_bets"] else 0,
+        }
+
+    rows_by_tol = {tol: state[tol]["rows"] for tol in tolerances}
+    return rows_by_tol, summary_by_tol
+
+def simulate_bets(df: pd.DataFrame, tolerances: List[float]):
+    """
+    For each tol in tolerances, maintain its own bankroll ledgers
+    and rows list, but now:
+      - ML & Spread use abs(run_diff) >= tol
+      - Totals use abs(total_pred - O/U) >= tol
+    Returns:
+      - summary: dict[tol -> summary dict]
+    """
+    BANK0 = 10_000.0
+    UNIT  = 0.01
+
+    # prepare state
+    state: Dict[float, Dict[str, Any]] = {
+        tol: {
+            "bank_ml": BANK0,
+            "bank_spread": BANK0,
+            "bank_totals": BANK0,
+            "wins_ml": 0,
+            "wins_spread": 0,
+            "wins_totals": 0,
+            "ml_bets": 0,
+            "spread_bets": 0,
+            "totals_bets": 0,
+            "rows": []
+        }
+        for tol in tolerances
+    }
+
+    with pg_connect() as conn:
+        for r in df.itertuples(index=False):
+            pred_diff = r.home_pred - r.away_pred
+            actual_diff = r.home_score - r.away_score
+            total_pred = r.home_pred + r.away_pred
+
+            # fetch market snapshot (skip if any missing)
+            market = get_game_market_snapshot(r.game_id, conn)
+            if None in market.values():
+                continue
+
+            # precompute O/U line and diff
+            over_line = market["totals"]["over"]["total"]
+            total_diff = total_pred - over_line
+
+            for tol in tolerances:
+                s = state[tol]
+
+                # MONEYLINE & SPREAD
+                if abs(pred_diff) >= tol:
+                    # moneyline
+                    stake_ml = UNIT * s["bank_ml"]
+                    fav = market["moneyline"]["favorite"]["team"]
+                    ml_side = "favorite" if fav == r.predicted_winner else "underdog"
+                    ml_line = market["moneyline"][ml_side]["odds"]
+                    ml_win = (r.predicted_winner == r.actual_winner)
+                    prof_ml = american_to_profit(stake_ml, ml_line, ml_win)
+                    s["bank_ml"] += prof_ml
+                    s["wins_ml"] += int(ml_win)
+                    s["ml_bets"] += 1
+
+                    # spread
+                    stake_sp = UNIT * s["bank_spread"]
+                    run_fav = market["spread"]["favorite"]["runline"]
+                    spread_side = decide_spread_bet(pred_diff, run_fav)
+                    sel = market["spread"][spread_side]
+                    rl = sel["runline"]
+                    spread_odds = sel["odds"]
+                    spread_win = ((spread_side == "favorite" and actual_diff > -rl) or
+                                  (spread_side == "underdog" and actual_diff < -rl))
+                    prof_sp = american_to_profit(stake_sp, spread_odds, spread_win)
+                    s["bank_spread"] += prof_sp
+                    s["wins_spread"] += int(spread_win)
+                    s["spread_bets"] += 1
+                else:
+                    ml_side = None; ml_line = None; ml_win = None; prof_ml = 0.0
+                    spread_side = None; rl = None; spread_win = None; prof_sp = 0.0
+
+                # TOTALS
+                if abs(total_diff) >= tol:
+                    stake_to = UNIT * s["bank_totals"]
+                    tot_side = decide_totals_bet(total_pred, over_line)
+                    tot_odds = market["totals"][tot_side]["odds"]
+                    tot_win = ((tot_side == "over" and r.home_score + r.away_score > over_line) or
+                               (tot_side == "under" and r.home_score + r.away_score < over_line))
+                    prof_to = american_to_profit(stake_to, tot_odds, tot_win)
+                    s["bank_totals"] += prof_to
+                    s["wins_totals"] += int(tot_win)
+                    s["totals_bets"] += 1
+                else:
+                    tot_side = None; tot_win = None; prof_to = 0.0
+
+                # record if any bet placed
+                if all(x is None for x in (ml_side, spread_side, tot_side)):
+                    continue
+
+                # capture row (unchanged fields preserved)
+                bank_net = (s["bank_ml"] + s["bank_spread"] + s["bank_totals"] - 3 * BANK0)
+                s["rows"].append({
+                    "game_id":       r.game_id,
+                    "ml_side":       ml_side,
+                    "ml_line":       ml_line,
+                    "ml_win":        ml_win,
+                    "ml_profit":     prof_ml,
+                    "spread_side":   spread_side,
+                    "runline":       rl,
+                    "spread_win":    spread_win,
+                    "spread_profit": prof_sp,
+                    "tot_side":      tot_side,
+                    "total_line":    over_line,
+                    "tot_win":       tot_win,
+                    "tot_profit":    prof_to,
+                    "pred_diff":     pred_diff,
+                    "actual_diff":   actual_diff,
+                    "bank_net":      round(bank_net, 2),
+                })
+
+        # build enriched summaries
+    summary = {}
+    for tol in tolerances:
+        s = state[tol]
+        n_ml = s["ml_bets"]
+        n_tot = s["totals_bets"]
+        profit_ml = round(s["bank_ml"] - BANK0, 2)
+        profit_tot = round(s["bank_totals"] - BANK0, 2)
+        win_ml = s["wins_ml"]
+        win_tot = s["wins_totals"]
+        p_ml = win_ml / n_ml if n_ml else 0.0
+        p_tot = win_tot / n_tot if n_tot else 0.0
+        ci_ml = compute_ci(p_ml, n_ml)
+        ci_tot = compute_ci(p_tot, n_tot)
+        roi_ml = profit_ml / n_ml if n_ml else 0.0
+        roi_tot = profit_tot / n_tot if n_tot else 0.0
+
+        summary[tol] = {
+            # raw
+            "ml_profit": profit_ml,
+            "totals_profit": profit_tot,
+            "ml_bets": n_ml,
+            "totals_bets": n_tot,
+            # proportions
+            "ml_win_pct": round(p_ml, 4),
+            "totals_win_pct": round(p_tot, 4),
+            # ROI per bet
+            "roi_ml_per_bet": round(roi_ml, 4),
+            "roi_totals_per_bet": round(roi_tot, 4),
+            # 95% CIs on win-rate
+            "ml_win_ci95": (round(ci_ml[0], 4), round(ci_ml[1], 4)),
+            "totals_win_ci95": (round(ci_tot[0], 4), round(ci_tot[1], 4)),
+        }
+
+    # extract rows per tolerance for output consistency
+    rows_by_tol = {tol: state[tol]["rows"] for tol in tolerances}
+    summary_by_tol = summary
+    return rows_by_tol, summary_by_tol
+
+def log_granular_stats(bets_df: pd.DataFrame):
+    # Moneyline split
+    fav_ml = bets_df[bets_df.ml_side=="favorite"]
+    dog_ml = bets_df[bets_df.ml_side=="underdog"]
+    logger.info(
+        "ML Favorites: %d bets, profit=%.2f, win%%=%.2f",
+        len(fav_ml), fav_ml.ml_profit.sum(), fav_ml.ml_win.mean()
+    )
+    logger.info(
+        "ML Underdogs: %d bets, profit=%.2f, win%%=%.2f",
+        len(dog_ml), dog_ml.ml_profit.sum(), dog_ml.ml_win.mean()
+    )
+
+    # Odds‐bucket performance
+    bins   = [-1e9, -200, -150, -110, 0, 110, 150, 200, 1e9]
+    labels = ["<=-200","-200~-150","-150~-110","-110~0","0~110",
+              "110~150","150~200",">200"]
+    bets_df["odds_bucket"] = pd.cut(bets_df.ml_line, bins=bins, labels=labels)
+    for b, grp in bets_df.groupby("odds_bucket"):
+        logger.info(
+            " ML odds %s: bets=%d, profit=%.2f, win%%=%.2f",
+            b, len(grp), grp.ml_profit.sum(), grp.ml_win.mean()
+        )
+
+    # Totals split
+    over  = bets_df[bets_df.tot_side=="over"]
+    under = bets_df[bets_df.tot_side=="under"]
+    logger.info(
+        "Totals Over: %d bets, profit=%.2f, win%%=%.2f",
+        len(over), over.tot_profit.sum(), over.tot_win.mean()
+    )
+    logger.info(
+        "Totals Under: %d bets, profit=%.2f, win%%=%.2f",
+        len(under), under.tot_profit.sum(), under.tot_win.mean()
+    )
+
+    # Spread split
+    fav_sp = bets_df[bets_df.spread_side=="favorite"]
+    dog_sp = bets_df[bets_df.spread_side=="underdog"]
+    logger.info(
+        "Spread Favorites: %d bets, profit=%.2f, win%%=%.2f",
+        len(fav_sp), fav_sp.spread_profit.sum(), fav_sp.spread_win.mean()
+    )
+    logger.info(
+        "Spread Underdogs: %d bets, profit=%.2f, win%%=%.2f",
+        len(dog_sp), dog_sp.spread_profit.sum(), dog_sp.spread_win.mean()
+    )
 
 # ──────────────────────────────────────────────────────────────────────────────
 # CLI wrapper

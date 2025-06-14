@@ -17,20 +17,20 @@ from scipy.stats import t
 # ─── CONFIG & LOGGING ─────────────────────────────────────────────────────────────
 load_dotenv(find_dotenv())
 
-DB_PARAMS = {
-    "dbname":   "SAL_db",     # assuming your database is still named "neondb"
-    "user":     "postgres",   # default user for local installs
-    "password": "password",   # your provided password
-    "host":     "localhost",  # local connection
-    "port":     "5432",       # default PostgreSQL port
-    # Removed "sslmode" since it's not needed for local
-}
+DB = dict(
+    dbname   = os.getenv("DB_NAME",   "neondb"),
+    user     = os.getenv("DB_USER",   "neondb_owner"),
+    password = os.getenv("DB_PASS",   "npg_aKWdUeCXV10c"),
+    host     = os.getenv("DB_HOST",   "ep-sweet-field-a5764df7-pooler.us-east-2.aws.neon.tech"),
+    port     = os.getenv("DB_PORT",   "5432"),
+    sslmode  = "require",
+)
 
 
 # Flag: when True, use team‐level allowed stats for a brand‐new starter
 ESTIMATE_STATS = False
 TEST_OPTION = True
-DELTA_PI = 0.08   # power‐index threshold
+DELTA_PI = 0.06   # power‐index threshold
 
 # build and normalize the path to the project’s logs folder
 log_dir  = os.path.normpath(os.path.join(os.path.dirname(__file__),"..","logs"))
